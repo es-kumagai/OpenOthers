@@ -19,7 +19,7 @@ public final class GoogleChrome : OpenTarget {
     
         let name = "Google Chrome"
         let bundleIdentifier = "com.google.Chrome"
-        let arguments: Array<OpenTargetArgument> = [
+        let arguments: Array<OpenTarget.Argument> = [
             
             .targetURL,
         ]
@@ -39,7 +39,7 @@ public final class GoogleChromeSecretMode : OpenTarget {
     
         let name = "Google Chrome (Secret Mode)"
         let bundleIdentifier = "com.google.Chrome"
-        let arguments: Array<OpenTargetArgument> = [
+        let arguments: Array<OpenTarget.Argument> = [
             
             "-incognito",
             .targetURL,

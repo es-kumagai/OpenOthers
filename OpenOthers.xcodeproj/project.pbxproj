@@ -48,12 +48,22 @@
 		B1DFBC8226D1287D005598F6 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D8EE0426D0FC880028AF32 /* URL.swift */; };
 		B1DFBC8326D12880005598F6 /* Base64Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13BA6A026D112F3009F5990 /* Base64Decoder.swift */; };
 		B1DFBC8426D12B2A005598F6 /* OpenOthersLauncher.app in Resources */ = {isa = PBXBuildFile; fileRef = B13BA6AB26D12707009F5990 /* OpenOthersLauncher.app */; };
-		B1DFBCE626D12E66005598F6 /* OpenTargets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D8EDDC26D0F8B60028AF32 /* OpenTargets.framework */; };
-		B1DFBCE726D12E66005598F6 /* OpenTargets.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1D8EDDC26D0F8B60028AF32 /* OpenTargets.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B1DFBCEB26D12EC3005598F6 /* OpenOthersLauncher.app in Embed Executables */ = {isa = PBXBuildFile; fileRef = B13BA6AB26D12707009F5990 /* OpenOthersLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B1DFBCEE26D12FA2005598F6 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DFBCED26D12FA2005598F6 /* Bundle.swift */; };
 		B1DFBCEF26D13BEA005598F6 /* OpenTargets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D8EDDC26D0F8B60028AF32 /* OpenTargets.framework */; };
 		B1DFBCF026D13BEA005598F6 /* OpenTargets.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1D8EDDC26D0F8B60028AF32 /* OpenTargets.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B1DFBD0126D157E8005598F6 /* OpenOthersCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1DFBCF826D157E8005598F6 /* OpenOthersCore.framework */; };
+		B1DFBD0826D157E8005598F6 /* OpenOthersCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DFBD0726D157E8005598F6 /* OpenOthersCoreTests.swift */; };
+		B1DFBD0A26D157E8005598F6 /* OpenOthersCore.h in Headers */ = {isa = PBXBuildFile; fileRef = B1DFBCFA26D157E8005598F6 /* OpenOthersCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B1DFBD0D26D157E8005598F6 /* OpenOthersCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1DFBCF826D157E8005598F6 /* OpenOthersCore.framework */; };
+		B1DFBD0E26D157E8005598F6 /* OpenOthersCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1DFBCF826D157E8005598F6 /* OpenOthersCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B1DFBD1726D15814005598F6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DFBD1626D15814005598F6 /* Constants.swift */; };
+		B1DFBD2026D158F5005598F6 /* OpenOthersCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1DFBCF826D157E8005598F6 /* OpenOthersCore.framework */; };
+		B1DFBD2326D158FD005598F6 /* OpenOthersCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1DFBCF826D157E8005598F6 /* OpenOthersCore.framework */; };
+		B1DFBD2B26D15B80005598F6 /* OpenOthersCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1DFBCF826D157E8005598F6 /* OpenOthersCore.framework */; };
+		B1DFBD2C26D15B80005598F6 /* OpenOthersCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1DFBCF826D157E8005598F6 /* OpenOthersCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B1DFBD3126D15E8C005598F6 /* OpenTargets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D8EDDC26D0F8B60028AF32 /* OpenTargets.framework */; };
+		B1DFBD3226D15E8C005598F6 /* OpenTargets.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1D8EDDC26D0F8B60028AF32 /* OpenTargets.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,14 +123,56 @@
 			remoteGlobalIDString = B1D8EDDB26D0F8B60028AF32;
 			remoteInfo = OpenTargets;
 		};
-		B1DFBCE826D12E66005598F6 /* PBXContainerItemProxy */ = {
+		B1DFBCF126D13BEA005598F6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B1D8ED1626D0072F0028AF32 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = B1D8EDDB26D0F8B60028AF32;
 			remoteInfo = OpenTargets;
 		};
-		B1DFBCF126D13BEA005598F6 /* PBXContainerItemProxy */ = {
+		B1DFBD0226D157E8005598F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1D8ED1626D0072F0028AF32 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1DFBCF726D157E8005598F6;
+			remoteInfo = OpenOthersCore;
+		};
+		B1DFBD0426D157E8005598F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1D8ED1626D0072F0028AF32 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1D8ED1D26D0072F0028AF32;
+			remoteInfo = OpenOthers;
+		};
+		B1DFBD0B26D157E8005598F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1D8ED1626D0072F0028AF32 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1DFBCF726D157E8005598F6;
+			remoteInfo = OpenOthersCore;
+		};
+		B1DFBD2526D158FD005598F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1D8ED1626D0072F0028AF32 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1DFBCF726D157E8005598F6;
+			remoteInfo = OpenOthersCore;
+		};
+		B1DFBD2D26D15B80005598F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1D8ED1626D0072F0028AF32 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1DFBCF726D157E8005598F6;
+			remoteInfo = OpenOthersCore;
+		};
+		B1DFBD2F26D15CAD005598F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1D8ED1626D0072F0028AF32 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B13BA6AA26D12707009F5990;
+			remoteInfo = OpenOthersLauncher;
+		};
+		B1DFBD3326D15E8C005598F6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B1D8ED1626D0072F0028AF32 /* Project object */;
 			proxyType = 1;
@@ -136,6 +188,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				B1DFBD2C26D15B80005598F6 /* OpenOthersCore.framework in Embed Frameworks */,
 				B13BA6D926D12789009F5990 /* Sky-AppKit in Embed Frameworks */,
 				B1DFBCF026D13BEA005598F6 /* OpenTargets.framework in Embed Frameworks */,
 			);
@@ -170,7 +223,18 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B1DFBCE726D12E66005598F6 /* OpenTargets.framework in Embed Frameworks */,
+				B1DFBD0E26D157E8005598F6 /* OpenOthersCore.framework in Embed Frameworks */,
+				B1DFBD3226D15E8C005598F6 /* OpenTargets.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1DFBD1C26D1587C005598F6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,6 +300,13 @@
 		B1D8EE1026D10A530028AF32 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		B1DFBC8826D12BDF005598F6 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		B1DFBCED26D12FA2005598F6 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		B1DFBCF826D157E8005598F6 /* OpenOthersCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OpenOthersCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1DFBCFA26D157E8005598F6 /* OpenOthersCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenOthersCore.h; sourceTree = "<group>"; };
+		B1DFBCFB26D157E8005598F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1DFBD0026D157E8005598F6 /* OpenOthersCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenOthersCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1DFBD0726D157E8005598F6 /* OpenOthersCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenOthersCoreTests.swift; sourceTree = "<group>"; };
+		B1DFBD0926D157E8005598F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1DFBD1626D15814005598F6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +314,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1DFBD2B26D15B80005598F6 /* OpenOthersCore.framework in Frameworks */,
 				B13BA6D826D12789009F5990 /* Sky-AppKit in Frameworks */,
 				B1DFBCEF26D13BEA005598F6 /* OpenTargets.framework in Frameworks */,
 			);
@@ -266,7 +338,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1DFBCE626D12E66005598F6 /* OpenTargets.framework in Frameworks */,
+				B1DFBD2026D158F5005598F6 /* OpenOthersCore.framework in Frameworks */,
+				B1DFBD3126D15E8C005598F6 /* OpenTargets.framework in Frameworks */,
+				B1DFBD0D26D157E8005598F6 /* OpenOthersCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +362,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1DFBD2326D158FD005598F6 /* OpenOthersCore.framework in Frameworks */,
 				B1D8ED4C26D007340028AF32 /* Cocoa.framework in Frameworks */,
 				B1D8EE1226D10B620028AF32 /* OpenTargets.framework in Frameworks */,
 			);
@@ -305,6 +380,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1D8EDE526D0F8B60028AF32 /* OpenTargets.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1DFBCF526D157E8005598F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1DFBCFD26D157E8005598F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1DFBD0126D157E8005598F6 /* OpenOthersCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,12 +448,14 @@
 				B1D8ED2026D0072F0028AF32 /* OpenOthers */,
 				B1D8ED4D26D007340028AF32 /* OpenOthers Extension */,
 				B13BA6AC26D12707009F5990 /* OpenOthersLauncher */,
+				B1DFBCF926D157E8005598F6 /* OpenOthersCore */,
 				B1D8EDDD26D0F8B60028AF32 /* OpenTargets */,
 				B1D8EDF926D0F9110028AF32 /* OpenOthersTests */,
 				B1D8ED3E26D007340028AF32 /* OpenOthersUITests */,
 				B1D8EDEA26D0F8B60028AF32 /* OpenTargetsTests */,
 				B13BA6BF26D12709009F5990 /* OpenOthersLauncherTests */,
 				B13BA6CA26D1270A009F5990 /* OpenOthersLauncherUITests */,
+				B1DFBD0626D157E8005598F6 /* OpenOthersCoreTests */,
 				B1D8ED4A26D007340028AF32 /* Frameworks */,
 				B1D8ED1F26D0072F0028AF32 /* Products */,
 			);
@@ -381,6 +473,8 @@
 				B13BA6AB26D12707009F5990 /* OpenOthersLauncher.app */,
 				B13BA6BC26D12709009F5990 /* OpenOthersLauncherTests.xctest */,
 				B13BA6C726D12709009F5990 /* OpenOthersLauncherUITests.xctest */,
+				B1DFBCF826D157E8005598F6 /* OpenOthersCore.framework */,
+				B1DFBD0026D157E8005598F6 /* OpenOthersCoreTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -535,6 +629,33 @@
 			path = Bundle;
 			sourceTree = "<group>";
 		};
+		B1DFBCF926D157E8005598F6 /* OpenOthersCore */ = {
+			isa = PBXGroup;
+			children = (
+				B1DFBD1526D15808005598F6 /* Bundle */,
+				B1DFBCFA26D157E8005598F6 /* OpenOthersCore.h */,
+				B1DFBCFB26D157E8005598F6 /* Info.plist */,
+			);
+			path = OpenOthersCore;
+			sourceTree = "<group>";
+		};
+		B1DFBD0626D157E8005598F6 /* OpenOthersCoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				B1DFBD0726D157E8005598F6 /* OpenOthersCoreTests.swift */,
+				B1DFBD0926D157E8005598F6 /* Info.plist */,
+			);
+			path = OpenOthersCoreTests;
+			sourceTree = "<group>";
+		};
+		B1DFBD1526D15808005598F6 /* Bundle */ = {
+			isa = PBXGroup;
+			children = (
+				B1DFBD1626D15814005598F6 /* Constants.swift */,
+			);
+			path = Bundle;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -543,6 +664,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1D8EDEE26D0F8B60028AF32 /* OpenTargets.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1DFBCF326D157E8005598F6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1DFBD0A26D157E8005598F6 /* OpenOthersCore.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,6 +690,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				B1DFBD2E26D15B80005598F6 /* PBXTargetDependency */,
 				B1DFBCF226D13BEA005598F6 /* PBXTargetDependency */,
 			);
 			name = OpenOthersLauncher;
@@ -621,8 +751,10 @@
 			buildRules = (
 			);
 			dependencies = (
+				B1DFBD3026D15CAD005598F6 /* PBXTargetDependency */,
 				B1D8ED4926D007340028AF32 /* PBXTargetDependency */,
-				B1DFBCE926D12E66005598F6 /* PBXTargetDependency */,
+				B1DFBD0C26D157E8005598F6 /* PBXTargetDependency */,
+				B1DFBD3426D15E8C005598F6 /* PBXTargetDependency */,
 			);
 			name = OpenOthers;
 			packageProductDependencies = (
@@ -679,6 +811,7 @@
 			);
 			dependencies = (
 				B1D8EE1526D10B620028AF32 /* PBXTargetDependency */,
+				B1DFBD2626D158FD005598F6 /* PBXTargetDependency */,
 			);
 			name = "OpenOthers Extension";
 			productName = "OpenOthers Extension";
@@ -720,6 +853,46 @@
 			name = OpenTargetsTests;
 			productName = OpenTargetsTests;
 			productReference = B1D8EDE426D0F8B60028AF32 /* OpenTargetsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B1DFBCF726D157E8005598F6 /* OpenOthersCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1DFBD0F26D157E8005598F6 /* Build configuration list for PBXNativeTarget "OpenOthersCore" */;
+			buildPhases = (
+				B1DFBCF326D157E8005598F6 /* Headers */,
+				B1DFBCF426D157E8005598F6 /* Sources */,
+				B1DFBCF526D157E8005598F6 /* Frameworks */,
+				B1DFBCF626D157E8005598F6 /* Resources */,
+				B1DFBD1C26D1587C005598F6 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenOthersCore;
+			packageProductDependencies = (
+			);
+			productName = OpenOthersCore;
+			productReference = B1DFBCF826D157E8005598F6 /* OpenOthersCore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B1DFBCFF26D157E8005598F6 /* OpenOthersCoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1DFBD1226D157E8005598F6 /* Build configuration list for PBXNativeTarget "OpenOthersCoreTests" */;
+			buildPhases = (
+				B1DFBCFC26D157E8005598F6 /* Sources */,
+				B1DFBCFD26D157E8005598F6 /* Frameworks */,
+				B1DFBCFE26D157E8005598F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B1DFBD0326D157E8005598F6 /* PBXTargetDependency */,
+				B1DFBD0526D157E8005598F6 /* PBXTargetDependency */,
+			);
+			name = OpenOthersCoreTests;
+			productName = OpenOthersCoreTests;
+			productReference = B1DFBD0026D157E8005598F6 /* OpenOthersCoreTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -764,6 +937,14 @@
 						CreatedOnToolsVersion = 12.5.1;
 						TestTargetID = B1D8ED1D26D0072F0028AF32;
 					};
+					B1DFBCF726D157E8005598F6 = {
+						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
+					};
+					B1DFBCFF26D157E8005598F6 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = B1D8ED1D26D0072F0028AF32;
+					};
 				};
 			};
 			buildConfigurationList = B1D8ED1926D0072F0028AF32 /* Build configuration list for PBXProject "OpenOthers" */;
@@ -785,12 +966,14 @@
 				B1D8ED1D26D0072F0028AF32 /* OpenOthers */,
 				B13BA6AA26D12707009F5990 /* OpenOthersLauncher */,
 				B1D8ED4526D007340028AF32 /* OpenOthers Extension */,
+				B1DFBCF726D157E8005598F6 /* OpenOthersCore */,
 				B1D8EDDB26D0F8B60028AF32 /* OpenTargets */,
 				B1D8ED2F26D007340028AF32 /* OpenOthersTests */,
 				B1D8ED3A26D007340028AF32 /* OpenOthersUITests */,
 				B1D8EDE326D0F8B60028AF32 /* OpenTargetsTests */,
 				B13BA6BB26D12709009F5990 /* OpenOthersLauncherTests */,
 				B13BA6C626D12709009F5990 /* OpenOthersLauncherUITests */,
+				B1DFBCFF26D157E8005598F6 /* OpenOthersCoreTests */,
 			);
 		};
 /* End PBXProject section */
@@ -862,6 +1045,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		B1D8EDE226D0F8B60028AF32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1DFBCF626D157E8005598F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1DFBCFE26D157E8005598F6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -960,6 +1157,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B1DFBCF426D157E8005598F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1DFBD1726D15814005598F6 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1DFBCFC26D157E8005598F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1DFBD0826D157E8005598F6 /* OpenOthersCoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1003,15 +1216,45 @@
 			target = B1D8EDDB26D0F8B60028AF32 /* OpenTargets */;
 			targetProxy = B1D8EE1426D10B620028AF32 /* PBXContainerItemProxy */;
 		};
-		B1DFBCE926D12E66005598F6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B1D8EDDB26D0F8B60028AF32 /* OpenTargets */;
-			targetProxy = B1DFBCE826D12E66005598F6 /* PBXContainerItemProxy */;
-		};
 		B1DFBCF226D13BEA005598F6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B1D8EDDB26D0F8B60028AF32 /* OpenTargets */;
 			targetProxy = B1DFBCF126D13BEA005598F6 /* PBXContainerItemProxy */;
+		};
+		B1DFBD0326D157E8005598F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1DFBCF726D157E8005598F6 /* OpenOthersCore */;
+			targetProxy = B1DFBD0226D157E8005598F6 /* PBXContainerItemProxy */;
+		};
+		B1DFBD0526D157E8005598F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1D8ED1D26D0072F0028AF32 /* OpenOthers */;
+			targetProxy = B1DFBD0426D157E8005598F6 /* PBXContainerItemProxy */;
+		};
+		B1DFBD0C26D157E8005598F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1DFBCF726D157E8005598F6 /* OpenOthersCore */;
+			targetProxy = B1DFBD0B26D157E8005598F6 /* PBXContainerItemProxy */;
+		};
+		B1DFBD2626D158FD005598F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1DFBCF726D157E8005598F6 /* OpenOthersCore */;
+			targetProxy = B1DFBD2526D158FD005598F6 /* PBXContainerItemProxy */;
+		};
+		B1DFBD2E26D15B80005598F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1DFBCF726D157E8005598F6 /* OpenOthersCore */;
+			targetProxy = B1DFBD2D26D15B80005598F6 /* PBXContainerItemProxy */;
+		};
+		B1DFBD3026D15CAD005598F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B13BA6AA26D12707009F5990 /* OpenOthersLauncher */;
+			targetProxy = B1DFBD2F26D15CAD005598F6 /* PBXContainerItemProxy */;
+		};
+		B1DFBD3426D15E8C005598F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1D8EDDB26D0F8B60028AF32 /* OpenTargets */;
+			targetProxy = B1DFBD3326D15E8C005598F6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1058,7 +1301,6 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				OTHER_CODE_SIGN_FLAGS = "--deep";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.ez-net.OpenOthersLauncher.Debug";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1080,7 +1322,6 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				OTHER_CODE_SIGN_FLAGS = "--deep";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.ez-net.OpenOthersLauncher";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1210,6 +1451,8 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ES_EXTENSION_DESCRIPTION = "This is a BETA version of safari app extension that can reopen the page shown in Safari's current tab by other application.";
+				ES_EXTENSION_DISPLAYNAME = "EZ-NET OpenOthers Extension Beta";
 				ES_URLSCHEME = "openothers-beta";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1229,7 +1472,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_CODE_SIGN_FLAGS = "";
+				OTHER_CODE_SIGN_FLAGS = "--deep";
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1273,6 +1516,8 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ES_EXTENSION_DESCRIPTION = "This is a safari app extension that can reopen the page shown in Safari's current tab by other application.";
+				ES_EXTENSION_DISPLAYNAME = "EZ-NET OpenOthers Extension";
 				ES_URLSCHEME = openothers;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1285,7 +1530,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				OTHER_CODE_SIGN_FLAGS = "";
+				OTHER_CODE_SIGN_FLAGS = "--deep";
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -1480,7 +1725,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "jp.ez-net.OpenTargets";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.ez-net.OpenTargets.Debug";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1551,6 +1796,105 @@
 					"@loader_path/../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.ez-net.OpenTargetsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenOthers.app/Contents/MacOS/OpenOthers";
+			};
+			name = Release;
+		};
+		B1DFBD1026D157E8005598F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 89282N6UM7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = OpenOthersCore/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.ez-net.OpenOthersCore.Debug";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B1DFBD1126D157E8005598F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 89282N6UM7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = OpenOthersCore/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.ez-net.OpenOthersCore";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B1DFBD1326D157E8005598F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 89282N6UM7;
+				INFOPLIST_FILE = OpenOthersCoreTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.ez-net.OpenOthersCoreTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenOthers.app/Contents/MacOS/OpenOthers";
+			};
+			name = Debug;
+		};
+		B1DFBD1426D157E8005598F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 89282N6UM7;
+				INFOPLIST_FILE = OpenOthersCoreTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.ez-net.OpenOthersCoreTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenOthers.app/Contents/MacOS/OpenOthers";
@@ -1646,6 +1990,24 @@
 			buildConfigurations = (
 				B1D8EDF726D0F8B60028AF32 /* Debug */,
 				B1D8EDF826D0F8B60028AF32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1DFBD0F26D157E8005598F6 /* Build configuration list for PBXNativeTarget "OpenOthersCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1DFBD1026D157E8005598F6 /* Debug */,
+				B1DFBD1126D157E8005598F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1DFBD1226D157E8005598F6 /* Build configuration list for PBXNativeTarget "OpenOthersCoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1DFBD1326D157E8005598F6 /* Debug */,
+				B1DFBD1426D157E8005598F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

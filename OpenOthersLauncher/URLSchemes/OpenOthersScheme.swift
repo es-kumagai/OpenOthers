@@ -8,17 +8,13 @@
 import Cocoa
 import Sky_AppKit
 import OpenTargets
+import OpenOthersCore
 
 final class OpenOthersScheme : URLScheme {
 
     internal static var workspace = NSWorkspace.shared
     
-    #if DEBUG
-    static let scheme = "openothers-beta"
-    #else
-    static let scheme = "openothers"
-    #endif
-    
+    static let scheme = basicScheme
     static let host = "open"
     
     static func action(url: URL) {
@@ -41,22 +37,15 @@ final class OpenOthersScheme : URLScheme {
             let target = try decoder.decode(OpenTarget.self, from: targetData)
             
             target.open(with: pageURL) { result in
+
+                switch result {
                 
-            }
-            return
-            let applicationURL = workspace.urlForApplication(withBundleIdentifier: "com.google.Chrome")!
-            let configuration = NSWorkspace.OpenConfiguration()
-            
-            configuration.createsNewApplicationInstance = true
-            configuration.arguments = [
-                "-incognito",
-                "https://yahoo.co.jp",
-            ]
-            
-            workspace.openApplication(at: applicationURL, configuration: configuration) { application, error in
-                
-                NSLog("Application: %@", application?.bundleIdentifier ?? "")
-                NSLog("Error: %@", error?.localizedDescription ?? "")
+                case .success(let application):
+                    NSLog("Target application has been opened: %@", application.bundleIdentifier ?? "(null)")
+                    
+                case .failure(let error):
+                    NSLog("Error: %@", error.localizedDescription)
+                }
             }
         }
         catch let error as DecodingError {

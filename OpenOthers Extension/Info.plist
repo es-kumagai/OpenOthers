@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>EZ-NET OpenOthers Extension</string>
+	<string>$(ES_EXTENSION_DISPLAYNAME)</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -57,6 +57,8 @@
 		</dict>
 	</dict>
 	<key>NSHumanReadableDescription</key>
-	<string>This is OpenOthers Extension. You should tell us what your extension does here.</string>
+	<string>$(ES_EXTENSION_DESCRIPTION)</string>
+	<key>LSHasLocalizedDisplayName</key>
+	<true/>
 </dict>
 </plist>

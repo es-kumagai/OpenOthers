@@ -7,6 +7,7 @@
 
 import Cocoa
 import Sky_AppKit
+import OpenOthersCore
 
 @main @objcMembers
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -49,12 +50,6 @@ extension AppDelegate {
             return
         }
         
-        #if DEBUG
-        let hostBundleIdentifier = "jp.ez-net.OpenOthers.Debug"
-        #else
-        let hostBundleIdentifier = "jp.ez-net.OpenOthers"
-        #endif
-
         guard let hostBundle = NSWorkspace.shared.urlForApplication(withBundleIdentifier: hostBundleIdentifier).flatMap(Bundle.init(url:)) else {
             
             return

@@ -9,7 +9,7 @@ import AppKit
 
 extension NSWorkspace {
     
-    func openApplication(_ url: URL, with target: OpenTarget, completionHandler: ((_ result: Result<NSRunningApplication, OpenTargetError>) -> Void)? = nil) {
+    func openApplication(_ url: URL, with target: OpenTarget, completionHandler: ((_ result: Result<NSRunningApplication, OpenTarget.Error>) -> Void)? = nil) {
 
         guard let applicationURL = target.applicationURL else {
         

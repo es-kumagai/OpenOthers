@@ -58,6 +58,16 @@
                ReferencedContainer = "container:OpenOthers.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B1DFBCFF26D157E8005598F6"
+               BuildableName = "OpenOthersCoreTests.xctest"
+               BlueprintName = "OpenOthersCoreTests"
+               ReferencedContainer = "container:OpenOthers.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

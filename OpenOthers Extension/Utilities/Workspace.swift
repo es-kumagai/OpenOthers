@@ -7,10 +7,11 @@
 
 import AppKit
 import OpenTargets
+import OpenOthersCore
 
 extension NSWorkspace {
 
-    func open(_ target: OpenTarget, with url: URL, completionHandler: ((Result<Void, OpenTargetError>) -> Void)? = nil) {
+    func open(_ target: OpenTarget, with url: URL, completionHandler: ((Result<Void, OpenTarget.Error>) -> Void)? = nil) {
         
         do {
             
@@ -18,11 +19,8 @@ extension NSWorkspace {
             let targetData = try encoder.encode(target).base64EncodedString()
             let urlData = url.dataRepresentation.base64EncodedString()
             
-            #if DEBUG
-            let url = URL(string: "openothers-beta://open?target=\(targetData)&url=\(urlData)")!
-            #else
-            let url = URL(string: "openothers://open?target=\(targetData)&url=\(urlData)")!
-            #endif
+            let url = URL(string: "\(basicScheme)://open?target=\(targetData)&url=\(urlData)")!
+            
             NSWorkspace.shared.open(url)
             
             completionHandler?(.success(()))

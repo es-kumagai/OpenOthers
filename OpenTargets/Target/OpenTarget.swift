@@ -11,10 +11,10 @@ open class OpenTarget : Codable {
 
     public let name: String
     public let bundleIdentifier: String
-    public let arguments: Array<OpenTargetArgument>
+    public let arguments: Array<Argument>
     public let createNewInstance: Bool
 
-    public init(name: String, bundleIdentifier: String, arguments: Array<OpenTargetArgument> = [], createNewInstance: Bool = true) {
+    public init(name: String, bundleIdentifier: String, arguments: Array<Argument> = [], createNewInstance: Bool = true) {
         
         self.name = name
         self.bundleIdentifier = bundleIdentifier
@@ -36,7 +36,7 @@ open class OpenTarget : Codable {
 
         name = try container.decode(String.self, forKey: .name)
         bundleIdentifier = try container.decode(String.self, forKey: .bundleIdentifier)
-        arguments = try container.decode(Array<OpenTargetArgument>.self, forKey: .arguments)
+        arguments = try container.decode(Array<Argument>.self, forKey: .arguments)
         createNewInstance = try container.decode(Bool.self, forKey: .createNewInstance)
     }
     
@@ -77,7 +77,7 @@ public extension OpenTarget {
         openTargetCurrentWorkspace.urlForApplication(withBundleIdentifier: bundleIdentifier)
     }
     
-    func open(with url: URL, completionHandler: ((Result<NSRunningApplication, OpenTargetError>) -> Void)? = nil) {
+    func open(with url: URL, completionHandler: ((Result<NSRunningApplication, Error>) -> Void)? = nil) {
         
         openTargetCurrentWorkspace.openApplication(url, with: self, completionHandler: completionHandler)
     }

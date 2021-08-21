@@ -13,6 +13,23 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(_ notification: Notification) {
 
+        launchBundledOpenOthersLauncherAppOnce()
+    }
+
+    func applicationWillTerminate(_ notification: Notification) {
+
+    }
+
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+        return true
+    }
+}
+
+extension AppDelegate {
+    
+    /// To register url schemes, launch OpenOthersLauncher.app embedded in main bundle at least once.
+    func launchBundledOpenOthersLauncherAppOnce() {
+        
         guard let bundleForLauncher = Bundle.main.bundleForLauncher else {
             
             NSLog("Launcher application did not found.")
@@ -31,13 +48,5 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             process.arguments = ["-a", bundleForLauncher.bundlePath]
             process.launch()
         }
-    }
-
-    func applicationWillTerminate(_ notification: Notification) {
-
-    }
-
-    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
-        return true
     }
 }

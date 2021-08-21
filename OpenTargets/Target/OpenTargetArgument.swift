@@ -5,13 +5,16 @@
 //  Created by Tomohiro Kumagai on 2021/08/21.
 //
 
-public enum OpenTargetArgument {
+extension OpenTarget {
+
+    public enum Argument {
     
-    case string(String)
-    case targetURL
+        case string(String)
+        case targetURL
+    }
 }
 
-private extension OpenTargetArgument {
+private extension OpenTarget.Argument {
 
     init(_ codingData: CodingData) {
         
@@ -26,7 +29,7 @@ private extension OpenTargetArgument {
     }
 }
 
-extension OpenTargetArgument : Codable {
+extension OpenTarget.Argument : Codable {
     
     public init(from decoder: Decoder) throws {
         
@@ -45,7 +48,7 @@ extension OpenTargetArgument : Codable {
     }
 }
 
-private extension OpenTargetArgument {
+private extension OpenTarget.Argument {
     
     struct CodingData : Codable {
     
@@ -60,9 +63,9 @@ private extension OpenTargetArgument {
     }
 }
 
-private extension OpenTargetArgument {
+private extension OpenTarget.Argument {
 
-    var dataType: OpenTargetArgument.CodingDataType {
+    var dataType: CodingDataType {
         
         switch self {
         
@@ -87,7 +90,7 @@ private extension OpenTargetArgument {
     }
 }
 
-extension OpenTargetArgument : ExpressibleByStringLiteral {
+extension OpenTarget.Argument : ExpressibleByStringLiteral {
     
     public init(stringLiteral value: String) {
         

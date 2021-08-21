@@ -24,7 +24,7 @@ public final class GoogleChrome : OpenTarget {
             .targetURL,
         ]
 
-        super.init(name: name, bundleIdentifier: bundleIdentifier, arguments: arguments, createNewInstance: false)
+        super.init(name: name, bundleIdentifier: bundleIdentifier, arguments: arguments, createNewInstance: true)
     }
     
     public required init(from decoder: Decoder) throws {

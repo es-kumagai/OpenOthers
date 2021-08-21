@@ -249,7 +249,6 @@
 		B13BA6AF26D12707009F5990 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B13BA6B126D12709009F5990 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B13BA6B426D12709009F5990 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B13BA6B626D12709009F5990 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B13BA6B726D12709009F5990 /* OpenOthersLauncher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OpenOthersLauncher.entitlements; sourceTree = "<group>"; };
 		B13BA6BC26D12709009F5990 /* OpenOthersLauncherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenOthersLauncherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B13BA6C026D12709009F5990 /* OpenOthersLauncherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenOthersLauncherTests.swift; sourceTree = "<group>"; };
@@ -307,6 +306,7 @@
 		B1DFBD0726D157E8005598F6 /* OpenOthersCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenOthersCoreTests.swift; sourceTree = "<group>"; };
 		B1DFBD0926D157E8005598F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1DFBD1626D15814005598F6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B1DFBD3C26D167DB005598F6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -418,7 +418,7 @@
 				B13BA6AF26D12707009F5990 /* ViewController.swift */,
 				B13BA6B126D12709009F5990 /* Assets.xcassets */,
 				B13BA6B326D12709009F5990 /* Main.storyboard */,
-				B13BA6B626D12709009F5990 /* Info.plist */,
+				B1DFBD3C26D167DB005598F6 /* Info.plist */,
 				B13BA6B726D12709009F5990 /* OpenOthersLauncher.entitlements */,
 			);
 			path = OpenOthersLauncher;

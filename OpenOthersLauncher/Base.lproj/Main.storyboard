@@ -712,16 +712,17 @@
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Nee-Um-O5f">
                                 <rect key="frame" x="18" y="234" width="40" height="16"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Home" id="oMD-fa-7H3">
-                                    <font key="font" usesAppearanceFont="YES"/>
+                                <textFieldCell key="cell" title="Home" id="oMD-fa-7H3">
+                                    <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="Nee-Um-O5f" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="5mW-zs-iIu"/>
+                            <constraint firstItem="Nee-Um-O5f" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="5mW-zs-iIu"/>
                             <constraint firstItem="Nee-Um-O5f" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="Qwk-Ta-Q4g"/>
+                            <constraint firstAttribute="trailing" secondItem="Nee-Um-O5f" secondAttribute="trailing" constant="424" id="gVA-7Z-PVP"/>
                         </constraints>
                     </view>
                     <connections>

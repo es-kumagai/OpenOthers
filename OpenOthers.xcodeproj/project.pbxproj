@@ -10,7 +10,6 @@
 		B133017F26D1A1EA005B411E /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B133017C26D19F45005B411E /* Alert.swift */; };
 		B133018126D1A23A005B411E /* AlertButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B133018026D1A23A005B411E /* AlertButton.swift */; };
 		B133018326D1C21B005B411E /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B133018226D1C21B005B411E /* Bundle.swift */; };
-		B133018526D1C396005B411E /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = B133018426D1C395005B411E /* Store.swift */; };
 		B13BA6A626D1175D009F5990 /* Workspace.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13BA6A526D1175D009F5990 /* Workspace.swift */; };
 		B13BA6AE26D12707009F5990 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13BA6AD26D12707009F5990 /* AppDelegate.swift */; };
 		B13BA6B026D12707009F5990 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13BA6AF26D12707009F5990 /* ViewController.swift */; };
@@ -20,7 +19,12 @@
 		B13BA6CC26D1270A009F5990 /* OpenOthersLauncherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13BA6CB26D1270A009F5990 /* OpenOthersLauncherUITests.swift */; };
 		B13BA6D826D12789009F5990 /* Sky-AppKit in Frameworks */ = {isa = PBXBuildFile; productRef = B13BA6D726D12789009F5990 /* Sky-AppKit */; };
 		B13BA6D926D12789009F5990 /* Sky-AppKit in Embed Frameworks */ = {isa = PBXBuildFile; productRef = B13BA6D726D12789009F5990 /* Sky-AppKit */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		B1A58A7126D1D0A000511332 /* BundleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A58A7026D1D0A000511332 /* BundleState.swift */; };
+		B1A58A7826D2373200511332 /* BundleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A58A7026D1D0A000511332 /* BundleState.swift */; };
+		B1A58A7926D2374300511332 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = B133018426D1C395005B411E /* Store.swift */; };
+		B1A58A7C26D2376F00511332 /* Storable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A58A7B26D2376F00511332 /* Storable.swift */; };
+		B1A58A7E26D237B000511332 /* UserDefaults+Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A58A7D26D237AF00511332 /* UserDefaults+Store.swift */; };
+		B1A58A8026D237D700511332 /* UserDefaults+NSCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A58A7F26D237D700511332 /* UserDefaults+NSCoding.swift */; };
+		B1A58A8226D237F000511332 /* StoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A58A8126D237F000511332 /* StoreProtocol.swift */; };
 		B1D8ED2326D0072F0028AF32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D8ED2226D0072F0028AF32 /* AppDelegate.swift */; };
 		B1D8ED2626D0072F0028AF32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1D8ED2426D0072F0028AF32 /* Main.storyboard */; };
 		B1D8ED2826D0072F0028AF32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D8ED2726D0072F0028AF32 /* ViewController.swift */; };
@@ -266,6 +270,10 @@
 		B13BA6CB26D1270A009F5990 /* OpenOthersLauncherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenOthersLauncherUITests.swift; sourceTree = "<group>"; };
 		B13BA6CD26D1270A009F5990 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1A58A7026D1D0A000511332 /* BundleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleState.swift; sourceTree = "<group>"; };
+		B1A58A7B26D2376F00511332 /* Storable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storable.swift; sourceTree = "<group>"; };
+		B1A58A7D26D237AF00511332 /* UserDefaults+Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Store.swift"; sourceTree = "<group>"; };
+		B1A58A7F26D237D700511332 /* UserDefaults+NSCoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+NSCoding.swift"; sourceTree = "<group>"; };
+		B1A58A8126D237F000511332 /* StoreProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreProtocol.swift; sourceTree = "<group>"; };
 		B1D8ED1E26D0072F0028AF32 /* OpenOthers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenOthers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D8ED2126D0072F0028AF32 /* OpenOthers.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OpenOthers.entitlements; sourceTree = "<group>"; };
 		B1D8ED2226D0072F0028AF32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -415,10 +423,10 @@
 		B133017E26D1A1DD005B411E /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				B1A58A7A26D2375E00511332 /* UserDefaults */,
 				B133017C26D19F45005B411E /* Alert.swift */,
 				B133018026D1A23A005B411E /* AlertButton.swift */,
 				B133018226D1C21B005B411E /* Bundle.swift */,
-				B133018426D1C395005B411E /* Store.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -464,6 +472,18 @@
 				B13BA6CD26D1270A009F5990 /* Info.plist */,
 			);
 			path = OpenOthersLauncherUITests;
+			sourceTree = "<group>";
+		};
+		B1A58A7A26D2375E00511332 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				B133018426D1C395005B411E /* Store.swift */,
+				B1A58A7B26D2376F00511332 /* Storable.swift */,
+				B1A58A7D26D237AF00511332 /* UserDefaults+Store.swift */,
+				B1A58A7F26D237D700511332 /* UserDefaults+NSCoding.swift */,
+				B1A58A8126D237F000511332 /* StoreProtocol.swift */,
+			);
+			path = UserDefaults;
 			sourceTree = "<group>";
 		};
 		B1D8ED1526D0072F0028AF32 = {
@@ -1188,11 +1208,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B133017F26D1A1EA005B411E /* Alert.swift in Sources */,
-				B1A58A7126D1D0A000511332 /* BundleState.swift in Sources */,
+				B1A58A8226D237F000511332 /* StoreProtocol.swift in Sources */,
+				B1A58A7C26D2376F00511332 /* Storable.swift in Sources */,
+				B1A58A8026D237D700511332 /* UserDefaults+NSCoding.swift in Sources */,
+				B1A58A7E26D237B000511332 /* UserDefaults+Store.swift in Sources */,
 				B133018326D1C21B005B411E /* Bundle.swift in Sources */,
 				B1DFBD1726D15814005598F6 /* Constants.swift in Sources */,
-				B133018526D1C396005B411E /* Store.swift in Sources */,
+				B1A58A7926D2374300511332 /* Store.swift in Sources */,
 				B133018126D1A23A005B411E /* AlertButton.swift in Sources */,
+				B1A58A7826D2373200511332 /* BundleState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

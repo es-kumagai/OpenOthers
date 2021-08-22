@@ -6,8 +6,8 @@
 //
 
 public struct BundleState {
-    
-    @Store(key: "running_host_bundle_date", appGroupID: appGroupID)
+        
+    @UserDefaultsStore(key: "running_host_bundle_date", appGroupID: appGroupID)
     public var runningHostBundleDate: Date? = nil
     
     public init() {

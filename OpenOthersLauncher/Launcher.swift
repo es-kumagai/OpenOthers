@@ -40,8 +40,12 @@ extension AppDelegate {
             }
         }
         
-        func terminateAllRunningHostApps() {
+        func terminateAllRunningHostApp(_ appliation: NSRunningApplication) {
             
+            if !appliation.isTerminated {
+                
+                appliation.terminate()
+            }
         }
         
         if hostProcesses.isEmpty {
@@ -63,7 +67,7 @@ extension AppDelegate {
                 fallthrough
                 
             case nil:
-                hostProcesses.filter { !$0.isTerminated }.forEach { $0.terminate() }
+                hostProcesses.forEach(terminateAllRunningHostApp)
                 openBundledOpenOthersHostApp()
 
             case _?:

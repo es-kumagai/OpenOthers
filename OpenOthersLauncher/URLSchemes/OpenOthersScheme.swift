@@ -9,6 +9,7 @@ import Cocoa
 import Sky_AppKit
 import OpenTargets
 import OpenOthersCore
+import Swim
 
 final class OpenOthersScheme : URLScheme {
 
@@ -36,8 +37,13 @@ final class OpenOthersScheme : URLScheme {
             let decoder = JSONDecoder()
             let target = try decoder.decode(OpenTarget.self, from: targetData)
             
+            
+            let waitingForOpeningSemaphore = DispatchSemaphore(value: 0)
+            
             target.open(with: pageURL) { result in
 
+                waitingForOpeningSemaphore.signal()
+                
                 switch result {
                 
                 case .success(let application):
@@ -47,6 +53,8 @@ final class OpenOthersScheme : URLScheme {
                     NSLog("Error: %@", error.localizedDescription)
                 }
             }
+            
+            waitingForOpeningSemaphore.wait()
         }
         catch let error as DecodingError {
             

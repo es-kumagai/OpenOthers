@@ -48,40 +48,5 @@ extension NSWorkspace {
                 completionHandler?(.failure(.unexpected(description: "An unexpected result was detected while opening the target application.")))
             }
         }
-        
-        let task = Process()
-        
-        task.launchPath = "/usr/bin/open"
-        task.arguments = arguments
-        task.launch()
-        
-        task.waitUntilExit()
-        
-//        let output = Pipe()
-//        let applicationName = applicationURL.deletingPathExtension().lastPathComponent
-//        let getPIDTask = Process()
-//
-//        getPIDTask.launchPath = "/usr/bin/pgrep"
-//        getPIDTask.arguments = [
-//            "-nx",
-//            applicationName,
-//        ]
-//        getPIDTask.standardOutput = output
-//        getPIDTask.launch()
-//        getPIDTask.waitUntilExit()  // FIXME: ここで応答が返ってこない。
-//
-//        let processIDData = output.fileHandleForReading.readDataToEndOfFile()
-//        let processIDString = String(data: processIDData, encoding: .ascii)!
-//        let processID = Int(processIDString)!
-//        let pid = pid_t(processID)
-//
-//        // FIXME: プロセス ID を取得して、completionHandler を呼ぶ必要がある。
-//        guard let application = NSRunningApplication(processIdentifier: pid) else {
-//
-//            completionHandler?(.failure(.failedToLaunch(description: "Task did not start.")))
-//            return
-//        }
-//
-//        completionHandler?(.success(application))
     }
 }

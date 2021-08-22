@@ -8,13 +8,12 @@
 import Cocoa
 
 class ViewController: NSViewController {
-
+    
     @IBOutlet weak var homeTextField: NSTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        homeTextField.stringValue = NSHomeDirectory()
     }
 
     override var representedObject: Any? {

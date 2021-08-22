@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B133017F26D1A1EA005B411E /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B133017C26D19F45005B411E /* Alert.swift */; };
+		B133018126D1A23A005B411E /* AlertButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B133018026D1A23A005B411E /* AlertButton.swift */; };
+		B133018326D1C21B005B411E /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B133018226D1C21B005B411E /* Bundle.swift */; };
+		B133018526D1C396005B411E /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = B133018426D1C395005B411E /* Store.swift */; };
 		B13BA6A626D1175D009F5990 /* Workspace.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13BA6A526D1175D009F5990 /* Workspace.swift */; };
 		B13BA6AE26D12707009F5990 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13BA6AD26D12707009F5990 /* AppDelegate.swift */; };
 		B13BA6B026D12707009F5990 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13BA6AF26D12707009F5990 /* ViewController.swift */; };
@@ -16,6 +20,7 @@
 		B13BA6CC26D1270A009F5990 /* OpenOthersLauncherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13BA6CB26D1270A009F5990 /* OpenOthersLauncherUITests.swift */; };
 		B13BA6D826D12789009F5990 /* Sky-AppKit in Frameworks */ = {isa = PBXBuildFile; productRef = B13BA6D726D12789009F5990 /* Sky-AppKit */; };
 		B13BA6D926D12789009F5990 /* Sky-AppKit in Embed Frameworks */ = {isa = PBXBuildFile; productRef = B13BA6D726D12789009F5990 /* Sky-AppKit */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		B1A58A7126D1D0A000511332 /* BundleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A58A7026D1D0A000511332 /* BundleState.swift */; };
 		B1D8ED2326D0072F0028AF32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D8ED2226D0072F0028AF32 /* AppDelegate.swift */; };
 		B1D8ED2626D0072F0028AF32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1D8ED2426D0072F0028AF32 /* Main.storyboard */; };
 		B1D8ED2826D0072F0028AF32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D8ED2726D0072F0028AF32 /* ViewController.swift */; };
@@ -47,9 +52,6 @@
 		B1DFBC8126D1286F005598F6 /* OpenOthersScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D8ED8926D089A80028AF32 /* OpenOthersScheme.swift */; };
 		B1DFBC8226D1287D005598F6 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D8EE0426D0FC880028AF32 /* URL.swift */; };
 		B1DFBC8326D12880005598F6 /* Base64Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13BA6A026D112F3009F5990 /* Base64Decoder.swift */; };
-		B1DFBC8426D12B2A005598F6 /* OpenOthersLauncher.app in Resources */ = {isa = PBXBuildFile; fileRef = B13BA6AB26D12707009F5990 /* OpenOthersLauncher.app */; };
-		B1DFBCEB26D12EC3005598F6 /* OpenOthersLauncher.app in Embed Executables */ = {isa = PBXBuildFile; fileRef = B13BA6AB26D12707009F5990 /* OpenOthersLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		B1DFBCEE26D12FA2005598F6 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DFBCED26D12FA2005598F6 /* Bundle.swift */; };
 		B1DFBCEF26D13BEA005598F6 /* OpenTargets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D8EDDC26D0F8B60028AF32 /* OpenTargets.framework */; };
 		B1DFBCF026D13BEA005598F6 /* OpenTargets.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1D8EDDC26D0F8B60028AF32 /* OpenTargets.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B1DFBD0126D157E8005598F6 /* OpenOthersCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1DFBCF826D157E8005598F6 /* OpenOthersCore.framework */; };
@@ -64,6 +66,9 @@
 		B1DFBD2C26D15B80005598F6 /* OpenOthersCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1DFBCF826D157E8005598F6 /* OpenOthersCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B1DFBD3126D15E8C005598F6 /* OpenTargets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D8EDDC26D0F8B60028AF32 /* OpenTargets.framework */; };
 		B1DFBD3226D15E8C005598F6 /* OpenTargets.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1D8EDDC26D0F8B60028AF32 /* OpenTargets.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B1DFBD3F26D1967F005598F6 /* Launcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DFBD3E26D1967F005598F6 /* Launcher.swift */; };
+		B1DFBD4126D19914005598F6 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DFBCED26D12FA2005598F6 /* Bundle.swift */; };
+		B1DFBD4326D19AB3005598F6 /* OpenOthers.app in Embed Executables */ = {isa = PBXBuildFile; fileRef = B1D8ED1E26D0072F0028AF32 /* OpenOthers.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,19 +170,19 @@
 			remoteGlobalIDString = B1DFBCF726D157E8005598F6;
 			remoteInfo = OpenOthersCore;
 		};
-		B1DFBD2F26D15CAD005598F6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B1D8ED1626D0072F0028AF32 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B13BA6AA26D12707009F5990;
-			remoteInfo = OpenOthersLauncher;
-		};
 		B1DFBD3326D15E8C005598F6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B1D8ED1626D0072F0028AF32 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = B1D8EDDB26D0F8B60028AF32;
 			remoteInfo = OpenTargets;
+		};
+		B1DFBD4426D19B3B005598F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1D8ED1626D0072F0028AF32 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1D8ED1D26D0072F0028AF32;
+			remoteInfo = OpenOthers;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -206,17 +211,6 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B1DFBC7F26D12805005598F6 /* Embed Executables */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 6;
-			files = (
-				B1DFBCEB26D12EC3005598F6 /* OpenOthersLauncher.app in Embed Executables */,
-			);
-			name = "Embed Executables";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B1DFBCEA26D12E66005598F6 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -239,9 +233,24 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B1DFBD4226D19A93005598F6 /* Embed Executables */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				B1DFBD4326D19AB3005598F6 /* OpenOthers.app in Embed Executables */,
+			);
+			name = "Embed Executables";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B133017C26D19F45005B411E /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		B133018026D1A23A005B411E /* AlertButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertButton.swift; sourceTree = "<group>"; };
+		B133018226D1C21B005B411E /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		B133018426D1C395005B411E /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		B13BA6A026D112F3009F5990 /* Base64Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base64Decoder.swift; sourceTree = "<group>"; };
 		B13BA6A526D1175D009F5990 /* Workspace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workspace.swift; sourceTree = "<group>"; };
 		B13BA6AB26D12707009F5990 /* OpenOthersLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenOthersLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -256,6 +265,7 @@
 		B13BA6C726D12709009F5990 /* OpenOthersLauncherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenOthersLauncherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B13BA6CB26D1270A009F5990 /* OpenOthersLauncherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenOthersLauncherUITests.swift; sourceTree = "<group>"; };
 		B13BA6CD26D1270A009F5990 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1A58A7026D1D0A000511332 /* BundleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleState.swift; sourceTree = "<group>"; };
 		B1D8ED1E26D0072F0028AF32 /* OpenOthers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenOthers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D8ED2126D0072F0028AF32 /* OpenOthers.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OpenOthers.entitlements; sourceTree = "<group>"; };
 		B1D8ED2226D0072F0028AF32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -307,6 +317,7 @@
 		B1DFBD0926D157E8005598F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1DFBD1626D15814005598F6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B1DFBD3C26D167DB005598F6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1DFBD3E26D1967F005598F6 /* Launcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -401,6 +412,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B133017E26D1A1DD005B411E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B133017C26D19F45005B411E /* Alert.swift */,
+				B133018026D1A23A005B411E /* AlertButton.swift */,
+				B133018226D1C21B005B411E /* Bundle.swift */,
+				B133018426D1C395005B411E /* Store.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		B13BA6A426D11755009F5990 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -412,10 +434,12 @@
 		B13BA6AC26D12707009F5990 /* OpenOthersLauncher */ = {
 			isa = PBXGroup;
 			children = (
+				B1DFBCEC26D12F80005598F6 /* Bundle */,
 				B1D8EE0326D0FC7C0028AF32 /* Utilities */,
 				B1D8ED8826D089970028AF32 /* URLSchemes */,
 				B13BA6AD26D12707009F5990 /* AppDelegate.swift */,
 				B13BA6AF26D12707009F5990 /* ViewController.swift */,
+				B1DFBD3E26D1967F005598F6 /* Launcher.swift */,
 				B13BA6B126D12709009F5990 /* Assets.xcassets */,
 				B13BA6B326D12709009F5990 /* Main.storyboard */,
 				B1DFBD3C26D167DB005598F6 /* Info.plist */,
@@ -445,10 +469,10 @@
 		B1D8ED1526D0072F0028AF32 = {
 			isa = PBXGroup;
 			children = (
+				B1DFBCF926D157E8005598F6 /* OpenOthersCore */,
+				B13BA6AC26D12707009F5990 /* OpenOthersLauncher */,
 				B1D8ED2026D0072F0028AF32 /* OpenOthers */,
 				B1D8ED4D26D007340028AF32 /* OpenOthers Extension */,
-				B13BA6AC26D12707009F5990 /* OpenOthersLauncher */,
-				B1DFBCF926D157E8005598F6 /* OpenOthersCore */,
 				B1D8EDDD26D0F8B60028AF32 /* OpenTargets */,
 				B1D8EDF926D0F9110028AF32 /* OpenOthersTests */,
 				B1D8ED3E26D007340028AF32 /* OpenOthersUITests */,
@@ -482,7 +506,6 @@
 		B1D8ED2026D0072F0028AF32 /* OpenOthers */ = {
 			isa = PBXGroup;
 			children = (
-				B1DFBCEC26D12F80005598F6 /* Bundle */,
 				B1D8ED2126D0072F0028AF32 /* OpenOthers.entitlements */,
 				B1D8ED2226D0072F0028AF32 /* AppDelegate.swift */,
 				B1D8ED2426D0072F0028AF32 /* Main.storyboard */,
@@ -632,6 +655,7 @@
 		B1DFBCF926D157E8005598F6 /* OpenOthersCore */ = {
 			isa = PBXGroup;
 			children = (
+				B133017E26D1A1DD005B411E /* Utilities */,
 				B1DFBD1526D15808005598F6 /* Bundle */,
 				B1DFBCFA26D157E8005598F6 /* OpenOthersCore.h */,
 				B1DFBCFB26D157E8005598F6 /* Info.plist */,
@@ -652,6 +676,7 @@
 			isa = PBXGroup;
 			children = (
 				B1DFBD1626D15814005598F6 /* Constants.swift */,
+				B1A58A7026D1D0A000511332 /* BundleState.swift */,
 			);
 			path = Bundle;
 			sourceTree = "<group>";
@@ -686,10 +711,13 @@
 				B13BA6A826D12707009F5990 /* Frameworks */,
 				B13BA6A926D12707009F5990 /* Resources */,
 				B13BA6DA26D12789009F5990 /* Embed Frameworks */,
+				B1DFBD4226D19A93005598F6 /* Embed Executables */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B1DFBD4726D19CA6005598F6 /* PBXTargetDependency */,
+				B1DFBD4526D19B3B005598F6 /* PBXTargetDependency */,
 				B1DFBD2E26D15B80005598F6 /* PBXTargetDependency */,
 				B1DFBCF226D13BEA005598F6 /* PBXTargetDependency */,
 			);
@@ -745,13 +773,11 @@
 				B1D8ED1B26D0072F0028AF32 /* Frameworks */,
 				B1D8ED1C26D0072F0028AF32 /* Resources */,
 				B1D8ED6126D007340028AF32 /* Embed App Extensions */,
-				B1DFBC7F26D12805005598F6 /* Embed Executables */,
 				B1DFBCEA26D12E66005598F6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B1DFBD3026D15CAD005598F6 /* PBXTargetDependency */,
 				B1D8ED4926D007340028AF32 /* PBXTargetDependency */,
 				B1DFBD0C26D157E8005598F6 /* PBXTargetDependency */,
 				B1DFBD3426D15E8C005598F6 /* PBXTargetDependency */,
@@ -1008,7 +1034,6 @@
 			files = (
 				B1D8ED2A26D007330028AF32 /* Assets.xcassets in Resources */,
 				B1D8ED2626D0072F0028AF32 /* Main.storyboard in Resources */,
-				B1DFBC8426D12B2A005598F6 /* OpenOthersLauncher.app in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1073,6 +1098,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1DFBC8126D1286F005598F6 /* OpenOthersScheme.swift in Sources */,
+				B1DFBD4126D19914005598F6 /* Bundle.swift in Sources */,
+				B1DFBD3F26D1967F005598F6 /* Launcher.swift in Sources */,
 				B13BA6B026D12707009F5990 /* ViewController.swift in Sources */,
 				B13BA6AE26D12707009F5990 /* AppDelegate.swift in Sources */,
 				B1DFBC8226D1287D005598F6 /* URL.swift in Sources */,
@@ -1101,7 +1128,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1D8ED2826D0072F0028AF32 /* ViewController.swift in Sources */,
-				B1DFBCEE26D12FA2005598F6 /* Bundle.swift in Sources */,
 				B1D8ED2326D0072F0028AF32 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1161,7 +1187,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B133017F26D1A1EA005B411E /* Alert.swift in Sources */,
+				B1A58A7126D1D0A000511332 /* BundleState.swift in Sources */,
+				B133018326D1C21B005B411E /* Bundle.swift in Sources */,
 				B1DFBD1726D15814005598F6 /* Constants.swift in Sources */,
+				B133018526D1C396005B411E /* Store.swift in Sources */,
+				B133018126D1A23A005B411E /* AlertButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1246,15 +1277,19 @@
 			target = B1DFBCF726D157E8005598F6 /* OpenOthersCore */;
 			targetProxy = B1DFBD2D26D15B80005598F6 /* PBXContainerItemProxy */;
 		};
-		B1DFBD3026D15CAD005598F6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B13BA6AA26D12707009F5990 /* OpenOthersLauncher */;
-			targetProxy = B1DFBD2F26D15CAD005598F6 /* PBXContainerItemProxy */;
-		};
 		B1DFBD3426D15E8C005598F6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B1D8EDDB26D0F8B60028AF32 /* OpenTargets */;
 			targetProxy = B1DFBD3326D15E8C005598F6 /* PBXContainerItemProxy */;
+		};
+		B1DFBD4526D19B3B005598F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1D8ED1D26D0072F0028AF32 /* OpenOthers */;
+			targetProxy = B1DFBD4426D19B3B005598F6 /* PBXContainerItemProxy */;
+		};
+		B1DFBD4726D19CA6005598F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = B1DFBD4626D19CA6005598F6 /* Sky-AppKit */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1451,6 +1486,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ES_APPGROUP_IDENTIFIER = "jp.ez-net.OpenOthers.CommonStore.Debug";
 				ES_EXTENSION_DESCRIPTION = "This is a BETA version of safari app extension that can reopen the page shown in Safari's current tab by other application.";
 				ES_EXTENSION_DISPLAYNAME = "EZ-NET OpenOthers Extension Beta";
 				ES_URLSCHEME = "openothers-beta";
@@ -1516,6 +1552,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ES_APPGROUP_IDENTIFIER = "jp.ez-net.OpenOthers.CommonStore";
 				ES_EXTENSION_DESCRIPTION = "This is a safari app extension that can reopen the page shown in Safari's current tab by other application.";
 				ES_EXTENSION_DISPLAYNAME = "EZ-NET OpenOthers Extension";
 				ES_URLSCHEME = openothers;
@@ -2027,6 +2064,11 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		B13BA6D726D12789009F5990 /* Sky-AppKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1D8ED8326D088EA0028AF32 /* XCRemoteSwiftPackageReference "Sky" */;
+			productName = "Sky-AppKit";
+		};
+		B1DFBD4626D19CA6005598F6 /* Sky-AppKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B1D8ED8326D088EA0028AF32 /* XCRemoteSwiftPackageReference "Sky" */;
 			productName = "Sky-AppKit";

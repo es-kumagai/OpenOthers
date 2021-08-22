@@ -12,9 +12,11 @@ import OpenOthersCore
 @main @objcMembers
 class AppDelegate: NSObject, NSApplicationDelegate {
 
+    var bundleState = BundleState()
+    var hostApplicationLaunchedByLauncher: NSRunningApplication?
     var schemeManager: URLSchemeManager!
     var terminationTimer: Timer!
-
+    
     override func awakeFromNib() {
         
         super.awakeFromNib()
@@ -25,6 +27,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
 
+        launchBundledOpenOthersHostAppOnce()
+                
         terminationTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(autoTerminationChecker(_:)), userInfo: nil, repeats: true)
     }
 
@@ -66,17 +70,19 @@ extension AppDelegate {
 }
 
 extension AppDelegate : URLSchemeManagerDelegate {
+    
+    func urlSchemeManager(_ manager: URLSchemeManager, schemeDidHandle scheme: URLScheme.Type, errorIfOccurs error: Error?) {
         
-    func urlSchemeManager(_ manager: URLSchemeManager, schemeDidHandle scheme: URLScheme.Type) {
-        
+        if let error = error {
+            
+            NSApp.showAlert("\(error.localizedDescription) on \(scheme)", caption: "An error occurs during invoking URL scheme action.")
+            return
+        }
     }
     
-    func urlSchemeManager(_ manager: URLSchemeManager, someURLSchemeDetected url: URL) {
-        
-    }
-
     func urlSchemeManager(_ manager: URLSchemeManager, handlingDidFinishWithMatchingCount matchingCount: Int) {
 
+        terminateLaunchBundledOpenOthersHostApp()
         NSApp.terminate(self)
     }
 }

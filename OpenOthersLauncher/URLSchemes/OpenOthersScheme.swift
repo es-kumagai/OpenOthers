@@ -17,18 +17,18 @@ final class OpenOthersScheme : URLScheme {
     static let scheme = basicScheme
     static let host = "open"
     
-    static func action(url: URL) {
+    static func action(url: URL) throws {
 
         let decoder = Base64Decoder()
         
         guard let pageURL = url.queries["url"].flatMap(decoder.url(from:)) else {
             
-            fatalError("It was not specified that a url to open.")
+            throw URLSchemeActionError.invalidURL(url, description: "It was not specified that a url to open.")
         }
         
         guard let targetData = url.queries["target"].flatMap(decoder.data(from:)) else {
             
-            fatalError("Received an invalid url scheme: \(url)")
+            throw URLSchemeActionError.invalidURL(url, description: "Received an invalid url scheme")
         }
         
         do {
@@ -50,11 +50,11 @@ final class OpenOthersScheme : URLScheme {
         }
         catch let error as DecodingError {
             
-            fatalError("Failed to decode the target data: \(error)")
+            throw URLSchemeActionError.invocationFailure(description: "Failed to decode the target data: \(error)")
         }
         catch {
             
-            fatalError("Unexpected error: \(error)")
+            throw URLSchemeActionError.invocationFailure(description: "Unexpected error: \(error)")
         }
     }
 }

@@ -18,43 +18,7 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     }
 
     override func toolbarItemClicked(in window: SFSafariWindow) {
-        
-        let target: OpenTarget = GoogleChrome()
-        
-        window.getActivePageProperties { result in
 
-            do {
-                let (page, properties) = try result.get()
-                
-                guard let url = properties.url else {
-                    
-                    return page.dispatchMessageToScript(with: .urlNotFound())
-                }
-
-                NSWorkspace.shared.open(target, with: url) { result in
-                    
-                    switch result {
-                    
-                    case .success:
-                        break
-                    
-                    case .failure(.notSupported):
-                        page.dispatchMessageToScript(with: .targetNotSupported(target))
-                        
-                    case .failure(_):
-                        page.dispatchMessageToScript(with: .failedToOpenTarget(target))
-                    }
-                }
-            }
-            catch SafariError.propertiesNotFound(in: let page?) {
-                
-                page.dispatchMessageToScript(with: .urlNotFound())
-            }
-            catch {
-                
-                fatalError("Failed to get properties in active page.")
-            }
-        }
     }
     
     override func validateToolbarItem(in window: SFSafariWindow, validationHandler: @escaping ((Bool, String) -> Void)) {

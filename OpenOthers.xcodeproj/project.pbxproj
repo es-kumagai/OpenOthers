@@ -23,6 +23,8 @@
 		B1A58A7926D2374300511332 /* UserDefaultsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B133018426D1C395005B411E /* UserDefaultsStore.swift */; };
 		B1A58A7C26D2376F00511332 /* UserDefaultsStorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A58A7B26D2376F00511332 /* UserDefaultsStorable.swift */; };
 		B1A58A8226D237F000511332 /* StoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A58A8126D237F000511332 /* StoreProtocol.swift */; };
+		B1A58A9226D3DE7600511332 /* TargetTableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A58A9126D3DE7600511332 /* TargetTableItem.swift */; };
+		B1A58A9426D3E41E00511332 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A58A9326D3E41E00511332 /* Bundle.swift */; };
 		B1D8ED2326D0072F0028AF32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D8ED2226D0072F0028AF32 /* AppDelegate.swift */; };
 		B1D8ED2626D0072F0028AF32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1D8ED2426D0072F0028AF32 /* Main.storyboard */; };
 		B1D8ED2826D0072F0028AF32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D8ED2726D0072F0028AF32 /* ViewController.swift */; };
@@ -270,6 +272,8 @@
 		B1A58A7026D1D0A000511332 /* BundleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleState.swift; sourceTree = "<group>"; };
 		B1A58A7B26D2376F00511332 /* UserDefaultsStorable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStorable.swift; sourceTree = "<group>"; };
 		B1A58A8126D237F000511332 /* StoreProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreProtocol.swift; sourceTree = "<group>"; };
+		B1A58A9126D3DE7600511332 /* TargetTableItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetTableItem.swift; sourceTree = "<group>"; };
+		B1A58A9326D3E41E00511332 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		B1D8ED1E26D0072F0028AF32 /* OpenOthers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenOthers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D8ED2126D0072F0028AF32 /* OpenOthers.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OpenOthers.entitlements; sourceTree = "<group>"; };
 		B1D8ED2226D0072F0028AF32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -431,6 +435,7 @@
 			isa = PBXGroup;
 			children = (
 				B13BA6A526D1175D009F5990 /* Workspace.swift */,
+				B1A58A9326D3E41E00511332 /* Bundle.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -486,6 +491,14 @@
 				B1A58A7A26D2375E00511332 /* UserDefaults */,
 			);
 			path = Store;
+			sourceTree = "<group>";
+		};
+		B1A58A8C26D3A5EA00511332 /* TargetTable */ = {
+			isa = PBXGroup;
+			children = (
+				B1A58A9126D3DE7600511332 /* TargetTableItem.swift */,
+			);
+			path = TargetTable;
 			sourceTree = "<group>";
 		};
 		B1D8ED1526D0072F0028AF32 = {
@@ -563,6 +576,7 @@
 				B13BA6A426D11755009F5990 /* Utilities */,
 				B1D8ED7B26D0245E0028AF32 /* Targets */,
 				B1D8ED7026D015370028AF32 /* SafariServices */,
+				B1A58A8C26D3A5EA00511332 /* TargetTable */,
 				B1D8ED7526D01CA00028AF32 /* Message.swift */,
 				B1D8ED4E26D007340028AF32 /* SafariExtensionHandler.swift */,
 				B1D8ED5026D007340028AF32 /* SafariExtensionViewController.swift */,
@@ -602,12 +616,12 @@
 			path = Targets;
 			sourceTree = "<group>";
 		};
-		B1D8ED8026D0313C0028AF32 /* Workaround */ = {
+		B1D8ED8026D0313C0028AF32 /* Launch */ = {
 			isa = PBXGroup;
 			children = (
 				B1D8ED8126D031460028AF32 /* Workspace.swift */,
 			);
-			path = Workaround;
+			path = Launch;
 			sourceTree = "<group>";
 		};
 		B1D8ED8826D089970028AF32 /* URLSchemes */ = {
@@ -631,7 +645,7 @@
 		B1D8EDDD26D0F8B60028AF32 /* OpenTargets */ = {
 			isa = PBXGroup;
 			children = (
-				B1D8ED8026D0313C0028AF32 /* Workaround */,
+				B1D8ED8026D0313C0028AF32 /* Launch */,
 				B1D8EDD126D0EDBE0028AF32 /* Target */,
 				B1D8EDDE26D0F8B60028AF32 /* OpenTargets.h */,
 				B1D8EDDF26D0F8B60028AF32 /* Info.plist */,
@@ -1179,8 +1193,10 @@
 				B1D8ED7226D015D90028AF32 /* SafariError.swift in Sources */,
 				B1D8ED7426D0168B0028AF32 /* SafariTab.swift in Sources */,
 				B1D8ED4F26D007340028AF32 /* SafariExtensionHandler.swift in Sources */,
+				B1A58A9226D3DE7600511332 /* TargetTableItem.swift in Sources */,
 				B1D8ED6F26D0152F0028AF32 /* SafariWindow.swift in Sources */,
 				B13BA6A626D1175D009F5990 /* Workspace.swift in Sources */,
+				B1A58A9426D3E41E00511332 /* Bundle.swift in Sources */,
 				B1D8ED7626D01CA00028AF32 /* Message.swift in Sources */,
 				B1D8ED7D26D0248D0028AF32 /* TargetGoogleChrome.swift in Sources */,
 			);

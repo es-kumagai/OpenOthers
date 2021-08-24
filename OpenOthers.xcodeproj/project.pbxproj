@@ -34,6 +34,7 @@
 		B1A58AAE26D4E12C00511332 /* SafeUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A58AAD26D4E12C00511332 /* SafeUserDefaults.swift */; };
 		B1A58AB026D4E70900511332 /* SafeUserDefaultsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A58AAF26D4E70900511332 /* SafeUserDefaultsError.swift */; };
 		B1A58AB226D5508D00511332 /* TargetBrave.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A58AB126D5508D00511332 /* TargetBrave.swift */; };
+		B1A58AB426D5544300511332 /* TargetFirefox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A58AB326D5544300511332 /* TargetFirefox.swift */; };
 		B1D8ED2326D0072F0028AF32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D8ED2226D0072F0028AF32 /* AppDelegate.swift */; };
 		B1D8ED2626D0072F0028AF32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1D8ED2426D0072F0028AF32 /* Main.storyboard */; };
 		B1D8ED2826D0072F0028AF32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D8ED2726D0072F0028AF32 /* ViewController.swift */; };
@@ -296,6 +297,7 @@
 		B1A58AAD26D4E12C00511332 /* SafeUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeUserDefaults.swift; sourceTree = "<group>"; };
 		B1A58AAF26D4E70900511332 /* SafeUserDefaultsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeUserDefaultsError.swift; sourceTree = "<group>"; };
 		B1A58AB126D5508D00511332 /* TargetBrave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetBrave.swift; sourceTree = "<group>"; };
+		B1A58AB326D5544300511332 /* TargetFirefox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetFirefox.swift; sourceTree = "<group>"; };
 		B1D8ED1E26D0072F0028AF32 /* OpenOthers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenOthers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D8ED2126D0072F0028AF32 /* OpenOthers.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OpenOthers.entitlements; sourceTree = "<group>"; };
 		B1D8ED2226D0072F0028AF32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -530,6 +532,7 @@
 			children = (
 				B1D8ED7C26D0248D0028AF32 /* TargetGoogleChrome.swift */,
 				B1A58AB126D5508D00511332 /* TargetBrave.swift */,
+				B1A58AB326D5544300511332 /* TargetFirefox.swift */,
 				B1A58A9D26D4139500511332 /* Targets.swift */,
 				B1A58A9F26D4152E00511332 /* OpenTarget.swift */,
 				B1A58AA326D417F000511332 /* TargetListItem.swift */,
@@ -1256,6 +1259,7 @@
 				B133017F26D1A1EA005B411E /* Alert.swift in Sources */,
 				B1A58AB026D4E70900511332 /* SafeUserDefaultsError.swift in Sources */,
 				B1A58A8226D237F000511332 /* StoreProtocol.swift in Sources */,
+				B1A58AB426D5544300511332 /* TargetFirefox.swift in Sources */,
 				B1A58AB226D5508D00511332 /* TargetBrave.swift in Sources */,
 				B1A58A7C26D2376F00511332 /* UserDefaultsStorable.swift in Sources */,
 				B1A58AAE26D4E12C00511332 /* SafeUserDefaults.swift in Sources */,

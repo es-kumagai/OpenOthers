@@ -18,7 +18,8 @@ public extension Targets {
         
         .googleChrome,
         .googleChromeSecretMode,
-        .brave
+        .firefox,
+        .brave,
     ]
     
     static var selectable: [OpenTarget] {

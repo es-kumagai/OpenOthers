@@ -9,15 +9,15 @@ import OpenTargets
 
 public extension OpenTarget {
     
-    static let brave = Brave()
+    static let firefox = Firefox()
 }
 
-public final class Brave : OpenTarget {
+public final class Firefox : OpenTarget {
     
     public convenience init() {
     
-        let name = "Brave"
-        let bundleIdentifier = "com.brave.Browser"
+        let name = "Firefox"
+        let bundleIdentifier = "org.mozilla.firefox"
         let arguments: Array<OpenTarget.Argument> = [
             
             .targetURL,

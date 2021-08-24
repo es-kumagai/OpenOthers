@@ -65,7 +65,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="235" height="24"/>
                                                                 <subviews>
                                                                     <imageView verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bba-Xc-Cfd">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                                        <rect key="frame" x="0.0" y="2" width="20" height="20"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" secondItem="bba-Xc-Cfd" secondAttribute="height" multiplier="1:1" id="V0v-it-63h"/>
                                                                         </constraints>
@@ -75,7 +75,7 @@
                                                                         </connections>
                                                                     </imageView>
                                                                     <textField horizontalHuggingPriority="252" verticalHuggingPriority="750" horizontalCompressionResistancePriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F4G-1B-ij5">
-                                                                        <rect key="frame" x="30" y="4" width="207" height="16"/>
+                                                                        <rect key="frame" x="26" y="4" width="211" height="16"/>
                                                                         <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Target Name" id="lKF-Y7-LgW">
                                                                             <font key="font" usesAppearanceFont="YES"/>
                                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -87,6 +87,8 @@
                                                                     </textField>
                                                                 </subviews>
                                                                 <constraints>
+                                                                    <constraint firstAttribute="bottom" secondItem="bba-Xc-Cfd" secondAttribute="bottom" constant="2" id="C2h-Wf-IiK"/>
+                                                                    <constraint firstItem="bba-Xc-Cfd" firstAttribute="top" secondItem="6kA-ms-jIt" secondAttribute="top" constant="2" id="NbT-MH-sCV"/>
                                                                     <constraint firstAttribute="height" constant="24" id="clV-3U-dpo"/>
                                                                 </constraints>
                                                                 <visibilityPriorities>

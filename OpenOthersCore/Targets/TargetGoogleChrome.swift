@@ -9,8 +9,8 @@ import OpenTargets
 
 public extension OpenTarget {
     
-    static var googleChrome: OpenTarget { GoogleChrome() }
-    static var googleChromeSecretMode: OpenTarget { GoogleChrome(secretMode: true) }
+    static let googleChrome = GoogleChrome()
+    static let googleChromeSecretMode = GoogleChrome(secretMode: true)
 }
 
 public final class GoogleChrome : OpenTarget {

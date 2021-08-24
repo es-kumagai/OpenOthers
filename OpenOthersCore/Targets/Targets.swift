@@ -14,10 +14,11 @@ public enum Targets {}
 
 public extension Targets {
     
-    static var all = [
+    static var all: Array<OpenTarget> = [
         
-        GoogleChrome(),
-        GoogleChromeSecretMode(),
+        .googleChrome,
+        .googleChromeSecretMode,
+        .brave
     ]
     
     static var selectable: [OpenTarget] {

@@ -10,46 +10,31 @@ import OpenTargets
 public extension OpenTarget {
     
     static var googleChrome: OpenTarget { GoogleChrome() }
-    static var googleChromeSecretMode: OpenTarget { GoogleChromeSecretMode() }
+    static var googleChromeSecretMode: OpenTarget { GoogleChrome(secretMode: true) }
 }
 
 public final class GoogleChrome : OpenTarget {
     
-    public init() {
+    public convenience init(secretMode: Bool = false) {
     
-        let name = "Google Chrome"
+        let name: String
         let bundleIdentifier = "com.google.Chrome"
-        let arguments: Array<OpenTarget.Argument> = [
-            
-            .targetURL,
-        ]
+        let arguments: Array<OpenTarget.Argument>
+        let createNewInstance: Bool
 
-        super.init(name: name, bundleIdentifier: bundleIdentifier, arguments: arguments, createNewInstance: true)
-    }
-    
-    public required init(from decoder: Decoder) throws {
+        switch secretMode {
         
-        try super.init(from: decoder)
-    }
-}
+        case false:
+            name = "Google Chrome"
+            createNewInstance = true
+            arguments = [.targetURL]
 
-public final class GoogleChromeSecretMode : OpenTarget {
+        case true:
+            name = "Google Chrome (Secret Mode)"
+            createNewInstance = true
+            arguments = ["-incognito", .targetURL]
+        }
 
-    public init() {
-    
-        let name = "Google Chrome (Secret Mode)"
-        let bundleIdentifier = "com.google.Chrome"
-        let arguments: Array<OpenTarget.Argument> = [
-            
-            "-incognito",
-            .targetURL,
-        ]
-
-        super.init(name: name, bundleIdentifier: bundleIdentifier, arguments: arguments, createNewInstance: true)
-    }
-    
-    public required init(from decoder: Decoder) throws {
-        
-        try super.init(from: decoder)
+        self.init(name: name, bundleIdentifier: bundleIdentifier, arguments: arguments, createNewInstance: createNewInstance)
     }
 }

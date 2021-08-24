@@ -24,7 +24,15 @@
 		B1A58A7C26D2376F00511332 /* UserDefaultsStorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A58A7B26D2376F00511332 /* UserDefaultsStorable.swift */; };
 		B1A58A8226D237F000511332 /* StoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A58A8126D237F000511332 /* StoreProtocol.swift */; };
 		B1A58A9226D3DE7600511332 /* TargetTableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A58A9126D3DE7600511332 /* TargetTableItem.swift */; };
-		B1A58A9426D3E41E00511332 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A58A9326D3E41E00511332 /* Bundle.swift */; };
+		B1A58A9726D4133100511332 /* OpenTargets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D8EDDC26D0F8B60028AF32 /* OpenTargets.framework */; };
+		B1A58A9826D4133100511332 /* OpenTargets.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1D8EDDC26D0F8B60028AF32 /* OpenTargets.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B1A58A9C26D4134D00511332 /* TargetGoogleChrome.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D8ED7C26D0248D0028AF32 /* TargetGoogleChrome.swift */; };
+		B1A58A9E26D4139500511332 /* Targets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A58A9D26D4139500511332 /* Targets.swift */; };
+		B1A58AA026D4152E00511332 /* OpenTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A58A9F26D4152E00511332 /* OpenTarget.swift */; };
+		B1A58AA426D417F000511332 /* TargetListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A58AA326D417F000511332 /* TargetListItem.swift */; };
+		B1A58AA826D41D5100511332 /* TargetsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A58AA726D41D5100511332 /* TargetsState.swift */; };
+		B1A58AAE26D4E12C00511332 /* SafeUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A58AAD26D4E12C00511332 /* SafeUserDefaults.swift */; };
+		B1A58AB026D4E70900511332 /* SafeUserDefaultsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A58AAF26D4E70900511332 /* SafeUserDefaultsError.swift */; };
 		B1D8ED2326D0072F0028AF32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D8ED2226D0072F0028AF32 /* AppDelegate.swift */; };
 		B1D8ED2626D0072F0028AF32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1D8ED2426D0072F0028AF32 /* Main.storyboard */; };
 		B1D8ED2826D0072F0028AF32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D8ED2726D0072F0028AF32 /* ViewController.swift */; };
@@ -42,7 +50,6 @@
 		B1D8ED7426D0168B0028AF32 /* SafariTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D8ED7326D0168B0028AF32 /* SafariTab.swift */; };
 		B1D8ED7626D01CA00028AF32 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D8ED7526D01CA00028AF32 /* Message.swift */; };
 		B1D8ED7826D01CC10028AF32 /* SafariMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D8ED7726D01CC10028AF32 /* SafariMessage.swift */; };
-		B1D8ED7D26D0248D0028AF32 /* TargetGoogleChrome.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D8ED7C26D0248D0028AF32 /* TargetGoogleChrome.swift */; };
 		B1D8EDE526D0F8B60028AF32 /* OpenTargets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D8EDDC26D0F8B60028AF32 /* OpenTargets.framework */; };
 		B1D8EDEC26D0F8B60028AF32 /* OpenTargetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D8EDEB26D0F8B60028AF32 /* OpenTargetsTests.swift */; };
 		B1D8EDEE26D0F8B60028AF32 /* OpenTargets.h in Headers */ = {isa = PBXBuildFile; fileRef = B1D8EDDE26D0F8B60028AF32 /* OpenTargets.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -89,6 +96,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = B13BA6AA26D12707009F5990;
 			remoteInfo = OpenOthersLauncher;
+		};
+		B1A58A9926D4133100511332 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1D8ED1626D0072F0028AF32 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1D8EDDB26D0F8B60028AF32;
+			remoteInfo = OpenTargets;
 		};
 		B1D8ED3126D007340028AF32 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -233,6 +247,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				B1A58A9826D4133100511332 /* OpenTargets.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,7 +288,12 @@
 		B1A58A7B26D2376F00511332 /* UserDefaultsStorable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStorable.swift; sourceTree = "<group>"; };
 		B1A58A8126D237F000511332 /* StoreProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreProtocol.swift; sourceTree = "<group>"; };
 		B1A58A9126D3DE7600511332 /* TargetTableItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetTableItem.swift; sourceTree = "<group>"; };
-		B1A58A9326D3E41E00511332 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		B1A58A9D26D4139500511332 /* Targets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Targets.swift; sourceTree = "<group>"; };
+		B1A58A9F26D4152E00511332 /* OpenTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenTarget.swift; sourceTree = "<group>"; };
+		B1A58AA326D417F000511332 /* TargetListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetListItem.swift; sourceTree = "<group>"; };
+		B1A58AA726D41D5100511332 /* TargetsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetsState.swift; sourceTree = "<group>"; };
+		B1A58AAD26D4E12C00511332 /* SafeUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeUserDefaults.swift; sourceTree = "<group>"; };
+		B1A58AAF26D4E70900511332 /* SafeUserDefaultsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeUserDefaultsError.swift; sourceTree = "<group>"; };
 		B1D8ED1E26D0072F0028AF32 /* OpenOthers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenOthers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D8ED2126D0072F0028AF32 /* OpenOthers.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OpenOthers.entitlements; sourceTree = "<group>"; };
 		B1D8ED2226D0072F0028AF32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -406,6 +426,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1A58A9726D4133100511332 /* OpenTargets.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,7 +456,6 @@
 			isa = PBXGroup;
 			children = (
 				B13BA6A526D1175D009F5990 /* Workspace.swift */,
-				B1A58A9326D3E41E00511332 /* Bundle.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -480,6 +500,8 @@
 			children = (
 				B133018426D1C395005B411E /* UserDefaultsStore.swift */,
 				B1A58A7B26D2376F00511332 /* UserDefaultsStorable.swift */,
+				B1A58AAD26D4E12C00511332 /* SafeUserDefaults.swift */,
+				B1A58AAF26D4E70900511332 /* SafeUserDefaultsError.swift */,
 			);
 			path = UserDefaults;
 			sourceTree = "<group>";
@@ -499,6 +521,17 @@
 				B1A58A9126D3DE7600511332 /* TargetTableItem.swift */,
 			);
 			path = TargetTable;
+			sourceTree = "<group>";
+		};
+		B1A58A9B26D4133B00511332 /* Targets */ = {
+			isa = PBXGroup;
+			children = (
+				B1D8ED7C26D0248D0028AF32 /* TargetGoogleChrome.swift */,
+				B1A58A9D26D4139500511332 /* Targets.swift */,
+				B1A58A9F26D4152E00511332 /* OpenTarget.swift */,
+				B1A58AA326D417F000511332 /* TargetListItem.swift */,
+			);
+			path = Targets;
 			sourceTree = "<group>";
 		};
 		B1D8ED1526D0072F0028AF32 = {
@@ -574,7 +607,6 @@
 			isa = PBXGroup;
 			children = (
 				B13BA6A426D11755009F5990 /* Utilities */,
-				B1D8ED7B26D0245E0028AF32 /* Targets */,
 				B1D8ED7026D015370028AF32 /* SafariServices */,
 				B1A58A8C26D3A5EA00511332 /* TargetTable */,
 				B1D8ED7526D01CA00028AF32 /* Message.swift */,
@@ -606,14 +638,6 @@
 				B1D8ED7726D01CC10028AF32 /* SafariMessage.swift */,
 			);
 			path = SafariServices;
-			sourceTree = "<group>";
-		};
-		B1D8ED7B26D0245E0028AF32 /* Targets */ = {
-			isa = PBXGroup;
-			children = (
-				B1D8ED7C26D0248D0028AF32 /* TargetGoogleChrome.swift */,
-			);
-			path = Targets;
 			sourceTree = "<group>";
 		};
 		B1D8ED8026D0313C0028AF32 /* Launch */ = {
@@ -691,6 +715,7 @@
 		B1DFBCF926D157E8005598F6 /* OpenOthersCore */ = {
 			isa = PBXGroup;
 			children = (
+				B1A58A9B26D4133B00511332 /* Targets */,
 				B133017E26D1A1DD005B411E /* Utilities */,
 				B1DFBD1526D15808005598F6 /* Bundle */,
 				B1DFBCFA26D157E8005598F6 /* OpenOthersCore.h */,
@@ -713,6 +738,7 @@
 			children = (
 				B1DFBD1626D15814005598F6 /* Constants.swift */,
 				B1A58A7026D1D0A000511332 /* BundleState.swift */,
+				B1A58AA726D41D5100511332 /* TargetsState.swift */,
 			);
 			path = Bundle;
 			sourceTree = "<group>";
@@ -930,6 +956,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				B1A58A9A26D4133100511332 /* PBXTargetDependency */,
 			);
 			name = OpenOthersCore;
 			packageProductDependencies = (
@@ -1196,9 +1223,7 @@
 				B1A58A9226D3DE7600511332 /* TargetTableItem.swift in Sources */,
 				B1D8ED6F26D0152F0028AF32 /* SafariWindow.swift in Sources */,
 				B13BA6A626D1175D009F5990 /* Workspace.swift in Sources */,
-				B1A58A9426D3E41E00511332 /* Bundle.swift in Sources */,
 				B1D8ED7626D01CA00028AF32 /* Message.swift in Sources */,
-				B1D8ED7D26D0248D0028AF32 /* TargetGoogleChrome.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1226,10 +1251,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				B133017F26D1A1EA005B411E /* Alert.swift in Sources */,
+				B1A58AB026D4E70900511332 /* SafeUserDefaultsError.swift in Sources */,
 				B1A58A8226D237F000511332 /* StoreProtocol.swift in Sources */,
 				B1A58A7C26D2376F00511332 /* UserDefaultsStorable.swift in Sources */,
+				B1A58AAE26D4E12C00511332 /* SafeUserDefaults.swift in Sources */,
+				B1A58AA026D4152E00511332 /* OpenTarget.swift in Sources */,
 				B133018326D1C21B005B411E /* Bundle.swift in Sources */,
+				B1A58AA426D417F000511332 /* TargetListItem.swift in Sources */,
+				B1A58A9E26D4139500511332 /* Targets.swift in Sources */,
+				B1A58A9C26D4134D00511332 /* TargetGoogleChrome.swift in Sources */,
 				B1DFBD1726D15814005598F6 /* Constants.swift in Sources */,
+				B1A58AA826D41D5100511332 /* TargetsState.swift in Sources */,
 				B1A58A7926D2374300511332 /* UserDefaultsStore.swift in Sources */,
 				B133018126D1A23A005B411E /* AlertButton.swift in Sources */,
 				B1A58A7826D2373200511332 /* BundleState.swift in Sources */,
@@ -1256,6 +1288,11 @@
 			isa = PBXTargetDependency;
 			target = B13BA6AA26D12707009F5990 /* OpenOthersLauncher */;
 			targetProxy = B13BA6C826D1270A009F5990 /* PBXContainerItemProxy */;
+		};
+		B1A58A9A26D4133100511332 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1D8EDDB26D0F8B60028AF32 /* OpenTargets */;
+			targetProxy = B1A58A9926D4133100511332 /* PBXContainerItemProxy */;
 		};
 		B1D8ED3226D007340028AF32 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

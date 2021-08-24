@@ -12,7 +12,9 @@ import OpenOthersCore
 @main @objcMembers
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    var bundleState = BundleState()
+    let bundleState = BundleState()
+    var targetState = TargetsState()
+    
     var hostApplicationLaunchedByLauncher: NSRunningApplication?
     var schemeManager: URLSchemeManager!
     var terminationTimer: Timer!
@@ -20,6 +22,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     override func awakeFromNib() {
         
         super.awakeFromNib()
+        
+        updateSelectableTargets()
         
         schemeManager = URLSchemeManager(schemes: [OpenOthersScheme.self])
         schemeManager.delegate = self
@@ -44,6 +48,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 }
 
 extension AppDelegate {
+    
+    func updateSelectableTargets() {
+    
+        targetState.selectableTargetListItems = Targets.selectableTargetListItems
+    }
     
     /// Terminates launcher process automatically when the host application is terminated.
     /// - Parameter timer: The timer that invoked this method.

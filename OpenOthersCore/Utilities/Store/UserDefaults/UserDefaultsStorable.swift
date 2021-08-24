@@ -5,38 +5,60 @@
 //  Created by Tomohiro Kumagai on 2021/08/22.
 //
 
-extension Double : UserDefaultsStorable {}
-extension Float : UserDefaultsStorable {}
-extension String : UserDefaultsStorable {}
-extension Bool : UserDefaultsStorable {}
-extension Data : UserDefaultsStorable {}
-extension Array : UserDefaultsStorable where Element : UserDefaultsStorable {}
-extension Dictionary : UserDefaultsStorable where Key == String, Value : UserDefaultsStorable {}
-extension Optional : UserDefaultsStorable where Wrapped : UserDefaultsStorable {}
-
-
 /// A storeable type; this protocol only must conform to types compatible with UserDefault.
 public protocol UserDefaultsStorable {
     
     var userDefaultsStoreableValue: Any { get }
     
-    init?(storeableValue source: Any)
+    init?(userDefaultsStorableValue source: Any)
 }
 
-extension UserDefaultsStorable {
+extension Array : UserDefaultsStorable where Element : UserDefaultsStorable {
 
-    public var userDefaultsStoreableValue: Any {
-
-        self
-    }
-    
-    public init?(storeableValue source: Any) {
+    public init?(userDefaultsStorableValue source: Any) {
         
-        guard let value = source as? Self else {
+        guard let elements = source as? Array<Any> else {
             
             return nil
         }
         
-        self = value
+        let values = elements.map(Element.init(userDefaultsStorableValue:))
+        
+        guard values.allSatisfy( { $0 != nil }) else {
+            
+            return nil
+        }
+        
+        self = values.compactMap { $0 }
+    }
+    
+    public var userDefaultsStoreableValue: Any {
+        
+        map(\.userDefaultsStoreableValue)
+    }
+}
+
+extension Dictionary : UserDefaultsStorable where Key == String, Value : UserDefaultsStorable {
+
+    public init?(userDefaultsStorableValue source: Any) {
+        
+        guard let elements = source as? Dictionary<String, Any> else {
+            
+            return nil
+        }
+        
+        let items = elements.mapValues(Value.init(userDefaultsStorableValue:))
+        
+        guard items.allSatisfy( { $0.value != nil }) else {
+            
+            return nil
+        }
+        
+        self = items.compactMapValues { $0 }
+    }
+    
+    public var userDefaultsStoreableValue: Any {
+        
+        mapValues(\.userDefaultsStoreableValue)
     }
 }

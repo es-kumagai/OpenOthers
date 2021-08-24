@@ -14,6 +14,8 @@ public protocol StoreProtocol {
     var assignedKey: Key { get }
     var defaultValue: Value { get }
     var store: Store { get }
+
+    var wrappedValue: Value { get set }
     
     init(defaultValue value: Value, key: Key, store: Store)
     

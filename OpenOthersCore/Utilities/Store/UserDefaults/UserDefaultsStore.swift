@@ -12,20 +12,13 @@ public struct UserDefaultsStore<Value> : StoreProtocol {
     
     public let assignedKey: String
     public let defaultValue: Value
-    public let store: UserDefaults
+    public let store: SafeUserDefaults
     
-    public enum ReadError : Error {
+    func removeFromStore() {
         
-        case unexpectedValueType(Any?, expected: Any.Type)
-        case unarchivingFailure(Data, toType: Any.Type)
-        case codingError(Error)
+        store.removeValue(forKey: assignedKey)
     }
-    
-    public enum WriteError : Error {
-        
-        case codingError(Error)
-    }
-    
+
     public var wrappedValue: Value {
         
         set (value) {
@@ -42,7 +35,7 @@ public struct UserDefaultsStore<Value> : StoreProtocol {
         self
     }
 
-    public init(defaultValue value: Value, key: String, store: UserDefaults) {
+    public init(defaultValue value: Value, key: String, store: SafeUserDefaults) {
         
         self.assignedKey = key
         self.defaultValue = value
@@ -50,7 +43,7 @@ public struct UserDefaultsStore<Value> : StoreProtocol {
     }
 }
 
-extension UserDefaultsStore {
+public extension UserDefaultsStore {
     
     init(wrappedValue value: Value, key: Key, appGroupID: String?) {
        
@@ -59,159 +52,116 @@ extension UserDefaultsStore {
 
     init(defaultValue value: Value, key: Key, appGroupID: String? = nil) {
         
-        let store = appGroupID.map(UserDefaults.init(suiteName:)).map(\.unsafelyUnwrapped) ?? .standard
+        let store = appGroupID.map(SafeUserDefaults.init(suiteName:)).map(\.unsafelyUnwrapped) ?? .standard
 
         self.init(defaultValue: value, key: key, store: store)
     }
-
-    func removeFromStore() {
-        
-        store.removeObject(forKey: assignedKey)
-    }
-
-    public func write(_ value: Value) throws {
-        
-        store.set(value, forKey: assignedKey)
-    }
     
-    public func read() throws -> Value {
+    /// Only supports Basic types and types compatible with either UserDefaultsStorable or NSCoding.
+    /// - Parameter value: <#value description#>
+    /// - Throws: <#description#>
+    func write(_ value: Value) throws {
         
-        store.value(forKey: assignedKey) as? Value ?? defaultValue
-    }
-}
-
-private extension UserDefaultsStore {
-    
-    func valueForReading<Result : UserDefaultsStorable>(as _: Result.Type) throws -> Result? {
+        switch value {
         
-        guard let value = store.value(forKey: assignedKey) else {
+        case let value as NSData:
+            try store.write(value, forKey: assignedKey)
             
-            return nil
-        }
-        
-        guard let result = Result(storeableValue: value) else {
+        case let value as NSString:
+            try store.write(value, forKey: assignedKey)
             
-            throw ReadError.unexpectedValueType(value, expected: Result.self)
-        }
+        case let value as NSNumber:
+            try store.write(value, forKey: assignedKey)
+            
+        case let value as NSDate:
+            try store.write(value, forKey: assignedKey)
+            
+        case let value as Array<NSData>:
+            try store.write(value, forKey: assignedKey)
+            
+        case let value as Array<NSString>:
+            try store.write(value, forKey: assignedKey)
+            
+        case let value as Array<NSNumber>:
+            try store.write(value, forKey: assignedKey)
+            
+        case let value as Array<NSDate>:
+            try store.write(value, forKey: assignedKey)
+            
+        case let value as SafeUserDefaults.Dictionary<NSData>:
+            try store.write(value, forKey: assignedKey)
+            
+        case let value as SafeUserDefaults.Dictionary<NSString>:
+            try store.write(value, forKey: assignedKey)
+            
+        case let value as SafeUserDefaults.Dictionary<NSNumber>:
+            try store.write(value, forKey: assignedKey)
+            
+        case let value as SafeUserDefaults.Dictionary<NSDate>:
+            try store.write(value, forKey: assignedKey)
         
-        return result
+        case let value as UserDefaultsStorable:
+            try store.write(value, forKey: assignedKey)
+            
+        case let value as NSSecureCoding:
+            try store.write(value, forKey: assignedKey)
+            
+        case let value as NSCoding:
+            try store.write(value, forKey: assignedKey)
+            
+        default:
+            throw SafeUserDefaults.WriteError.incompatibleValue
+        }
     }
     
-    func archivedDataForWriting<T : NSCoding>(of value: T, requiringSecureCoding: Bool) throws -> Data {
+    func read() throws -> Value {
         
         do {
-            return try NSKeyedArchiver.archivedData(withRootObject: value, requiringSecureCoding: requiringSecureCoding)
+            return try store.unsafeRead(forKey: assignedKey, as: Value.self, alternativeValueIfNotExist: defaultValue)
         }
-        catch {
+        catch SafeUserDefaults.ReadError.incompatibleValue(let anyValue, with: _) {
+
+            switch anyValue {
             
-            throw WriteError.codingError(error)
-        }
-    }
-    
-    func unarchivedDataForReading<Result : NSCoding>(of anyValue: Any?, to _: Result.Type) throws -> Result? {
-        
-        do {
-            guard let anyValue = anyValue else {
+            case let source where Value.self is UserDefaultsStorable.Type:
+
+                let storableType = Value.self as! UserDefaultsStorable.Type
                 
-                return nil
-            }
-            
-            guard let data = anyValue as? Data else {
-            
-                throw ReadError.unexpectedValueType(anyValue, expected: Data.self)
-            }
-            
-            guard let value = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) else {
+                guard let value = storableType.init(userDefaultsStorableValue: source) as? Value else {
+                    
+                    throw SafeUserDefaults.ReadError.incompatibleValue(source, with: Value.self)
+                }
                 
-                throw ReadError.unarchivingFailure(data, toType: Result.self)
-            }
+                return value
+
+            case let source as Data:
             
-            guard let result = value as? Result else {
+                do {
+                    
+                    guard let anyValue = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(source) else {
+                        
+                        throw SafeUserDefaults.ReadError.incompatibleValue(source, with: Value.self)
+                    }
+                    
+                    guard let value = anyValue as? Value else {
+                        
+                        throw SafeUserDefaults.ReadError.incompatibleValue(anyValue, with: Value.self)
+                    }
+                    
+                    return value
+                }
+                catch let error as SafeUserDefaults.ReadError {
+                    
+                    throw error
+                }
+                catch {
+                    
+                    throw SafeUserDefaults.ReadError.failedToUnarchive(error)
+                }
                 
-                throw ReadError.unexpectedValueType(value, expected: Result.self)
+            default:
+                throw SafeUserDefaults.ReadError.incompatibleValue(anyValue, with: Value.self)
             }
-            
-            return result
         }
-        catch {
-            
-            throw ReadError.codingError(error)
-        }
-    }
-}
-
-extension UserDefaultsStore where Value : UserDefaultsStorable {
-    
-    public func write(_ value: Value) throws {
-        
-        store.set(value.userDefaultsStoreableValue, forKey: assignedKey)
-    }
-    
-    public func read() throws -> Value {
-        
-        try valueForReading(as: Value.self) ?? defaultValue
-    }
-}
-
-extension UserDefaultsStore where Value : NSCoding {
-    
-    public func write(_ value: Value) throws {
-        
-        try store.set(archivedDataForWriting(of: value, requiringSecureCoding: false), forKey: assignedKey)
-    }
-    
-    public func read() throws -> Value {
-        
-        try unarchivedDataForReading(of: store.value(forKey: assignedKey), to: Value.self) ?? defaultValue
-    }
-}
-
-extension UserDefaultsStore where Value : NSSecureCoding {
-    
-    public func write(_ value: Value) throws {
-        
-        try store.set(archivedDataForWriting(of: value, requiringSecureCoding: Value.supportsSecureCoding), forKey: assignedKey)
-    }
-    
-    public func read() throws -> Value {
-        
-        try unarchivedDataForReading(of: store.value(forKey: assignedKey), to: Value.self) ?? defaultValue
-    }
-}
-
-extension UserDefaultsStore where Value : ReferenceConvertible, Value.ReferenceType : NSCoding {
-    
-    public func read() throws -> Value {
-        
-        guard let referenceValue = try unarchivedDataForReading(of: store.value(forKey: assignedKey), to: Value.ReferenceType.self) else {
-            
-            return defaultValue
-        }
-
-        guard let result = referenceValue as? Value else {
-            
-            throw ReadError.unexpectedValueType(referenceValue, expected: Value.self)
-        }
-        
-        return result
-    }
-
-    public func write(_ value: Value) throws {
-        
-        let value = value as! Value.ReferenceType
-        let data = try archivedDataForWriting(of: value, requiringSecureCoding: false)
-        
-        store.set(data, forKey: assignedKey)
-    }
-}
-
-extension UserDefaultsStore where Value : ReferenceConvertible, Value.ReferenceType : NSSecureCoding {
-    
-    public func write(_ value: Value) throws {
-        
-        let value = value as! Value.ReferenceType
-        let data = try archivedDataForWriting(of: value, requiringSecureCoding: Value.ReferenceType.supportsSecureCoding)
-        
-        store.set(data, forKey: assignedKey)
     }
 }

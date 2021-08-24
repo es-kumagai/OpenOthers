@@ -14,6 +14,8 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
     @IBOutlet var targetsController: NSArrayController!
     @IBOutlet weak var targetList: NSTableView!
     
+    let targetsState = TargetsState()
+    
     static let shared: SafariExtensionViewController = {
     
         let shared = SafariExtensionViewController()
@@ -26,11 +28,9 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
         
         super.awakeFromNib()
         
-        targetsController.content = [
-            
-            TargetTableItem(target: GoogleChrome()),
-            TargetTableItem(target: GoogleChromeSecretMode()),
-        ]
+        let targets = targetsState.selectableTargetListItems
+        
+        targetsController.content = targets.map(TargetTableItem.init)
     }
 }
 

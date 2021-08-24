@@ -7,29 +7,30 @@
 
 import Cocoa
 import OpenTargets
+import OpenOthersCore
 
 @objcMembers
 final class TargetTableItem: NSObject {
 
     var target: OpenTarget
+    var iconImage: NSImage?
     
-    init(target: OpenTarget) {
+    init(target: OpenTarget, iconImage: NSImage?) {
     
         self.target = target
+        self.iconImage = iconImage
     }
     
     var name: String {
         
         target.name
     }
+}
+
+extension TargetTableItem {
     
-    var iconImage: NSImage? {
+    convenience init(_ item: TargetListItem) {
         
-        guard let bundle = Bundle(identifier: target.bundleIdentifier) else {
-            
-            return nil
-        }
-        
-        return bundle.iconImage
+        self.init(target: item.target, iconImage: item.iconImage)
     }
 }

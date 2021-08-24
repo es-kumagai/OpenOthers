@@ -5,7 +5,7 @@
 //  Created by Tomohiro Kumagai on 2021/08/22.
 //
 
-import Foundation
+import AppKit
 
 public extension Bundle {
     
@@ -17,5 +17,12 @@ public extension Bundle {
     var modificationDate: Date? {
         
         bundleAttributes?[.modificationDate] as? Date
+    }
+    
+    var iconImage: NSImage? {
+
+        object(forInfoDictionaryKey: "CFBundleIconFile")
+            .flatMap { $0 as? String }
+            .flatMap { image(forResource: $0) }
     }
 }

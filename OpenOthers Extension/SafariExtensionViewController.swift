@@ -28,9 +28,7 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
         
         super.awakeFromNib()
         
-        let targets = targetsState.selectableTargetListItems
-        
-        targetsController.content = targets.map(TargetTableItem.init)
+        updateTargetList()
     }
 }
 
@@ -46,6 +44,20 @@ extension SafariExtensionViewController {
         return targets.map(\.target)
     }
 
+    func updateTargetList() {
+        
+        do {
+            let selectableTargets = try targetsState.$selectableTargetListItems.read()
+            let selectableTargetTableItems = selectableTargets.map(TargetTableItem.init)
+        
+            targetsController.content = selectableTargetTableItems
+        }
+        catch {
+            
+            targetsController.content = Array<TargetTableItem>()
+        }
+    }
+    
     func open(_ target: OpenTarget, withLocationInWindow window: SFSafariWindow) {
         
         window.getActivePageProperties { result in
@@ -82,7 +94,6 @@ extension SafariExtensionViewController {
                 fatalError("Failed to get properties in active page.")
             }
         }
-
     }
 }
 

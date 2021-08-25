@@ -26,8 +26,12 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
         validationHandler(true, "")
     }
     
-    override func popoverViewController() -> SFSafariExtensionViewController {
+    override func popoverViewController() -> SafariExtensionViewController {
         return SafariExtensionViewController.shared
     }
 
+    override func popoverWillShow(in window: SFSafariWindow) {
+        
+        SafariExtensionViewController.shared.updateTargetList()
+    }
 }

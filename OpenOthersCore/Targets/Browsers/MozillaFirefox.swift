@@ -9,14 +9,14 @@ import OpenTargets
 
 public extension OpenTarget {
     
-    static let firefox = Firefox()
+    static let mozillaFirefox = MozillaFirefox()
 }
 
-public final class Firefox : OpenTarget {
+public final class MozillaFirefox : OpenTarget {
     
     public convenience init() {
     
-        let name = "Firefox"
+        let name = "Mozilla Firefox"
         let bundleIdentifier = "org.mozilla.firefox"
         let arguments: Array<OpenTarget.Argument> = [
             

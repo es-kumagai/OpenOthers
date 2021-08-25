@@ -18,7 +18,7 @@ public extension Targets {
         
         .googleChrome,
         .googleChromeSecretMode,
-        .firefox,
+        .mozillaFirefox,
         .microsoftEdge,
         .brave,
         .operaNeon,

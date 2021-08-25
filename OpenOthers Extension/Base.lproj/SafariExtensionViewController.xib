@@ -16,22 +16,22 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="c22-O7-iKe" userLabel="Safari Extension View">
-            <rect key="frame" x="0.0" y="0.0" width="330" height="381"/>
+            <rect key="frame" x="0.0" y="0.0" width="350" height="378"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4Iy-aV-wGF">
-                    <rect key="frame" x="18" y="345" width="66" height="16"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Open in ..." id="2Ec-kd-q2K">
+                    <rect key="frame" x="18" y="342" width="314" height="16"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Open in the browser selected below" id="2Ec-kd-q2K">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="AgU-um-DpP">
-                    <rect key="frame" x="20" y="20" width="290" height="341"/>
+                    <rect key="frame" x="20" y="20" width="310" height="338"/>
                     <subviews>
                         <scrollView autohidesScrollers="YES" horizontalLineScroll="24" horizontalPageScroll="10" verticalLineScroll="24" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="Wie-fN-ERm">
-                            <rect key="frame" x="0.0" y="0.0" width="290" height="317"/>
+                            <rect key="frame" x="0.0" y="-3" width="290" height="317"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <clipView key="contentView" id="pzG-xu-wCS">
                                 <rect key="frame" x="1" y="1" width="288" height="315"/>
@@ -58,7 +58,7 @@
                                                 <tableColumnResizingMask key="resizingMask" resizeWithTable="YES"/>
                                                 <prototypeCellViews>
                                                     <tableCellView id="zw9-ZL-uCx">
-                                                        <rect key="frame" x="8" y="0.0" width="235" height="24"/>
+                                                        <rect key="frame" x="18" y="0.0" width="235" height="24"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
                                                             <stackView distribution="fill" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6kA-ms-jIt">
@@ -139,15 +139,15 @@
                 </customView>
             </subviews>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="4Iy-aV-wGF" secondAttribute="trailing" constant="248" id="DOD-zP-DHQ"/>
                 <constraint firstItem="4Iy-aV-wGF" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="20" symbolic="YES" id="LKv-qR-pHd"/>
                 <constraint firstAttribute="bottom" secondItem="AgU-um-DpP" secondAttribute="bottom" constant="20" symbolic="YES" id="QpW-aE-uhy"/>
                 <constraint firstItem="AgU-um-DpP" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" symbolic="YES" id="TBg-5P-Vee"/>
                 <constraint firstItem="AgU-um-DpP" firstAttribute="top" secondItem="4Iy-aV-wGF" secondAttribute="top" id="Uew-Kp-SZk"/>
                 <constraint firstAttribute="trailing" secondItem="AgU-um-DpP" secondAttribute="trailing" constant="20" symbolic="YES" id="ddr-3T-rYP"/>
-                <constraint firstItem="4Iy-aV-wGF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" symbolic="YES" id="v4f-kS-9UU"/>
+                <constraint firstAttribute="trailing" secondItem="4Iy-aV-wGF" secondAttribute="trailing" constant="20" symbolic="YES" id="tWy-dF-3za"/>
+                <constraint firstItem="4Iy-aV-wGF" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" symbolic="YES" id="v4f-kS-9UU"/>
             </constraints>
-            <point key="canvasLocation" x="91" y="6.5"/>
+            <point key="canvasLocation" x="23" y="6.5"/>
         </customView>
         <customObject id="AVf-ys-re4"/>
         <arrayController id="wic-ds-hBg" userLabel="Targets Controller"/>

@@ -34,7 +34,7 @@
 		B1A58AAE26D4E12C00511332 /* SafeUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A58AAD26D4E12C00511332 /* SafeUserDefaults.swift */; };
 		B1A58AB026D4E70900511332 /* SafeUserDefaultsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A58AAF26D4E70900511332 /* SafeUserDefaultsError.swift */; };
 		B1A58AB226D5508D00511332 /* TargetBrave.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A58AB126D5508D00511332 /* TargetBrave.swift */; };
-		B1A58AB426D5544300511332 /* TargetFirefox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A58AB326D5544300511332 /* TargetFirefox.swift */; };
+		B1A58AB426D5544300511332 /* MozillaFirefox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A58AB326D5544300511332 /* MozillaFirefox.swift */; };
 		B1A58AB626D5C9C300511332 /* MicrosoftEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A58AB526D5C9C300511332 /* MicrosoftEdge.swift */; };
 		B1A58AB926D5D0DF00511332 /* OperaNeon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A58AB826D5D0DF00511332 /* OperaNeon.swift */; };
 		B1A58ABB26D5D1D100511332 /* Vivaldi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A58ABA26D5D1D100511332 /* Vivaldi.swift */; };
@@ -300,7 +300,7 @@
 		B1A58AAD26D4E12C00511332 /* SafeUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeUserDefaults.swift; sourceTree = "<group>"; };
 		B1A58AAF26D4E70900511332 /* SafeUserDefaultsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeUserDefaultsError.swift; sourceTree = "<group>"; };
 		B1A58AB126D5508D00511332 /* TargetBrave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetBrave.swift; sourceTree = "<group>"; };
-		B1A58AB326D5544300511332 /* TargetFirefox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetFirefox.swift; sourceTree = "<group>"; };
+		B1A58AB326D5544300511332 /* MozillaFirefox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MozillaFirefox.swift; sourceTree = "<group>"; };
 		B1A58AB526D5C9C300511332 /* MicrosoftEdge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MicrosoftEdge.swift; sourceTree = "<group>"; };
 		B1A58AB826D5D0DF00511332 /* OperaNeon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperaNeon.swift; sourceTree = "<group>"; };
 		B1A58ABA26D5D1D100511332 /* Vivaldi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vivaldi.swift; sourceTree = "<group>"; };
@@ -537,7 +537,6 @@
 			isa = PBXGroup;
 			children = (
 				B1A58AB726D5C9CA00511332 /* Browsers */,
-				B1A58AB326D5544300511332 /* TargetFirefox.swift */,
 				B1A58A9D26D4139500511332 /* Targets.swift */,
 				B1A58A9F26D4152E00511332 /* OpenTarget.swift */,
 				B1A58AA326D417F000511332 /* TargetListItem.swift */,
@@ -548,6 +547,7 @@
 		B1A58AB726D5C9CA00511332 /* Browsers */ = {
 			isa = PBXGroup;
 			children = (
+				B1A58AB326D5544300511332 /* MozillaFirefox.swift */,
 				B1A58AB526D5C9C300511332 /* MicrosoftEdge.swift */,
 				B1D8ED7C26D0248D0028AF32 /* GoogleChrome.swift */,
 				B1A58AB126D5508D00511332 /* TargetBrave.swift */,
@@ -1277,7 +1277,7 @@
 				B1A58AB026D4E70900511332 /* SafeUserDefaultsError.swift in Sources */,
 				B1A58A8226D237F000511332 /* StoreProtocol.swift in Sources */,
 				B1A58ABB26D5D1D100511332 /* Vivaldi.swift in Sources */,
-				B1A58AB426D5544300511332 /* TargetFirefox.swift in Sources */,
+				B1A58AB426D5544300511332 /* MozillaFirefox.swift in Sources */,
 				B1A58AB226D5508D00511332 /* TargetBrave.swift in Sources */,
 				B1A58A7C26D2376F00511332 /* UserDefaultsStorable.swift in Sources */,
 				B1A58AAE26D4E12C00511332 /* SafeUserDefaults.swift in Sources */,

@@ -28,7 +28,6 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
         
         super.awakeFromNib()
         
-        updateTargetList()
     }
 }
 
@@ -100,8 +99,6 @@ extension SafariExtensionViewController {
 extension SafariExtensionViewController : NSTableViewDelegate {
     
     func tableViewSelectionDidChange(_ notification: Notification) {
-
-        dismissPopover()
 
         let tableView = notification.object as! NSTableView
         let selectedRow = tableView.selectedRow

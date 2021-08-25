@@ -19,7 +19,10 @@ public extension Targets {
         .googleChrome,
         .googleChromeSecretMode,
         .firefox,
+        .microsoftEdge,
         .brave,
+        .operaNeon,
+        .vivaldi,
     ]
     
     static var selectable: [OpenTarget] {

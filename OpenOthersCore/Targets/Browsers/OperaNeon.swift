@@ -10,19 +10,31 @@ import OpenTargets
 public extension OpenTarget {
     
     static let operaNeon = OperaNeon()
+    static let operaNeonSecretMode = OperaNeon(secretMode: true)
 }
 
 public final class OperaNeon : OpenTarget {
     
-    public convenience init() {
+    public convenience init(secretMode: Bool = false) {
     
-        let name = "Opera Neon"
+        let name: String
         let bundleIdentifier = "com.opera.Neon"
-        let arguments: Array<OpenTarget.Argument> = [
-            
-            .targetURL,
-        ]
+        let arguments: Array<OpenTarget.Argument>
+        let createNewInstance: Bool
 
-        self.init(name: name, bundleIdentifier: bundleIdentifier, arguments: arguments, createNewInstance: true)
+        switch secretMode {
+        
+        case false:
+            name = "Opera Neon"
+            createNewInstance = true
+            arguments = [.targetURL]
+
+        case true:
+            name = "Opera Neon (Secret Mode)"
+            createNewInstance = true
+            arguments = ["-incognito", .targetURL]
+        }
+
+        self.init(name: name, bundleIdentifier: bundleIdentifier, arguments: arguments, createNewInstance: createNewInstance)
     }
 }

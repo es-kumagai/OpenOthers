@@ -19,9 +19,13 @@ public extension Targets {
         .googleChrome,
         .googleChromeSecretMode,
         .mozillaFirefox,
+        .mozillaFirefoxSecretMode,
         .microsoftEdge,
+        .microsoftEdgeSecretMode,
         .brave,
+        .braveSecretMode,
         .operaNeon,
+        .operaNeonSecretMode,
         .vivaldi,
     ]
     

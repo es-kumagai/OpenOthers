@@ -10,19 +10,31 @@ import OpenTargets
 public extension OpenTarget {
     
     static let brave = Brave()
+    static let braveSecretMode = Brave(secretMode: true)
 }
 
 public final class Brave : OpenTarget {
     
-    public convenience init() {
+    public convenience init(secretMode: Bool = false) {
     
-        let name = "Brave"
+        let name: String
         let bundleIdentifier = "com.brave.Browser"
-        let arguments: Array<OpenTarget.Argument> = [
-            
-            .targetURL,
-        ]
+        let arguments: Array<OpenTarget.Argument>
+        let createNewInstance: Bool
 
-        self.init(name: name, bundleIdentifier: bundleIdentifier, arguments: arguments, createNewInstance: true)
+        switch secretMode {
+        
+        case false:
+            name = "Brave"
+            createNewInstance = true
+            arguments = [.targetURL]
+
+        case true:
+            name = "Brave (Secret Mode)"
+            createNewInstance = true
+            arguments = ["-incognito", .targetURL]
+        }
+
+        self.init(name: name, bundleIdentifier: bundleIdentifier, arguments: arguments, createNewInstance: createNewInstance)
     }
 }

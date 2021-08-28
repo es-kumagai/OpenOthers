@@ -39,6 +39,8 @@
 		B1A58AB926D5D0DF00511332 /* OperaNeon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A58AB826D5D0DF00511332 /* OperaNeon.swift */; };
 		B1A58ABB26D5D1D100511332 /* Vivaldi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A58ABA26D5D1D100511332 /* Vivaldi.swift */; };
 		B1B3DAC926D9E0570033E955 /* ObjectiveC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B3DAC826D9E0570033E955 /* ObjectiveC.swift */; };
+		B1B3DAD126DA9F940033E955 /* ToolbarItemIcon-Debug.pdf in Resources */ = {isa = PBXBuildFile; fileRef = B1B3DACF26DA9F930033E955 /* ToolbarItemIcon-Debug.pdf */; };
+		B1B3DAD226DA9F940033E955 /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = B1B3DAD026DA9F930033E955 /* ToolbarItemIcon.pdf */; };
 		B1D8ED2326D0072F0028AF32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D8ED2226D0072F0028AF32 /* AppDelegate.swift */; };
 		B1D8ED2626D0072F0028AF32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1D8ED2426D0072F0028AF32 /* Main.storyboard */; };
 		B1D8ED2826D0072F0028AF32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D8ED2726D0072F0028AF32 /* ViewController.swift */; };
@@ -49,7 +51,6 @@
 		B1D8ED4F26D007340028AF32 /* SafariExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D8ED4E26D007340028AF32 /* SafariExtensionHandler.swift */; };
 		B1D8ED5126D007340028AF32 /* SafariExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D8ED5026D007340028AF32 /* SafariExtensionViewController.swift */; };
 		B1D8ED5426D007340028AF32 /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = B1D8ED5326D007340028AF32 /* script.js */; };
-		B1D8ED5626D007340028AF32 /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = B1D8ED5526D007340028AF32 /* ToolbarItemIcon.pdf */; };
 		B1D8ED5926D007340028AF32 /* SafariExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1D8ED5726D007340028AF32 /* SafariExtensionViewController.xib */; };
 		B1D8ED6F26D0152F0028AF32 /* SafariWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D8ED6E26D0152F0028AF32 /* SafariWindow.swift */; };
 		B1D8ED7226D015D90028AF32 /* SafariError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D8ED7126D015D90028AF32 /* SafariError.swift */; };
@@ -306,6 +307,8 @@
 		B1A58AB826D5D0DF00511332 /* OperaNeon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperaNeon.swift; sourceTree = "<group>"; };
 		B1A58ABA26D5D1D100511332 /* Vivaldi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vivaldi.swift; sourceTree = "<group>"; };
 		B1B3DAC826D9E0570033E955 /* ObjectiveC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveC.swift; sourceTree = "<group>"; };
+		B1B3DACF26DA9F930033E955 /* ToolbarItemIcon-Debug.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "ToolbarItemIcon-Debug.pdf"; sourceTree = "<group>"; };
+		B1B3DAD026DA9F930033E955 /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
 		B1D8ED1E26D0072F0028AF32 /* OpenOthers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenOthers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D8ED2126D0072F0028AF32 /* OpenOthers.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OpenOthers.entitlements; sourceTree = "<group>"; };
 		B1D8ED2226D0072F0028AF32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -322,7 +325,6 @@
 		B1D8ED4E26D007340028AF32 /* SafariExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionHandler.swift; sourceTree = "<group>"; };
 		B1D8ED5026D007340028AF32 /* SafariExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionViewController.swift; sourceTree = "<group>"; };
 		B1D8ED5326D007340028AF32 /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
-		B1D8ED5526D007340028AF32 /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
 		B1D8ED5826D007340028AF32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SafariExtensionViewController.xib; sourceTree = "<group>"; };
 		B1D8ED5A26D007340028AF32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1D8ED5B26D007340028AF32 /* OpenOthers_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OpenOthers_Extension.entitlements; sourceTree = "<group>"; };
@@ -559,9 +561,17 @@
 			path = Browsers;
 			sourceTree = "<group>";
 		};
+		B1B3DACA26DA92DA0033E955 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		B1D8ED1526D0072F0028AF32 = {
 			isa = PBXGroup;
 			children = (
+				B1B3DACA26DA92DA0033E955 /* Resources */,
 				B1DFBCF926D157E8005598F6 /* OpenOthersCore */,
 				B13BA6AC26D12707009F5990 /* OpenOthersLauncher */,
 				B1D8ED2026D0072F0028AF32 /* OpenOthers */,
@@ -649,7 +659,8 @@
 			isa = PBXGroup;
 			children = (
 				B1D8ED5326D007340028AF32 /* script.js */,
-				B1D8ED5526D007340028AF32 /* ToolbarItemIcon.pdf */,
+				B1B3DACF26DA9F930033E955 /* ToolbarItemIcon-Debug.pdf */,
+				B1B3DAD026DA9F930033E955 /* ToolbarItemIcon.pdf */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1145,8 +1156,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1B3DAD126DA9F940033E955 /* ToolbarItemIcon-Debug.pdf in Resources */,
 				B1D8ED5926D007340028AF32 /* SafariExtensionViewController.xib in Resources */,
-				B1D8ED5626D007340028AF32 /* ToolbarItemIcon.pdf in Resources */,
+				B1B3DAD226DA9F940033E955 /* ToolbarItemIcon.pdf in Resources */,
 				B1D8ED5426D007340028AF32 /* script.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1598,6 +1610,7 @@
 				ES_APPGROUP_IDENTIFIER = "jp.ez-net.OpenOthers.CommonStore.Debug";
 				ES_EXTENSION_DESCRIPTION = "This is a BETA version of safari app extension that can reopen the page shown in Safari's current tab by other application.";
 				ES_EXTENSION_DISPLAYNAME = "EZ-NET OpenOthers Extension Beta";
+				ES_EXTENSION_TOOLBARITEMICON = "ToolbarItemIcon-Debug.pdf";
 				ES_URLSCHEME = "openothers-beta";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1664,6 +1677,7 @@
 				ES_APPGROUP_IDENTIFIER = "jp.ez-net.OpenOthers.CommonStore";
 				ES_EXTENSION_DESCRIPTION = "This is a safari app extension that can reopen the page shown in Safari's current tab by other application.";
 				ES_EXTENSION_DISPLAYNAME = "EZ-NET OpenOthers Extension";
+				ES_EXTENSION_TOOLBARITEMICON = ToolbarItemIcon.pdf;
 				ES_URLSCHEME = openothers;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;

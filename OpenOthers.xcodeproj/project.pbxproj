@@ -86,7 +86,6 @@
 		B1DFBD3226D15E8C005598F6 /* OpenTargets.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1D8EDDC26D0F8B60028AF32 /* OpenTargets.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B1DFBD3F26D1967F005598F6 /* Launcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DFBD3E26D1967F005598F6 /* Launcher.swift */; };
 		B1DFBD4126D19914005598F6 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DFBCED26D12FA2005598F6 /* Bundle.swift */; };
-		B1DFBD4326D19AB3005598F6 /* OpenOthers.app in Embed Executables */ = {isa = PBXBuildFile; fileRef = B1D8ED1E26D0072F0028AF32 /* OpenOthers.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +109,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = B1D8EDDB26D0F8B60028AF32;
 			remoteInfo = OpenTargets;
+		};
+		B1B3DAD326DAB5660033E955 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1D8ED1626D0072F0028AF32 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1D8ED1D26D0072F0028AF32;
+			remoteInfo = OpenOthers;
 		};
 		B1D8ED3126D007340028AF32 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -202,13 +208,6 @@
 			remoteGlobalIDString = B1D8EDDB26D0F8B60028AF32;
 			remoteInfo = OpenTargets;
 		};
-		B1DFBD4426D19B3B005598F6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B1D8ED1626D0072F0028AF32 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B1D8ED1D26D0072F0028AF32;
-			remoteInfo = OpenOthers;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -257,17 +256,6 @@
 				B1A58A9826D4133100511332 /* OpenTargets.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B1DFBD4226D19A93005598F6 /* Embed Executables */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 6;
-			files = (
-				B1DFBD4326D19AB3005598F6 /* OpenOthers.app in Embed Executables */,
-			);
-			name = "Embed Executables";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -810,15 +798,14 @@
 				B13BA6A826D12707009F5990 /* Frameworks */,
 				B13BA6A926D12707009F5990 /* Resources */,
 				B13BA6DA26D12789009F5990 /* Embed Frameworks */,
-				B1DFBD4226D19A93005598F6 /* Embed Executables */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				B1DFBD4726D19CA6005598F6 /* PBXTargetDependency */,
-				B1DFBD4526D19B3B005598F6 /* PBXTargetDependency */,
 				B1DFBD2E26D15B80005598F6 /* PBXTargetDependency */,
 				B1DFBCF226D13BEA005598F6 /* PBXTargetDependency */,
+				B1B3DAD426DAB5660033E955 /* PBXTargetDependency */,
 			);
 			name = OpenOthersLauncher;
 			packageProductDependencies = (
@@ -1338,6 +1325,11 @@
 			target = B1D8EDDB26D0F8B60028AF32 /* OpenTargets */;
 			targetProxy = B1A58A9926D4133100511332 /* PBXContainerItemProxy */;
 		};
+		B1B3DAD426DAB5660033E955 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1D8ED1D26D0072F0028AF32 /* OpenOthers */;
+			targetProxy = B1B3DAD326DAB5660033E955 /* PBXContainerItemProxy */;
+		};
 		B1D8ED3226D007340028AF32 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B1D8ED1D26D0072F0028AF32 /* OpenOthers */;
@@ -1402,11 +1394,6 @@
 			isa = PBXTargetDependency;
 			target = B1D8EDDB26D0F8B60028AF32 /* OpenTargets */;
 			targetProxy = B1DFBD3326D15E8C005598F6 /* PBXContainerItemProxy */;
-		};
-		B1DFBD4526D19B3B005598F6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B1D8ED1D26D0072F0028AF32 /* OpenOthers */;
-			targetProxy = B1DFBD4426D19B3B005598F6 /* PBXContainerItemProxy */;
 		};
 		B1DFBD4726D19CA6005598F6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

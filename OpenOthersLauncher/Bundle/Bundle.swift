@@ -11,7 +11,7 @@ extension Bundle {
     
     var extensionHostURL: URL! {
         
-        url(forAuxiliaryExecutable: "OpenOthers.app")
+        bundleURL.deletingLastPathComponent().appendingPathComponent("OpenOthers.app")
     }
     
     var bundleForExtensionHost: Bundle! {

@@ -16,7 +16,7 @@ public extension Targets {
     
     static var all: [OpenTarget] {
     
-        let targetClass = ObjCRuntime.Class(rawValue: OpenTarget.self)
+        let targetClass = ObjCRuntime.Class(OpenTarget.self)
         let targets = targetClass.classMethods.compactMap {
             
             targetClass.messageSendToClassMethod($0) as? OpenTarget
@@ -25,16 +25,11 @@ public extension Targets {
         return targets
     }
     
-    static var selectable: [OpenTarget] {
+    static var selectables: [OpenTarget] {
         
         all.filter { target in
 
             workspace.urlForApplication(withBundleIdentifier: target.bundleIdentifier) != nil
         }
-    }
-    
-    static var selectableTargetListItems: [TargetListItem] {
-        
-        Targets.selectable.map { TargetListItem(target: $0, iconImage: $0.bundle?.iconImage) }
     }
 }

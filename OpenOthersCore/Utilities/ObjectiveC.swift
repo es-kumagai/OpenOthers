@@ -18,7 +18,7 @@ extension ObjCRuntime {
     
         let rawValue: AnyClass
         
-        init(rawValue: AnyClass) {
+        init(_ rawValue: AnyClass) {
             
             self.rawValue = rawValue
         }
@@ -28,7 +28,7 @@ extension ObjCRuntime {
         
         var rawValue: ObjectiveC.Method
         
-        init(rawValue: ObjectiveC.Method) {
+        init(_ rawValue: ObjectiveC.Method) {
             
             self.rawValue = rawValue
         }
@@ -37,21 +37,21 @@ extension ObjCRuntime {
 
 extension ObjCRuntime.Method {
     
-    struct Description : RawRepresentable {
+    struct Description {
         
         var rawValue: objc_method_description
         
-        init(rawValue: objc_method_description) {
+        init(_ rawValue: objc_method_description) {
             
             self.rawValue = rawValue
         }
     }
     
-    struct Implementation : RawRepresentable {
+    struct Implementation {
         
         var rawValue: IMP
         
-        init(rawValue: IMP) {
+        init(_ rawValue: IMP) {
             
             self.rawValue = rawValue
         }
@@ -155,7 +155,7 @@ extension ObjCRuntime.Method {
     
     var implementation: Implementation {
         
-        Implementation(rawValue: method_getImplementation(rawValue))
+        Implementation(method_getImplementation(rawValue))
     }
     
     var typeEncoding: String! {
@@ -165,7 +165,7 @@ extension ObjCRuntime.Method {
     
     var methodDescription: Description {
         
-        Description(rawValue: method_getDescription(rawValue).pointee)
+        Description(method_getDescription(rawValue).pointee)
     }
 }
 

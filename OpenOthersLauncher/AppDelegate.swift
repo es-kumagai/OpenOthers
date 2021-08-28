@@ -51,7 +51,7 @@ extension AppDelegate {
     
     func updateSelectableTargets() {
     
-        targetState.selectableTargetListItems = Targets.selectableTargetListItems
+        targetState.selectableTargetListItems = Targets.selectables.map(TargetListItem.init)
     }
     
     /// Terminates launcher process automatically when the host application is terminated.

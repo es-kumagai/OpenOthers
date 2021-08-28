@@ -539,7 +539,6 @@
 		B1A58A9B26D4133B00511332 /* Targets */ = {
 			isa = PBXGroup;
 			children = (
-				B1A58AB726D5C9CA00511332 /* Browsers */,
 				B1A58A9D26D4139500511332 /* Targets.swift */,
 				B1A58A9F26D4152E00511332 /* OpenTarget.swift */,
 				B1A58AA326D417F000511332 /* TargetListItem.swift */,
@@ -741,6 +740,7 @@
 		B1DFBCF926D157E8005598F6 /* OpenOthersCore */ = {
 			isa = PBXGroup;
 			children = (
+				B1A58AB726D5C9CA00511332 /* Browsers */,
 				B1A58A9B26D4133B00511332 /* Targets */,
 				B133017E26D1A1DD005B411E /* Utilities */,
 				B1DFBD1526D15808005598F6 /* Bundle */,

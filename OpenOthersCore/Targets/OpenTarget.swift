@@ -25,3 +25,11 @@ public extension OpenTarget {
         bundleURL.flatMap(Bundle.init(url:))
     }
 }
+
+public extension TargetListItem {
+    
+    convenience init(target: OpenTarget) {
+        
+        self.init(target: target, iconImage: target.bundle?.iconImage)
+    }
+}

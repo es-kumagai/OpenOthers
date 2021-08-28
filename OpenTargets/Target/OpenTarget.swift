@@ -7,7 +7,8 @@
 
 import AppKit
 
-open class OpenTarget : Codable {
+@objcMembers
+open class OpenTarget : NSObject, Codable {
 
     public let name: String
     public let bundleIdentifier: String
@@ -54,17 +55,14 @@ open class OpenTarget : Codable {
 /// The current workspace; this can be replaced if you need (e.g. for testing).
 internal var openTargetCurrentWorkspace = NSWorkspace.shared
 
-extension OpenTarget : CustomStringConvertible {
+extension OpenTarget {
     
-    public var description: String {
+    public override var description: String {
         
         name
     }
-}
-
-extension OpenTarget : CustomDebugStringConvertible {
     
-    public var debugDescription: String {
+    public override var debugDescription: String {
         
         "\(name) (\(bundleIdentifier)) \(arguments)"
     }

@@ -14,20 +14,16 @@ public enum Targets {}
 
 public extension Targets {
     
-    static var all: Array<OpenTarget> = [
+    static var all: [OpenTarget] {
+    
+        let targetClass = ObjCRuntime.Class(rawValue: OpenTarget.self)
+        let targets = targetClass.classMethods.compactMap {
+            
+            targetClass.messageSendToClassMethod($0) as? OpenTarget
+        }
         
-        .googleChrome,
-        .googleChromeSecretMode,
-        .mozillaFirefox,
-        .mozillaFirefoxSecretMode,
-        .microsoftEdge,
-        .microsoftEdgeSecretMode,
-        .brave,
-        .braveSecretMode,
-        .operaNeon,
-        .operaNeonSecretMode,
-        .vivaldi,
-    ]
+        return targets
+    }
     
     static var selectable: [OpenTarget] {
         

@@ -41,6 +41,7 @@
 		B1B3DADB26DB79E00033E955 /* ToolbarItemIcon-Debug.pdf in Resources */ = {isa = PBXBuildFile; fileRef = B1B3DAD926DB79E00033E955 /* ToolbarItemIcon-Debug.pdf */; };
 		B1B3DADC26DB79E00033E955 /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = B1B3DADA26DB79E00033E955 /* ToolbarItemIcon.pdf */; };
 		B1B3DADD26DB7B660033E955 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1D8ED2926D007330028AF32 /* Assets.xcassets */; };
+		B1B3DADF26DB82660033E955 /* Icon.afdesign in Resources */ = {isa = PBXBuildFile; fileRef = B1B3DADE26DB82660033E955 /* Icon.afdesign */; };
 		B1D8ED2326D0072F0028AF32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D8ED2226D0072F0028AF32 /* AppDelegate.swift */; };
 		B1D8ED2626D0072F0028AF32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1D8ED2426D0072F0028AF32 /* Main.storyboard */; };
 		B1D8ED2826D0072F0028AF32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D8ED2726D0072F0028AF32 /* ViewController.swift */; };
@@ -296,6 +297,7 @@
 		B1B3DAC826D9E0570033E955 /* ObjectiveC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveC.swift; sourceTree = "<group>"; };
 		B1B3DAD926DB79E00033E955 /* ToolbarItemIcon-Debug.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "ToolbarItemIcon-Debug.pdf"; sourceTree = "<group>"; };
 		B1B3DADA26DB79E00033E955 /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
+		B1B3DADE26DB82660033E955 /* Icon.afdesign */ = {isa = PBXFileReference; lastKnownFileType = file; path = Icon.afdesign; sourceTree = "<group>"; };
 		B1D8ED1E26D0072F0028AF32 /* OpenOthers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenOthers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D8ED2126D0072F0028AF32 /* OpenOthers.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OpenOthers.entitlements; sourceTree = "<group>"; };
 		B1D8ED2226D0072F0028AF32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -550,6 +552,7 @@
 		B1B3DACA26DA92DA0033E955 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B1B3DADE26DB82660033E955 /* Icon.afdesign */,
 				B1D8ED2926D007330028AF32 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -1145,6 +1148,7 @@
 				B1D8ED5926D007340028AF32 /* SafariExtensionViewController.xib in Resources */,
 				B1B3DADC26DB79E00033E955 /* ToolbarItemIcon.pdf in Resources */,
 				B1D8ED5426D007340028AF32 /* script.js in Resources */,
+				B1B3DADF26DB82660033E955 /* Icon.afdesign in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

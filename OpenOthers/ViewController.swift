@@ -15,10 +15,26 @@ let extensionBundleIdentifier = "jp.ez-net.OpenOthers.Extension"
 class ViewController: NSViewController {
 
     @IBOutlet var appNameLabel: NSTextField!
+    @IBOutlet var appDescriptionLabel: NSTextField!
     
     override func viewDidLoad() {
+
         super.viewDidLoad()
-        self.appNameLabel.stringValue = appName
+        
+        let appDescription: String?
+        
+        if let safariExtensionBundle = Bundle.main.safariExtensionBundle {
+            
+            appDescription = safariExtensionBundle.object(forInfoDictionaryKey: "NSHumanReadableDescription") as? String
+        }
+        else {
+            
+            appDescription = nil
+        }
+        
+        appNameLabel.stringValue = appName
+        appDescriptionLabel.stringValue = appDescription ?? ""
+        
         SFSafariExtensionManager.getStateOfSafariExtension(withIdentifier: extensionBundleIdentifier) { (state, error) in
             guard let state = state, error == nil else {
                 // Insert code to inform the user that something went wrong.

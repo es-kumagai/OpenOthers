@@ -3,7 +3,7 @@
     "pins": [
       {
         "package": "Ocean",
-        "repositoryURL": "https://github.com/es-kumagai/Ocean",
+        "repositoryURL": "git@github.com:es-kumagai/Ocean.git",
         "state": {
           "branch": "master",
           "revision": "0174868b817d0306c42f19f9ec3c906a9ab16e48",

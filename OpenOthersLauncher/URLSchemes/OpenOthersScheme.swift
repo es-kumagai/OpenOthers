@@ -37,6 +37,7 @@ final class OpenOthersScheme : URLScheme {
             let decoder = JSONDecoder()
             let target = try decoder.decode(OpenTarget.self, from: targetData)
             
+            OpenRequestDetectedNotification(target: target, url: url).post()
             
             let waitingForOpeningSemaphore = DispatchSemaphore(value: 0)
             

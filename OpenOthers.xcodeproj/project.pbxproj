@@ -43,6 +43,9 @@
 		B1B3DADD26DB7B660033E955 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1D8ED2926D007330028AF32 /* Assets.xcassets */; };
 		B1B3DADF26DB82660033E955 /* Icon.afdesign in Resources */ = {isa = PBXBuildFile; fileRef = B1B3DADE26DB82660033E955 /* Icon.afdesign */; };
 		B1B3DAE226DB85590033E955 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B3DAE126DB85590033E955 /* Bundle.swift */; };
+		B1B3DAE526DB8FA30033E955 /* OpenRequestDetectedNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B3DAE426DB8FA30033E955 /* OpenRequestDetectedNotification.swift */; };
+		B1B3DAE826DB93B80033E955 /* Ocean in Frameworks */ = {isa = PBXBuildFile; productRef = B1B3DAE726DB93B80033E955 /* Ocean */; };
+		B1B3DAE926DB93B80033E955 /* Ocean in Embed Frameworks */ = {isa = PBXBuildFile; productRef = B1B3DAE726DB93B80033E955 /* Ocean */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B1D8ED2326D0072F0028AF32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D8ED2226D0072F0028AF32 /* AppDelegate.swift */; };
 		B1D8ED2626D0072F0028AF32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1D8ED2426D0072F0028AF32 /* Main.storyboard */; };
 		B1D8ED2826D0072F0028AF32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D8ED2726D0072F0028AF32 /* ViewController.swift */; };
@@ -222,6 +225,7 @@
 				B1DFBD2C26D15B80005598F6 /* OpenOthersCore.framework in Embed Frameworks */,
 				B13BA6D926D12789009F5990 /* Sky-AppKit in Embed Frameworks */,
 				B1DFBCF026D13BEA005598F6 /* OpenTargets.framework in Embed Frameworks */,
+				B1B3DAE926DB93B80033E955 /* Ocean in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +304,7 @@
 		B1B3DADA26DB79E00033E955 /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
 		B1B3DADE26DB82660033E955 /* Icon.afdesign */ = {isa = PBXFileReference; lastKnownFileType = file; path = Icon.afdesign; sourceTree = "<group>"; };
 		B1B3DAE126DB85590033E955 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		B1B3DAE426DB8FA30033E955 /* OpenRequestDetectedNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenRequestDetectedNotification.swift; sourceTree = "<group>"; };
 		B1D8ED1E26D0072F0028AF32 /* OpenOthers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenOthers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D8ED2126D0072F0028AF32 /* OpenOthers.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OpenOthers.entitlements; sourceTree = "<group>"; };
 		B1D8ED2226D0072F0028AF32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -361,6 +366,7 @@
 				B1DFBD2B26D15B80005598F6 /* OpenOthersCore.framework in Frameworks */,
 				B13BA6D826D12789009F5990 /* Sky-AppKit in Frameworks */,
 				B1DFBCEF26D13BEA005598F6 /* OpenTargets.framework in Frameworks */,
+				B1B3DAE826DB93B80033E955 /* Ocean in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +475,7 @@
 		B13BA6AC26D12707009F5990 /* OpenOthersLauncher */ = {
 			isa = PBXGroup;
 			children = (
+				B1B3DAE326DB8F950033E955 /* Notification */,
 				B1DFBCEC26D12F80005598F6 /* Bundle */,
 				B1D8EE0326D0FC7C0028AF32 /* Utilities */,
 				B1D8ED8826D089970028AF32 /* URLSchemes */,
@@ -566,6 +573,14 @@
 				B1B3DAE126DB85590033E955 /* Bundle.swift */,
 			);
 			path = Bundle;
+			sourceTree = "<group>";
+		};
+		B1B3DAE326DB8F950033E955 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				B1B3DAE426DB8FA30033E955 /* OpenRequestDetectedNotification.swift */,
+			);
+			path = Notification;
 			sourceTree = "<group>";
 		};
 		B1D8ED1526D0072F0028AF32 = {
@@ -822,6 +837,7 @@
 			name = OpenOthersLauncher;
 			packageProductDependencies = (
 				B13BA6D726D12789009F5990 /* Sky-AppKit */,
+				B1B3DAE726DB93B80033E955 /* Ocean */,
 			);
 			productName = OpenOthersLauncher;
 			productReference = B13BA6AB26D12707009F5990 /* OpenOthersLauncher.app */;
@@ -1083,6 +1099,7 @@
 			mainGroup = B1D8ED1526D0072F0028AF32;
 			packageReferences = (
 				B1D8ED8326D088EA0028AF32 /* XCRemoteSwiftPackageReference "Sky" */,
+				B1B3DAE626DB93B80033E955 /* XCRemoteSwiftPackageReference "Ocean" */,
 			);
 			productRefGroup = B1D8ED1F26D0072F0028AF32 /* Products */;
 			projectDirPath = "";
@@ -1199,6 +1216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1DFBC8126D1286F005598F6 /* OpenOthersScheme.swift in Sources */,
+				B1B3DAE526DB8FA30033E955 /* OpenRequestDetectedNotification.swift in Sources */,
 				B1DFBD4126D19914005598F6 /* Bundle.swift in Sources */,
 				B1DFBD3F26D1967F005598F6 /* Launcher.swift in Sources */,
 				B13BA6B026D12707009F5990 /* ViewController.swift in Sources */,
@@ -1708,6 +1726,7 @@
 				CODE_SIGN_ENTITLEMENTS = "OpenOthers Extension/OpenOthers_Extension.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 89282N6UM7;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "OpenOthers Extension/Info.plist";
@@ -1730,6 +1749,7 @@
 				CODE_SIGN_ENTITLEMENTS = "OpenOthers Extension/OpenOthers_Extension.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 89282N6UM7;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "OpenOthers Extension/Info.plist";
@@ -2188,6 +2208,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		B1B3DAE626DB93B80033E955 /* XCRemoteSwiftPackageReference "Ocean" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:es-kumagai/Ocean.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		B1D8ED8326D088EA0028AF32 /* XCRemoteSwiftPackageReference "Sky" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:es-kumagai/Sky.git";
@@ -2203,6 +2231,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B1D8ED8326D088EA0028AF32 /* XCRemoteSwiftPackageReference "Sky" */;
 			productName = "Sky-AppKit";
+		};
+		B1B3DAE726DB93B80033E955 /* Ocean */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1B3DAE626DB93B80033E955 /* XCRemoteSwiftPackageReference "Ocean" */;
+			productName = Ocean;
 		};
 		B1DFBD4626D19CA6005598F6 /* Sky-AppKit */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -6,22 +6,39 @@
 //
 
 import Cocoa
+import Ocean
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, NotificationObservable {
     
-    @IBOutlet weak var homeTextField: NSTextField!
+    var notificationHandlers = Notification.Handlers()
     
+    @IBOutlet var selectedTargetLabel: NSTextField!
+    @IBOutlet var urlLabel: NSTextField!
+
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-
+        
+        selectedTargetLabel.stringValue = ""
+        urlLabel.stringValue = ""
     }
-
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
+    
+    override func viewWillAppear() {
+        
+        super.viewWillAppear()
+        
+        observe(OpenRequestDetectedNotification.self) { [unowned self] notification in
+            
+            selectedTargetLabel.stringValue = notification.target.name
+            urlLabel.stringValue = notification.url.absoluteString
         }
     }
 
-
+    override func viewWillDisappear() {
+        
+        super.viewWillDisappear()
+        
+        notificationHandlers.releaseAll()
+    }
 }
 

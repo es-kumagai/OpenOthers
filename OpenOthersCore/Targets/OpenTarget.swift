@@ -33,3 +33,11 @@ public extension TargetListItem {
         self.init(target: target, iconImage: target.bundle?.iconImage)
     }
 }
+
+public extension Sequence where Element == OpenTarget {
+    
+    func contains(bundleURL: URL?) -> Bool {
+        
+        map(\.bundleURL).contains(bundleURL)
+    }
+}

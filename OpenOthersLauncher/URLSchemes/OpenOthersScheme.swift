@@ -24,7 +24,7 @@ final class OpenOthersScheme : URLScheme {
         
         guard let pageURL = url.queries["url"].flatMap(decoder.url(from:)) else {
             
-            throw URLSchemeActionError.invalidURL(url, description: "It was not specified that a url to open.")
+            throw URLSchemeActionError.invalidURL(url, description: "It was not specified that a url to open")
         }
         
         guard let targetData = url.queries["target"].flatMap(decoder.data(from:)) else {
@@ -36,6 +36,11 @@ final class OpenOthersScheme : URLScheme {
 
             let decoder = JSONDecoder()
             let target = try decoder.decode(OpenTarget.self, from: targetData)
+            
+            guard Targets.selectables.contains(bundleURL: target.bundleURL) else {
+            
+                throw URLSchemeActionError.invocationFailure(description: "The specified target '\(target)' is not allowed")
+            }
             
             OpenRequestDetectedNotification(target: target, url: url).post()
             
@@ -57,13 +62,17 @@ final class OpenOthersScheme : URLScheme {
             
             waitingForOpeningSemaphore.wait()
         }
+        catch let error as URLSchemeActionError {
+
+            throw error
+        }
         catch let error as DecodingError {
             
-            throw URLSchemeActionError.invocationFailure(description: "Failed to decode the target data: \(error)")
+            throw URLSchemeActionError.invocationFailure(description: "Failed to decode the target data: \(error.localizedDescription)")
         }
         catch {
             
-            throw URLSchemeActionError.invocationFailure(description: "Unexpected error: \(error)")
+            throw URLSchemeActionError.invocationFailure(description: "Unexpected error: \(error.localizedDescription)")
         }
     }
 }

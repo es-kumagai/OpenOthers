@@ -15,7 +15,7 @@ extension AppDelegate {
         
         guard let hostBundle = Bundle.main.bundleForExtensionHost else {
             
-            NSApp.showAlert("", caption: "Host application did not found.")
+            NSApp.showAlert("", caption: "Host application did not found")
             return
         }
         
@@ -35,7 +35,7 @@ extension AppDelegate {
                 
                 if let error = error {
                     
-                    NSApp.showAlert(error.localizedDescription, caption: "Failed to open Host App.")
+                    NSApp.showAlert(error.localizedDescription, caption: "Failed to open Host App")
                 }
             }
         }

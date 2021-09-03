@@ -23,8 +23,8 @@ public extension NSApplication {
             NSLog("%@; %@", caption, message)
         }
         
-        DispatchQueue.main.sync {
-
+        func show() {
+            
             let alert = NSAlert()
         
             alert.messageText = caption
@@ -34,6 +34,15 @@ public extension NSApplication {
             buttons.forEach(alert.addButton(_:))
             
             alert.runModal()
+        }
+
+        switch Thread.isMainThread {
+        
+        case true:
+            show()
+            
+        case false:
+            DispatchQueue.main.sync(execute: show)
         }
     }
 }

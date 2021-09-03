@@ -81,12 +81,24 @@ extension AppDelegate {
 extension AppDelegate : URLSchemeManagerDelegate {
     
     func urlSchemeManager(_ manager: URLSchemeManager, schemeDidHandle scheme: URLScheme.Type, errorIfOccurs error: Error?) {
-        
-        if let error = error {
+
+        guard let error = error else {
             
-            NSApp.showAlert("\(error.localizedDescription) on \(scheme)", caption: "An error occurs during invoking URL scheme action.")
             return
         }
+
+        let message: String
+        
+        switch error {
+        
+        case let error as URLSchemeActionError:
+            message = "\(error)"
+
+        case let error:
+            message = error.localizedDescription
+        }
+
+        NSApp.showAlert("\(message) on \(scheme)", caption: "An error occurs during invoking URL scheme action")
     }
     
     func urlSchemeManager(_ manager: URLSchemeManager, handlingDidFinishWithMatchingCount matchingCount: Int) {

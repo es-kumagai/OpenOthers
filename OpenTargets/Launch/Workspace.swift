@@ -45,7 +45,7 @@ extension NSWorkspace {
                 completionHandler?(.failure(.failedToLaunch(description: error.localizedDescription)))
                 
             case (nil, nil), (_?, _?):
-                completionHandler?(.failure(.unexpected(description: "An unexpected result was detected while opening the target application.")))
+                completionHandler?(.failure(.unexpected(description: "An unexpected result was detected while opening the target application")))
             }
         }
     }

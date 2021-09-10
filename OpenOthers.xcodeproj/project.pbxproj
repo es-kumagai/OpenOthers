@@ -1635,10 +1635,12 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 3;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ES_APPGROUP_IDENTIFIER = "jp.ez-net.OpenOthers.CommonStore.Debug";
+				ES_CURRENT_BUNDLE_VERSION = 1.1.0;
 				ES_EXTENSION_DESCRIPTION = "This is a BETA version of safari app extension that can reopen the page shown in Safari's current tab by other application.";
 				ES_EXTENSION_DISPLAYNAME = "EZ-NET OpenOthers Extension Beta";
 				ES_EXTENSION_TOOLBARITEMICON = "ToolbarItemIcon-Debug.pdf";
@@ -1702,10 +1704,12 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 3;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ES_APPGROUP_IDENTIFIER = "jp.ez-net.OpenOthers.CommonStore";
+				ES_CURRENT_BUNDLE_VERSION = 1.1.0;
 				ES_EXTENSION_DESCRIPTION = "This is a safari app extension that can reopen the page shown in Safari's current tab by other application.";
 				ES_EXTENSION_DISPLAYNAME = "EZ-NET OpenOthers Extension";
 				ES_EXTENSION_TOOLBARITEMICON = ToolbarItemIcon.pdf;
@@ -1734,7 +1738,6 @@
 				CODE_SIGN_ENTITLEMENTS = "OpenOthers Extension/OpenOthers_Extension.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 89282N6UM7;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "OpenOthers Extension/Info.plist";
@@ -1757,7 +1760,6 @@
 				CODE_SIGN_ENTITLEMENTS = "OpenOthers Extension/OpenOthers_Extension.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 89282N6UM7;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "OpenOthers Extension/Info.plist";

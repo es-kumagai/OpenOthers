@@ -18,11 +18,12 @@ public final class Vivaldi : OpenTarget {
     
         let name = "Vivaldi"
         let bundleIdentifier = "com.vivaldi.Vivaldi"
+        let mode = Mode.normal
         let arguments: Array<OpenTarget.Argument> = [
             
             .targetURL,
         ]
 
-        self.init(name: name, bundleIdentifier: bundleIdentifier, arguments: arguments, createNewInstance: true)
+        self.init(name: name, bundleIdentifier: bundleIdentifier, mode: mode, arguments: arguments, createNewInstance: true)
     }
 }

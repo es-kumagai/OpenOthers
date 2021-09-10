@@ -10,6 +10,7 @@
 		B133017F26D1A1EA005B411E /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B133017C26D19F45005B411E /* Alert.swift */; };
 		B133018126D1A23A005B411E /* AlertButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B133018026D1A23A005B411E /* AlertButton.swift */; };
 		B133018326D1C21B005B411E /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B133018226D1C21B005B411E /* Bundle.swift */; };
+		B139502926EBD96800416CF4 /* OpenTargetMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B139502826EBD96800416CF4 /* OpenTargetMode.swift */; };
 		B13BA6A626D1175D009F5990 /* Workspace.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13BA6A526D1175D009F5990 /* Workspace.swift */; };
 		B13BA6AE26D12707009F5990 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13BA6AD26D12707009F5990 /* AppDelegate.swift */; };
 		B13BA6B026D12707009F5990 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13BA6AF26D12707009F5990 /* ViewController.swift */; };
@@ -271,6 +272,7 @@
 		B133018026D1A23A005B411E /* AlertButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertButton.swift; sourceTree = "<group>"; };
 		B133018226D1C21B005B411E /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		B133018426D1C395005B411E /* UserDefaultsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStore.swift; sourceTree = "<group>"; };
+		B139502826EBD96800416CF4 /* OpenTargetMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenTargetMode.swift; sourceTree = "<group>"; };
 		B13BA6A026D112F3009F5990 /* Base64Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base64Decoder.swift; sourceTree = "<group>"; };
 		B13BA6A526D1175D009F5990 /* Workspace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workspace.swift; sourceTree = "<group>"; };
 		B13BA6AB26D12707009F5990 /* OpenOthersLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenOthersLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -711,6 +713,7 @@
 			isa = PBXGroup;
 			children = (
 				B1D8ED6B26D009880028AF32 /* OpenTarget.swift */,
+				B139502826EBD96800416CF4 /* OpenTargetMode.swift */,
 				B1D8ED7E26D025CD0028AF32 /* OpenTargetArgument.swift */,
 				B1D8ED7926D01FCF0028AF32 /* OpenTargetError.swift */,
 			);
@@ -1288,6 +1291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B139502926EBD96800416CF4 /* OpenTargetMode.swift in Sources */,
 				B1D8EE0826D0FEC20028AF32 /* OpenTargetError.swift in Sources */,
 				B1D8EE0926D0FF340028AF32 /* Workspace.swift in Sources */,
 				B1D8EE0626D0FEAF0028AF32 /* OpenTarget.swift in Sources */,

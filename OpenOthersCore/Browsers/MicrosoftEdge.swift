@@ -19,6 +19,7 @@ public final class MicrosoftEdge : OpenTarget {
     
         let name: String
         let bundleIdentifier = "com.microsoft.edgemac"
+        let mode: Mode = secretMode ? .secret : .normal
         let arguments: Array<OpenTarget.Argument>
         let createNewInstance: Bool
 
@@ -35,6 +36,6 @@ public final class MicrosoftEdge : OpenTarget {
             arguments = ["--inprivate", .targetURL]
         }
 
-        self.init(name: name, bundleIdentifier: bundleIdentifier, arguments: arguments, createNewInstance: createNewInstance)
+        self.init(name: name, bundleIdentifier: bundleIdentifier, mode: mode, arguments: arguments, createNewInstance: createNewInstance)
     }
 }

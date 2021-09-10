@@ -19,6 +19,7 @@ public final class OperaNeon : OpenTarget {
     
         let name: String
         let bundleIdentifier = "com.opera.Neon"
+        let mode: Mode = secretMode ? .secret : .normal
         let arguments: Array<OpenTarget.Argument>
         let createNewInstance: Bool
 
@@ -35,6 +36,6 @@ public final class OperaNeon : OpenTarget {
             arguments = ["-incognito", .targetURL]
         }
 
-        self.init(name: name, bundleIdentifier: bundleIdentifier, arguments: arguments, createNewInstance: createNewInstance)
+        self.init(name: name, bundleIdentifier: bundleIdentifier, mode: mode, arguments: arguments, createNewInstance: createNewInstance)
     }
 }

@@ -12,13 +12,15 @@ open class OpenTarget : NSObject, Codable {
 
     public let name: String
     public let bundleIdentifier: String
+    public let mode: Mode
     public let arguments: Array<Argument>
     public let createNewInstance: Bool
 
-    public init(name: String, bundleIdentifier: String, arguments: Array<Argument> = [], createNewInstance: Bool = true) {
+    public init(name: String, bundleIdentifier: String, mode: Mode, arguments: Array<Argument> = [], createNewInstance: Bool = true) {
         
         self.name = name
         self.bundleIdentifier = bundleIdentifier
+        self.mode = mode
         self.arguments = arguments
         self.createNewInstance = createNewInstance
     }
@@ -27,6 +29,7 @@ open class OpenTarget : NSObject, Codable {
         
         case name
         case bundleIdentifier = "bundle_identifier"
+        case mode
         case arguments
         case createNewInstance = "create_new_instance"
     }
@@ -37,6 +40,7 @@ open class OpenTarget : NSObject, Codable {
 
         name = try container.decode(String.self, forKey: .name)
         bundleIdentifier = try container.decode(String.self, forKey: .bundleIdentifier)
+        mode = try container.decode(Mode.self, forKey: .mode)
         arguments = try container.decode(Array<Argument>.self, forKey: .arguments)
         createNewInstance = try container.decode(Bool.self, forKey: .createNewInstance)
     }
@@ -47,6 +51,7 @@ open class OpenTarget : NSObject, Codable {
         
         try container.encode(name, forKey: .name)
         try container.encode(bundleIdentifier, forKey: .bundleIdentifier)
+        try container.encode(mode, forKey: .mode)
         try container.encode(arguments, forKey: .arguments)
         try container.encode(createNewInstance, forKey: .createNewInstance)
     }
@@ -64,7 +69,7 @@ extension OpenTarget {
     
     public override var debugDescription: String {
         
-        "\(name) (\(bundleIdentifier)) \(arguments)"
+        "\(name) (\(bundleIdentifier), \(mode)) \(arguments)"
     }
 }
 

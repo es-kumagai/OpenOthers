@@ -12,7 +12,14 @@ import OpenTargets
 class SafariExtensionViewController: SFSafariExtensionViewController {
     
     @IBOutlet var targetsController: NSArrayController!
-    @IBOutlet weak var targetList: NSTableView!
+    @IBOutlet var targetList: NSTableView!
+    
+    @objc var withSecretMode = false {
+        
+        didSet {
+            updateTargetList()
+        }
+    }
     
     let targetsState = TargetsState()
     
@@ -20,18 +27,23 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
     
         let shared = SafariExtensionViewController()
                 
-        shared.preferredContentSize = NSSize(width:350, height:378)
+        shared.preferredContentSize = NSSize(width:350, height:260)
         return shared
     }()
 
     override func awakeFromNib() {
         
         super.awakeFromNib()
-        
+
     }
 }
 
 extension SafariExtensionViewController {
+    
+    var targetMode: OpenTarget.Mode {
+
+        withSecretMode ? .secret : .normal
+    }
     
     var targets: [OpenTarget]! {
    
@@ -47,7 +59,10 @@ extension SafariExtensionViewController {
         
         do {
             let selectableTargets = try targetsState.$selectableTargetListItems.read()
-            let selectableTargetTableItems = selectableTargets.map(TargetTableItem.init)
+            let selectableTargetTableItems = selectableTargets
+                .filter { $0.target.mode == targetMode }
+                .sorted { $0.target.name < $1.target.name }
+                .map(TargetTableItem.init)
         
             targetsController.content = selectableTargetTableItems
         }

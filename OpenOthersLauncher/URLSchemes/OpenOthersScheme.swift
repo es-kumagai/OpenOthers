@@ -42,13 +42,12 @@ final class OpenOthersScheme : URLScheme {
                 throw URLSchemeActionError.invocationFailure(description: "The specified target '\(target)' is not allowed")
             }
             
-            OpenRequestDetectedNotification(target: target, url: url).post()
-            
-            let waitingForOpeningSemaphore = DispatchSemaphore(value: 0)
+            OpenRequestDetectedNotification(target: target, url: pageURL).post()
             
             target.open(with: pageURL) { result in
-
-                waitingForOpeningSemaphore.signal()
+                
+                Thread.sleep(forTimeInterval: 5)
+                OpenRequestDidFinishNotification().post()
                 
                 switch result {
                 
@@ -59,8 +58,6 @@ final class OpenOthersScheme : URLScheme {
                     NSLog("Error: %@", error.localizedDescription)
                 }
             }
-            
-            waitingForOpeningSemaphore.wait()
         }
         catch let error as URLSchemeActionError {
 

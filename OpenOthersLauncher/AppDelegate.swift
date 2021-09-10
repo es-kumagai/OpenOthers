@@ -7,11 +7,14 @@
 
 import Cocoa
 import Sky_AppKit
+import Ocean
 import OpenOthersCore
 
 @main @objcMembers
-class AppDelegate: NSObject, NSApplicationDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate, NotificationObservable {
 
+    var notificationHandlers = Notification.Handlers()
+    
     let bundleState = BundleState()
     var targetState = TargetsState()
     
@@ -34,9 +37,20 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         launchBundledOpenOthersHostAppOnce()
                 
         terminationTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(autoTerminationChecker(_:)), userInfo: nil, repeats: true)
+        
+        observe(OpenRequestDidFinishNotification.self) { [unowned self] notification in
+            
+            DispatchQueue.main.sync {
+
+                terminateLaunchBundledOpenOthersHostApp()
+                NSApp.terminate(self)
+            }
+        }
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
+
+        notificationHandlers.releaseAll()
 
         schemeManager = nil
         terminationTimer = nil
@@ -103,7 +117,9 @@ extension AppDelegate : URLSchemeManagerDelegate {
     
     func urlSchemeManager(_ manager: URLSchemeManager, handlingDidFinishWithMatchingCount matchingCount: Int) {
 
-        terminateLaunchBundledOpenOthersHostApp()
-        NSApp.terminate(self)
+        if matchingCount == 0 {
+
+            OpenRequestDidFinishNotification().post()
+        }
     }
 }

@@ -493,10 +493,10 @@
 		B13BA6AC26D12707009F5990 /* OpenOthersLauncher */ = {
 			isa = PBXGroup;
 			children = (
-				B1B3DAE326DB8F950033E955 /* Notification */,
 				B1DFBCEC26D12F80005598F6 /* Bundle */,
-				B1D8EE0326D0FC7C0028AF32 /* Utilities */,
+				B1B3DAE326DB8F950033E955 /* Notification */,
 				B1D8ED8826D089970028AF32 /* URLSchemes */,
+				B1D8EE0326D0FC7C0028AF32 /* Utilities */,
 				B13BA6AD26D12707009F5990 /* AppDelegate.swift */,
 				B13BA6AF26D12707009F5990 /* ViewController.swift */,
 				B1DFBD3E26D1967F005598F6 /* Launcher.swift */,
@@ -675,16 +675,16 @@
 		B1D8ED4D26D007340028AF32 /* OpenOthers Extension */ = {
 			isa = PBXGroup;
 			children = (
-				B13BA6A426D11755009F5990 /* Utilities */,
+				B1D8ED5226D007340028AF32 /* Resources */,
 				B1D8ED7026D015370028AF32 /* SafariServices */,
 				B1A58A8C26D3A5EA00511332 /* TargetTable */,
+				B13BA6A426D11755009F5990 /* Utilities */,
 				B1D8ED7526D01CA00028AF32 /* Message.swift */,
 				B1D8ED4E26D007340028AF32 /* SafariExtensionHandler.swift */,
 				B1D8ED5026D007340028AF32 /* SafariExtensionViewController.swift */,
 				B1D8ED5726D007340028AF32 /* SafariExtensionViewController.xib */,
 				B1D8ED5A26D007340028AF32 /* Info.plist */,
 				B1D8ED5B26D007340028AF32 /* OpenOthers_Extension.entitlements */,
-				B1D8ED5226D007340028AF32 /* Resources */,
 			);
 			path = "OpenOthers Extension";
 			sourceTree = "<group>";
@@ -786,11 +786,11 @@
 		B1DFBCF926D157E8005598F6 /* OpenOthersCore */ = {
 			isa = PBXGroup;
 			children = (
-				B139502C26EC8D7600416CF4 /* Error */,
 				B1A58AB726D5C9CA00511332 /* Browsers */,
+				B1DFBD1526D15808005598F6 /* Bundle */,
+				B139502C26EC8D7600416CF4 /* Error */,
 				B1A58A9B26D4133B00511332 /* Targets */,
 				B133017E26D1A1DD005B411E /* Utilities */,
-				B1DFBD1526D15808005598F6 /* Bundle */,
 				B1DFBCFA26D157E8005598F6 /* OpenOthersCore.h */,
 				B1DFBCFB26D157E8005598F6 /* Info.plist */,
 			);

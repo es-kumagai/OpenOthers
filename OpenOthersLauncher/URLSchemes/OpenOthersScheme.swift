@@ -46,7 +46,6 @@ final class OpenOthersScheme : URLScheme {
             
             target.open(with: pageURL) { result in
                 
-                Thread.sleep(forTimeInterval: 5)
                 OpenRequestDidFinishNotification().post()
                 
                 switch result {

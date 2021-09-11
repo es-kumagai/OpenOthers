@@ -23,6 +23,7 @@
 		B13BA6CC26D1270A009F5990 /* OpenOthersLauncherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13BA6CB26D1270A009F5990 /* OpenOthersLauncherUITests.swift */; };
 		B13BA6D826D12789009F5990 /* Sky-AppKit in Frameworks */ = {isa = PBXBuildFile; productRef = B13BA6D726D12789009F5990 /* Sky-AppKit */; };
 		B13BA6D926D12789009F5990 /* Sky-AppKit in Embed Frameworks */ = {isa = PBXBuildFile; productRef = B13BA6D726D12789009F5990 /* Sky-AppKit */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		B16D693C26ED6B6C0093CF3B /* AppleSafari.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16D693B26ED6B6C0093CF3B /* AppleSafari.swift */; };
 		B1A58A7826D2373200511332 /* BundleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A58A7026D1D0A000511332 /* BundleState.swift */; };
 		B1A58A7926D2374300511332 /* UserDefaultsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B133018426D1C395005B411E /* UserDefaultsStore.swift */; };
 		B1A58A7C26D2376F00511332 /* UserDefaultsStorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A58A7B26D2376F00511332 /* UserDefaultsStorable.swift */; };
@@ -293,6 +294,7 @@
 		B13BA6C726D12709009F5990 /* OpenOthersLauncherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenOthersLauncherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B13BA6CB26D1270A009F5990 /* OpenOthersLauncherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenOthersLauncherUITests.swift; sourceTree = "<group>"; };
 		B13BA6CD26D1270A009F5990 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B16D693B26ED6B6C0093CF3B /* AppleSafari.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleSafari.swift; sourceTree = "<group>"; };
 		B1A58A7026D1D0A000511332 /* BundleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleState.swift; sourceTree = "<group>"; };
 		B1A58A7B26D2376F00511332 /* UserDefaultsStorable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStorable.swift; sourceTree = "<group>"; };
 		B1A58A8126D237F000511332 /* StoreProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreProtocol.swift; sourceTree = "<group>"; };
@@ -566,11 +568,12 @@
 		B1A58AB726D5C9CA00511332 /* Browsers */ = {
 			isa = PBXGroup;
 			children = (
-				B1A58AB326D5544300511332 /* MozillaFirefox.swift */,
-				B1A58AB526D5C9C300511332 /* MicrosoftEdge.swift */,
+				B16D693B26ED6B6C0093CF3B /* AppleSafari.swift */,
 				B1D8ED7C26D0248D0028AF32 /* GoogleChrome.swift */,
-				B1A58AB126D5508D00511332 /* TargetBrave.swift */,
+				B1A58AB526D5C9C300511332 /* MicrosoftEdge.swift */,
+				B1A58AB326D5544300511332 /* MozillaFirefox.swift */,
 				B1A58AB826D5D0DF00511332 /* OperaNeon.swift */,
+				B1A58AB126D5508D00511332 /* TargetBrave.swift */,
 				B1A58ABA26D5D1D100511332 /* Vivaldi.swift */,
 			);
 			path = Browsers;
@@ -1338,6 +1341,7 @@
 				B1A58ABB26D5D1D100511332 /* Vivaldi.swift in Sources */,
 				B1A58AB426D5544300511332 /* MozillaFirefox.swift in Sources */,
 				B1A58AB226D5508D00511332 /* TargetBrave.swift in Sources */,
+				B16D693C26ED6B6C0093CF3B /* AppleSafari.swift in Sources */,
 				B1A58A7C26D2376F00511332 /* UserDefaultsStorable.swift in Sources */,
 				B1A58AAE26D4E12C00511332 /* SafeUserDefaults.swift in Sources */,
 				B1A58AA026D4152E00511332 /* OpenTarget.swift in Sources */,

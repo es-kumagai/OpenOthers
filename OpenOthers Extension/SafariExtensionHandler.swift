@@ -40,11 +40,7 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
         return SafariExtensionViewController.shared
     }
 
-    override func popoverDidClose(in window: SFSafariWindow) {
-        
-    }
     override func popoverWillShow(in window: SFSafariWindow) {
-        
         SafariExtensionViewController.shared.updateTargetList()
     }
 }

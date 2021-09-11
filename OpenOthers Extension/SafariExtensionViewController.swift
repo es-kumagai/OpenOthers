@@ -57,18 +57,53 @@ extension SafariExtensionViewController {
 
     func updateTargetList() {
         
-        do {
-            let selectableTargets = try targetsState.$selectableTargetListItems.read()
-            let selectableTargetTableItems = selectableTargets
-                .filter { $0.target.mode == targetMode }
-                .sorted { $0.target.name < $1.target.name }
-                .map(TargetTableItem.init)
-        
-            targetsController.content = selectableTargetTableItems
+        func updateContent(_ content: Array<TargetTableItem>) {
+
+            DispatchQueue.main.async {
+                
+                self.targetsController.content = content
+            }
         }
-        catch {
+        
+        SFSafariApplication.getActiveWindow { [unowned self] window in
+        
+            guard let window = window else {
+                
+                updateContent([])
+                return
+            }
             
-            targetsController.content = Array<TargetTableItem>()
+            window.getActivePageProperties { result in
+                
+                let usesPrivateBrowsing = try? result.get().properties.usesPrivateBrowsing
+                let currentTargetMode: OpenTarget.Mode? = usesPrivateBrowsing.map { $0 ? .secret : .normal }
+                
+                func includesTarget(_ target: OpenTarget) -> Bool {
+                    
+                    guard target.bundleIdentifier == AppleSafari.bundleIdentifier else {
+                        
+                        return true
+                    }
+                    
+                    return currentTargetMode == target.mode
+                }
+                
+                do {
+                    
+                    let selectableTargets = try targetsState.$selectableTargetListItems.read()
+                    let selectableTargetTableItems = selectableTargets
+                        .filter { $0.target.mode == targetMode }
+                        .filter { includesTarget($0.target) }
+                        .sorted { $0.target.name < $1.target.name }
+                        .map(TargetTableItem.init)
+                    
+                    updateContent(selectableTargetTableItems)
+                }
+                catch {
+                    
+                    updateContent([])
+                }
+            }
         }
     }
     
@@ -84,6 +119,14 @@ extension SafariExtensionViewController {
                     return page.dispatchMessageToScript(with: .urlNotFound())
                 }
 
+                if target.bundleIdentifier == AppleSafari.bundleIdentifier {
+
+                    SFSafariApplication.openWindow(with: url) { window in
+                        
+                    }
+                    return
+                }
+                
                 NSWorkspace.shared.open(target, with: url) { result in
                     
                     switch result {

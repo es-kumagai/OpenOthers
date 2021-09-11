@@ -6,6 +6,16 @@ This is a Safari App Extension that allows you to open the viewing page in anoth
 
 ![OpenOthers Extension works in Safari](Resources/Images/About.png)
 
+This extension now supports the following browsers.
+These browsers are detected automatically.
+
+- Google Chrome
+- Mozilla Firefox
+- Microsoft Edge
+- Opera Neon
+- Brave
+- Vivaldi
+
 ## COMPOSITION
 
 This extension consists of the following three applications.

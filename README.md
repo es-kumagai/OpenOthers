@@ -16,6 +16,8 @@ These browsers are detected automatically.
 - Brave
 - Vivaldi
 
+This extension is also able to open in Safari itself as new window.
+
 ## DESCRIPTION
 
 This extension consists of the following three applications.

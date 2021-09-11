@@ -295,6 +295,7 @@
 		B13BA6CB26D1270A009F5990 /* OpenOthersLauncherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenOthersLauncherUITests.swift; sourceTree = "<group>"; };
 		B13BA6CD26D1270A009F5990 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B16D693B26ED6B6C0093CF3B /* AppleSafari.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleSafari.swift; sourceTree = "<group>"; };
+		B16D693D26ED76920093CF3B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B1A58A7026D1D0A000511332 /* BundleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleState.swift; sourceTree = "<group>"; };
 		B1A58A7B26D2376F00511332 /* UserDefaultsStorable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStorable.swift; sourceTree = "<group>"; };
 		B1A58A8126D237F000511332 /* StoreProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreProtocol.swift; sourceTree = "<group>"; };
@@ -608,6 +609,7 @@
 		B1D8ED1526D0072F0028AF32 = {
 			isa = PBXGroup;
 			children = (
+				B16D693D26ED76920093CF3B /* README.md */,
 				B1B3DACA26DA92DA0033E955 /* Resources */,
 				B1DFBCF926D157E8005598F6 /* OpenOthersCore */,
 				B13BA6AC26D12707009F5990 /* OpenOthersLauncher */,
@@ -1656,12 +1658,12 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ES_APPGROUP_IDENTIFIER = "jp.ez-net.OpenOthers.CommonStore.Debug";
-				ES_CURRENT_BUNDLE_VERSION = 1.1.1;
+				ES_CURRENT_BUNDLE_VERSION = 1.2.0;
 				ES_EXTENSION_DESCRIPTION = "This is a BETA version of safari app extension that can reopen the page shown in Safari's current tab by other application.";
 				ES_EXTENSION_DISPLAYNAME = "EZ-NET OpenOthers Extension Beta";
 				ES_EXTENSION_TOOLBARITEMICON = "ToolbarItemIcon-Debug.pdf";
@@ -1725,12 +1727,12 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ES_APPGROUP_IDENTIFIER = "jp.ez-net.OpenOthers.CommonStore";
-				ES_CURRENT_BUNDLE_VERSION = 1.1.1;
+				ES_CURRENT_BUNDLE_VERSION = 1.2.0;
 				ES_EXTENSION_DESCRIPTION = "This is a safari app extension that can reopen the page shown in Safari's current tab by other application.";
 				ES_EXTENSION_DISPLAYNAME = "EZ-NET OpenOthers Extension";
 				ES_EXTENSION_TOOLBARITEMICON = ToolbarItemIcon.pdf;

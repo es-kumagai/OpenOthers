@@ -16,7 +16,7 @@ These browsers are detected automatically.
 - Brave
 - Vivaldi
 
-## COMPOSITION
+## DESCRIPTION
 
 This extension consists of the following three applications.
 

@@ -98,7 +98,7 @@
                                                 <tableColumnResizingMask key="resizingMask" resizeWithTable="YES"/>
                                                 <prototypeCellViews>
                                                     <tableCellView id="zw9-ZL-uCx">
-                                                        <rect key="frame" x="8" y="0.0" width="235" height="24"/>
+                                                        <rect key="frame" x="18" y="0.0" width="235" height="24"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
                                                             <stackView distribution="fill" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6kA-ms-jIt">

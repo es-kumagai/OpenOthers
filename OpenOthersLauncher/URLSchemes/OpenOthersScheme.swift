@@ -20,7 +20,18 @@ final class OpenOthersScheme : URLScheme {
     
     static func action(url: URL) throws {
 
+        let state = TargetsState()
         let decoder = Base64Decoder()
+        
+        guard let verification = url.queries["verification"].flatMap(UUID.init(uuidString:)) else {
+            
+            throw URLSchemeActionError.invalidURL(url, description: "A verification code was not contains in the request.")
+        }
+        
+        guard state.verification == verification else {
+            
+            throw URLSchemeActionError.invalidURL(url, description: "Specified verification code was not match.")
+        }
         
         guard let pageURL = url.queries["url"].flatMap(decoder.url(from:)) else {
             

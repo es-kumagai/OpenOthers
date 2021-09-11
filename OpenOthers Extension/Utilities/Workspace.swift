@@ -9,6 +9,8 @@ import AppKit
 import OpenTargets
 import OpenOthersCore
 
+private var state = TargetsState()
+
 extension NSWorkspace {
 
     func open(_ target: OpenTarget, with url: URL, completionHandler: ((Result<Void, OpenTarget.Error>) -> Void)? = nil) {
@@ -18,8 +20,11 @@ extension NSWorkspace {
             let encoder = JSONEncoder()
             let targetData = try encoder.encode(target).base64EncodedString()
             let urlData = url.dataRepresentation.base64EncodedString()
+            let verification = UUID()
+                        
+            state.verification = verification
             
-            let url = URL(string: "\(basicScheme)://open?target=\(targetData)&url=\(urlData)")!
+            let url = URL(string: "\(basicScheme)://open?target=\(targetData)&url=\(urlData)&verification=\(verification.uuidString)")!
             
             NSWorkspace.shared.open(url)
             

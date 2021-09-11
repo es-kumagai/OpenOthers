@@ -12,6 +12,9 @@
 		B133018326D1C21B005B411E /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B133018226D1C21B005B411E /* Bundle.swift */; };
 		B139502926EBD96800416CF4 /* OpenTargetMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B139502826EBD96800416CF4 /* OpenTargetMode.swift */; };
 		B139502B26EBEC8B00416CF4 /* OpenRequestDidFinishNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B139502A26EBEC8B00416CF4 /* OpenRequestDidFinishNotification.swift */; };
+		B139502F26EC8D9800416CF4 /* URLSchemeActionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B139502D26EC8D8400416CF4 /* URLSchemeActionError.swift */; };
+		B139503126EC8DFF00416CF4 /* Sky-AppKit in Frameworks */ = {isa = PBXBuildFile; productRef = B139503026EC8DFF00416CF4 /* Sky-AppKit */; };
+		B139503226EC8DFF00416CF4 /* Sky-AppKit in Embed Frameworks */ = {isa = PBXBuildFile; productRef = B139503026EC8DFF00416CF4 /* Sky-AppKit */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B13BA6A626D1175D009F5990 /* Workspace.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13BA6A526D1175D009F5990 /* Workspace.swift */; };
 		B13BA6AE26D12707009F5990 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13BA6AD26D12707009F5990 /* AppDelegate.swift */; };
 		B13BA6B026D12707009F5990 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13BA6AF26D12707009F5990 /* ViewController.swift */; };
@@ -262,6 +265,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				B1A58A9826D4133100511332 /* OpenTargets.framework in Embed Frameworks */,
+				B139503226EC8DFF00416CF4 /* Sky-AppKit in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +279,7 @@
 		B133018426D1C395005B411E /* UserDefaultsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStore.swift; sourceTree = "<group>"; };
 		B139502826EBD96800416CF4 /* OpenTargetMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenTargetMode.swift; sourceTree = "<group>"; };
 		B139502A26EBEC8B00416CF4 /* OpenRequestDidFinishNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenRequestDidFinishNotification.swift; sourceTree = "<group>"; };
+		B139502D26EC8D8400416CF4 /* URLSchemeActionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSchemeActionError.swift; sourceTree = "<group>"; };
 		B13BA6A026D112F3009F5990 /* Base64Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base64Decoder.swift; sourceTree = "<group>"; };
 		B13BA6A526D1175D009F5990 /* Workspace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workspace.swift; sourceTree = "<group>"; };
 		B13BA6AB26D12707009F5990 /* OpenOthersLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenOthersLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -442,6 +447,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1A58A9726D4133100511332 /* OpenTargets.framework in Frameworks */,
+				B139503126EC8DFF00416CF4 /* Sky-AppKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +472,14 @@
 				B1B3DAC826D9E0570033E955 /* ObjectiveC.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		B139502C26EC8D7600416CF4 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				B139502D26EC8D8400416CF4 /* URLSchemeActionError.swift */,
+			);
+			path = Error;
 			sourceTree = "<group>";
 		};
 		B13BA6A426D11755009F5990 /* Utilities */ = {
@@ -772,6 +786,7 @@
 		B1DFBCF926D157E8005598F6 /* OpenOthersCore */ = {
 			isa = PBXGroup;
 			children = (
+				B139502C26EC8D7600416CF4 /* Error */,
 				B1A58AB726D5C9CA00511332 /* Browsers */,
 				B1A58A9B26D4133B00511332 /* Targets */,
 				B133017E26D1A1DD005B411E /* Utilities */,
@@ -1018,6 +1033,7 @@
 			);
 			name = OpenOthersCore;
 			packageProductDependencies = (
+				B139503026EC8DFF00416CF4 /* Sky-AppKit */,
 			);
 			productName = OpenOthersCore;
 			productReference = B1DFBCF826D157E8005598F6 /* OpenOthersCore.framework */;
@@ -1328,6 +1344,7 @@
 				B1A58AB626D5C9C300511332 /* MicrosoftEdge.swift in Sources */,
 				B133018326D1C21B005B411E /* Bundle.swift in Sources */,
 				B1A58AA426D417F000511332 /* TargetListItem.swift in Sources */,
+				B139502F26EC8D9800416CF4 /* URLSchemeActionError.swift in Sources */,
 				B1A58A9E26D4139500511332 /* Targets.swift in Sources */,
 				B1A58A9C26D4134D00511332 /* GoogleChrome.swift in Sources */,
 				B1DFBD1726D15814005598F6 /* Constants.swift in Sources */,
@@ -2237,6 +2254,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		B139503026EC8DFF00416CF4 /* Sky-AppKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1D8ED8326D088EA0028AF32 /* XCRemoteSwiftPackageReference "Sky" */;
+			productName = "Sky-AppKit";
+		};
 		B13BA6D726D12789009F5990 /* Sky-AppKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B1D8ED8326D088EA0028AF32 /* XCRemoteSwiftPackageReference "Sky" */;

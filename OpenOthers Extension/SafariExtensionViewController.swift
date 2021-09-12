@@ -69,8 +69,7 @@ extension SafariExtensionViewController {
         
             guard let window = window else {
                 
-                updateContent([])
-                return
+                return updateContent([])
             }
             
             window.getActivePageProperties { result in
@@ -119,12 +118,9 @@ extension SafariExtensionViewController {
                     return page.dispatchMessageToScript(with: .urlNotFound())
                 }
 
-                if target.bundleIdentifier == AppleSafari.bundleIdentifier {
+                guard target.bundleIdentifier != AppleSafari.bundleIdentifier else {
 
-                    SFSafariApplication.openWindow(with: url) { window in
-                        
-                    }
-                    return
+                    return SFSafariApplication.openWindow(with: url)
                 }
                 
                 NSWorkspace.shared.open(target, with: url) { result in
@@ -168,11 +164,11 @@ extension SafariExtensionViewController : NSTableViewDelegate {
         
         let target = targets[selectedRow]
 
-        SFSafariApplication.getActiveWindow { window in
+        SFSafariApplication.getActiveWindow { [unowned self] window in
             
             window.map {
 
-                self.open(target, withLocationInWindow: $0)
+                open(target, withLocationInWindow: $0)
             }
         }
     }

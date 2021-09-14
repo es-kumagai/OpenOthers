@@ -2,7 +2,7 @@
 
 ![OpenOthers.app](Resources/Images/OpenOthers.png)
 
-This is a Safari App Extension that allows you to open the viewing page in another browser easily. 
+This is a Safari App Extension that allows you to open the viewing page in other browsers easily. 
 
 ![OpenOthers Extension works in Safari](Resources/Images/About.png)
 
@@ -16,7 +16,7 @@ These browsers are detected automatically.
 - Brave
 - Vivaldi
 
-This extension is also able to open in Safari itself as new window.
+This extension is also able to open in Safari itself as new window. This feature is useful when you want to open the same page in different windows and see them side by side. 
 
 ## DESCRIPTION
 

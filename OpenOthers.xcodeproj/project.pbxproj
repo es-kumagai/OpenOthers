@@ -13,17 +13,18 @@
 		B139502926EBD96800416CF4 /* OpenTargetMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B139502826EBD96800416CF4 /* OpenTargetMode.swift */; };
 		B139502B26EBEC8B00416CF4 /* OpenRequestDidFinishNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B139502A26EBEC8B00416CF4 /* OpenRequestDidFinishNotification.swift */; };
 		B139502F26EC8D9800416CF4 /* URLSchemeActionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B139502D26EC8D8400416CF4 /* URLSchemeActionError.swift */; };
-		B139503126EC8DFF00416CF4 /* Sky-AppKit in Frameworks */ = {isa = PBXBuildFile; productRef = B139503026EC8DFF00416CF4 /* Sky-AppKit */; };
-		B139503226EC8DFF00416CF4 /* Sky-AppKit in Embed Frameworks */ = {isa = PBXBuildFile; productRef = B139503026EC8DFF00416CF4 /* Sky-AppKit */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B13BA6A626D1175D009F5990 /* Workspace.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13BA6A526D1175D009F5990 /* Workspace.swift */; };
 		B13BA6AE26D12707009F5990 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13BA6AD26D12707009F5990 /* AppDelegate.swift */; };
 		B13BA6B026D12707009F5990 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13BA6AF26D12707009F5990 /* ViewController.swift */; };
 		B13BA6B526D12709009F5990 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B13BA6B326D12709009F5990 /* Main.storyboard */; };
 		B13BA6C126D12709009F5990 /* OpenOthersLauncherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13BA6C026D12709009F5990 /* OpenOthersLauncherTests.swift */; };
 		B13BA6CC26D1270A009F5990 /* OpenOthersLauncherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13BA6CB26D1270A009F5990 /* OpenOthersLauncherUITests.swift */; };
-		B13BA6D826D12789009F5990 /* Sky-AppKit in Frameworks */ = {isa = PBXBuildFile; productRef = B13BA6D726D12789009F5990 /* Sky-AppKit */; };
-		B13BA6D926D12789009F5990 /* Sky-AppKit in Embed Frameworks */ = {isa = PBXBuildFile; productRef = B13BA6D726D12789009F5990 /* Sky-AppKit */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B16D693C26ED6B6C0093CF3B /* AppleSafari.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16D693B26ED6B6C0093CF3B /* AppleSafari.swift */; };
+		B185622B2A8FD3E200A742F9 /* Sky-AppKit in Frameworks */ = {isa = PBXBuildFile; productRef = B185622A2A8FD3E200A742F9 /* Sky-AppKit */; };
+		B185622E2A8FD40000A742F9 /* Ocean in Frameworks */ = {isa = PBXBuildFile; productRef = B185622D2A8FD40000A742F9 /* Ocean */; };
+		B18562302A8FD47500A742F9 /* Sky-AppKit in Frameworks */ = {isa = PBXBuildFile; productRef = B185622F2A8FD47500A742F9 /* Sky-AppKit */; };
+		B18562322A8FD49500A742F9 /* Sky-AppKit in Frameworks */ = {isa = PBXBuildFile; productRef = B18562312A8FD49500A742F9 /* Sky-AppKit */; };
+		B18562342A8FD49500A742F9 /* Ocean in Frameworks */ = {isa = PBXBuildFile; productRef = B18562332A8FD49500A742F9 /* Ocean */; };
 		B1A58A7826D2373200511332 /* BundleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A58A7026D1D0A000511332 /* BundleState.swift */; };
 		B1A58A7926D2374300511332 /* UserDefaultsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B133018426D1C395005B411E /* UserDefaultsStore.swift */; };
 		B1A58A7C26D2376F00511332 /* UserDefaultsStorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A58A7B26D2376F00511332 /* UserDefaultsStorable.swift */; };
@@ -50,8 +51,6 @@
 		B1B3DADF26DB82660033E955 /* Icon.afdesign in Resources */ = {isa = PBXBuildFile; fileRef = B1B3DADE26DB82660033E955 /* Icon.afdesign */; };
 		B1B3DAE226DB85590033E955 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B3DAE126DB85590033E955 /* Bundle.swift */; };
 		B1B3DAE526DB8FA30033E955 /* OpenRequestDetectedNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B3DAE426DB8FA30033E955 /* OpenRequestDetectedNotification.swift */; };
-		B1B3DAE826DB93B80033E955 /* Ocean in Frameworks */ = {isa = PBXBuildFile; productRef = B1B3DAE726DB93B80033E955 /* Ocean */; };
-		B1B3DAE926DB93B80033E955 /* Ocean in Embed Frameworks */ = {isa = PBXBuildFile; productRef = B1B3DAE726DB93B80033E955 /* Ocean */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B1D8ED2326D0072F0028AF32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D8ED2226D0072F0028AF32 /* AppDelegate.swift */; };
 		B1D8ED2626D0072F0028AF32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1D8ED2426D0072F0028AF32 /* Main.storyboard */; };
 		B1D8ED2826D0072F0028AF32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D8ED2726D0072F0028AF32 /* ViewController.swift */; };
@@ -86,7 +85,6 @@
 		B1DFBD0126D157E8005598F6 /* OpenOthersCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1DFBCF826D157E8005598F6 /* OpenOthersCore.framework */; };
 		B1DFBD0826D157E8005598F6 /* OpenOthersCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DFBD0726D157E8005598F6 /* OpenOthersCoreTests.swift */; };
 		B1DFBD0A26D157E8005598F6 /* OpenOthersCore.h in Headers */ = {isa = PBXBuildFile; fileRef = B1DFBCFA26D157E8005598F6 /* OpenOthersCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B1DFBD0D26D157E8005598F6 /* OpenOthersCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1DFBCF826D157E8005598F6 /* OpenOthersCore.framework */; };
 		B1DFBD0E26D157E8005598F6 /* OpenOthersCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1DFBCF826D157E8005598F6 /* OpenOthersCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B1DFBD1726D15814005598F6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DFBD1626D15814005598F6 /* Constants.swift */; };
 		B1DFBD2026D158F5005598F6 /* OpenOthersCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1DFBCF826D157E8005598F6 /* OpenOthersCore.framework */; };
@@ -229,9 +227,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				B1DFBD2C26D15B80005598F6 /* OpenOthersCore.framework in Embed Frameworks */,
-				B13BA6D926D12789009F5990 /* Sky-AppKit in Embed Frameworks */,
 				B1DFBCF026D13BEA005598F6 /* OpenTargets.framework in Embed Frameworks */,
-				B1B3DAE926DB93B80033E955 /* Ocean in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,7 +262,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				B1A58A9826D4133100511332 /* OpenTargets.framework in Embed Frameworks */,
-				B139503226EC8DFF00416CF4 /* Sky-AppKit in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,9 +371,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1DFBD2B26D15B80005598F6 /* OpenOthersCore.framework in Frameworks */,
-				B13BA6D826D12789009F5990 /* Sky-AppKit in Frameworks */,
+				B18562322A8FD49500A742F9 /* Sky-AppKit in Frameworks */,
 				B1DFBCEF26D13BEA005598F6 /* OpenTargets.framework in Frameworks */,
-				B1B3DAE826DB93B80033E955 /* Ocean in Frameworks */,
+				B18562342A8FD49500A742F9 /* Ocean in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,8 +396,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1DFBD2026D158F5005598F6 /* OpenOthersCore.framework in Frameworks */,
+				B185622B2A8FD3E200A742F9 /* Sky-AppKit in Frameworks */,
 				B1DFBD3126D15E8C005598F6 /* OpenTargets.framework in Frameworks */,
-				B1DFBD0D26D157E8005598F6 /* OpenOthersCore.framework in Frameworks */,
+				B185622E2A8FD40000A742F9 /* Ocean in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,7 +446,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1A58A9726D4133100511332 /* OpenTargets.framework in Frameworks */,
-				B139503126EC8DFF00416CF4 /* Sky-AppKit in Frameworks */,
+				B18562302A8FD47500A742F9 /* Sky-AppKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -855,15 +851,14 @@
 			buildRules = (
 			);
 			dependencies = (
-				B1DFBD4726D19CA6005598F6 /* PBXTargetDependency */,
 				B1DFBD2E26D15B80005598F6 /* PBXTargetDependency */,
 				B1DFBCF226D13BEA005598F6 /* PBXTargetDependency */,
 				B1B3DAD426DAB5660033E955 /* PBXTargetDependency */,
 			);
 			name = OpenOthersLauncher;
 			packageProductDependencies = (
-				B13BA6D726D12789009F5990 /* Sky-AppKit */,
-				B1B3DAE726DB93B80033E955 /* Ocean */,
+				B18562312A8FD49500A742F9 /* Sky-AppKit */,
+				B18562332A8FD49500A742F9 /* Ocean */,
 			);
 			productName = OpenOthersLauncher;
 			productReference = B13BA6AB26D12707009F5990 /* OpenOthersLauncher.app */;
@@ -924,6 +919,8 @@
 			);
 			name = OpenOthers;
 			packageProductDependencies = (
+				B185622A2A8FD3E200A742F9 /* Sky-AppKit */,
+				B185622D2A8FD40000A742F9 /* Ocean */,
 			);
 			productName = OpenOthers;
 			productReference = B1D8ED1E26D0072F0028AF32 /* OpenOthers.app */;
@@ -1038,7 +1035,7 @@
 			);
 			name = OpenOthersCore;
 			packageProductDependencies = (
-				B139503026EC8DFF00416CF4 /* Sky-AppKit */,
+				B185622F2A8FD47500A742F9 /* Sky-AppKit */,
 			);
 			productName = OpenOthersCore;
 			productReference = B1DFBCF826D157E8005598F6 /* OpenOthersCore.framework */;
@@ -1125,8 +1122,8 @@
 			);
 			mainGroup = B1D8ED1526D0072F0028AF32;
 			packageReferences = (
-				B1D8ED8326D088EA0028AF32 /* XCRemoteSwiftPackageReference "Sky" */,
-				B1B3DAE626DB93B80033E955 /* XCRemoteSwiftPackageReference "Ocean" */,
+				B18562292A8FD3E200A742F9 /* XCRemoteSwiftPackageReference "Sky" */,
+				B185622C2A8FD40000A742F9 /* XCRemoteSwiftPackageReference "Ocean" */,
 			);
 			productRefGroup = B1D8ED1F26D0072F0028AF32 /* Products */;
 			projectDirPath = "";
@@ -1458,10 +1455,6 @@
 			target = B1D8EDDB26D0F8B60028AF32 /* OpenTargets */;
 			targetProxy = B1DFBD3326D15E8C005598F6 /* PBXContainerItemProxy */;
 		};
-		B1DFBD4726D19CA6005598F6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = B1DFBD4626D19CA6005598F6 /* Sky-AppKit */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -1658,7 +1651,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -1682,7 +1675,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1727,7 +1720,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1745,7 +1738,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				OTHER_CODE_SIGN_FLAGS = "--deep";
@@ -1758,6 +1751,7 @@
 		B1D8ED5F26D007340028AF32 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_ENTITLEMENTS = "OpenOthers Extension/OpenOthers_Extension.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -1780,6 +1774,7 @@
 		B1D8ED6026D007340028AF32 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_ENTITLEMENTS = "OpenOthers Extension/OpenOthers_Extension.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -2031,7 +2026,7 @@
 		B1DFBD1026D157E8005598F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -2061,7 +2056,7 @@
 		B1DFBD1126D157E8005598F6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -2241,17 +2236,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B1B3DAE626DB93B80033E955 /* XCRemoteSwiftPackageReference "Ocean" */ = {
+		B18562292A8FD3E200A742F9 /* XCRemoteSwiftPackageReference "Sky" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:es-kumagai/Ocean.git";
+			repositoryURL = "https://github.com/es-kumagai/Sky";
 			requirement = {
 				branch = master;
 				kind = branch;
 			};
 		};
-		B1D8ED8326D088EA0028AF32 /* XCRemoteSwiftPackageReference "Sky" */ = {
+		B185622C2A8FD40000A742F9 /* XCRemoteSwiftPackageReference "Ocean" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:es-kumagai/Sky.git";
+			repositoryURL = "https://github.com/es-kumagai/Ocean";
 			requirement = {
 				branch = master;
 				kind = branch;
@@ -2260,25 +2255,30 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B139503026EC8DFF00416CF4 /* Sky-AppKit */ = {
+		B185622A2A8FD3E200A742F9 /* Sky-AppKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B1D8ED8326D088EA0028AF32 /* XCRemoteSwiftPackageReference "Sky" */;
+			package = B18562292A8FD3E200A742F9 /* XCRemoteSwiftPackageReference "Sky" */;
 			productName = "Sky-AppKit";
 		};
-		B13BA6D726D12789009F5990 /* Sky-AppKit */ = {
+		B185622D2A8FD40000A742F9 /* Ocean */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B1D8ED8326D088EA0028AF32 /* XCRemoteSwiftPackageReference "Sky" */;
-			productName = "Sky-AppKit";
-		};
-		B1B3DAE726DB93B80033E955 /* Ocean */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B1B3DAE626DB93B80033E955 /* XCRemoteSwiftPackageReference "Ocean" */;
+			package = B185622C2A8FD40000A742F9 /* XCRemoteSwiftPackageReference "Ocean" */;
 			productName = Ocean;
 		};
-		B1DFBD4626D19CA6005598F6 /* Sky-AppKit */ = {
+		B185622F2A8FD47500A742F9 /* Sky-AppKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B1D8ED8326D088EA0028AF32 /* XCRemoteSwiftPackageReference "Sky" */;
+			package = B18562292A8FD3E200A742F9 /* XCRemoteSwiftPackageReference "Sky" */;
 			productName = "Sky-AppKit";
+		};
+		B18562312A8FD49500A742F9 /* Sky-AppKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B18562292A8FD3E200A742F9 /* XCRemoteSwiftPackageReference "Sky" */;
+			productName = "Sky-AppKit";
+		};
+		B18562332A8FD49500A742F9 /* Ocean */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B185622C2A8FD40000A742F9 /* XCRemoteSwiftPackageReference "Ocean" */;
+			productName = Ocean;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

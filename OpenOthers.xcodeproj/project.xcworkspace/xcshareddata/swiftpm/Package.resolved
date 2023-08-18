@@ -1,34 +1,32 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "Ocean",
-        "repositoryURL": "git@github.com:es-kumagai/Ocean.git",
-        "state": {
-          "branch": "master",
-          "revision": "0174868b817d0306c42f19f9ec3c906a9ab16e48",
-          "version": null
-        }
-      },
-      {
-        "package": "Sky",
-        "repositoryURL": "git@github.com:es-kumagai/Sky.git",
-        "state": {
-          "branch": "master",
-          "revision": "6669eb2e10f64f92740b9e718cd454539db06d8a",
-          "version": null
-        }
-      },
-      {
-        "package": "Swim",
-        "repositoryURL": "https://github.com/es-kumagai/Swim",
-        "state": {
-          "branch": "master",
-          "revision": "c9cac424b37375426cf8b50e8b2dc4116bd0c797",
-          "version": null
-        }
+  "pins" : [
+    {
+      "identity" : "ocean",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:es-kumagai/Ocean.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "6d98c063b3fe8eaac6ba0f92112a47c5adc0751c"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "sky",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:es-kumagai/Sky.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "e8f06a8a3217a22055549f6892f4bab647523ef5"
+      }
+    },
+    {
+      "identity" : "swim",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/es-kumagai/Swim",
+      "state" : {
+        "branch" : "main",
+        "revision" : "52ea99fe91efb9363c071a9a9d6ad87a3c084ecf"
+      }
+    }
+  ],
+  "version" : 2
 }

@@ -8,6 +8,6 @@
 import Ocean
 import OpenTargets
 
-struct OpenRequestDidFinishNotification : NotificationProtocol {
+struct OpenRequestDidFinbishNotification : NotificationProtocol {
     
 }

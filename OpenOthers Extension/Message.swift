@@ -5,7 +5,7 @@
 //  Created by Tomohiro Kumagai on 2021/08/21.
 //
 
-import OpenTargets
+import OpenOthersCore
 
 extension SafariMessage {
     

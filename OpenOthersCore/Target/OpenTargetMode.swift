@@ -14,7 +14,7 @@ extension OpenTarget {
     }
 }
 
-extension OpenTarget.Mode : Codable {
+extension OpenTarget.Mode : Sendable {
     
 }
 

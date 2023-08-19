@@ -9,16 +9,41 @@ import SafariServices
 
 extension SFSafariWindow {
     
-    func getActivePageProperties(_ completionHandler: @escaping (_ result: Result<(page: SFSafariPage, properties: SFSafariPageProperties), SafariError>) -> Void) {
+    @MainActor
+    var activeTab: SFSafariTab {
         
-        getActiveTab { tab in
+        get async throws {
             
-            guard let tab = tab else {
+            try await withCheckedThrowingContinuation { continuation in
                 
-                return completionHandler(.failure(.tabNotFound(on: self)))
+                getActiveTab { tab in
+                    
+                    guard let tab else {
+                        
+                        return continuation.resume(throwing: SafariError.tabNotFound(on: self))
+                    }
+                    
+                    continuation.resume(returning: tab)
+                }
             }
+        }
+    }
+    
+    @MainActor
+    var activePage: SFSafariPage {
+
+        get async throws {
             
-            tab.getActivePageProperties(completionHandler)
+            try await activeTab.activePage
+        }
+    }
+    
+    @MainActor
+    var activePageProperties: SFSafariPageProperties {
+        
+        get async throws {
+            
+            try await activeTab.activePageProperties
         }
     }
 }

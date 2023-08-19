@@ -5,9 +5,9 @@
 //  Created by Tomohiro Kumagai on 2021/08/21.
 //
 
-import SafariServices
+@preconcurrency import SafariServices
 import OpenOthersCore
-import OpenTargets
+import OpenOthersHelper
 
 class SafariExtensionViewController: SFSafariExtensionViewController {
     
@@ -21,12 +21,12 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
         }
     }
     
-    let targetsState = TargetsState()
+//    let targetsState = TargetsState()
     
     static let shared: SafariExtensionViewController = {
-    
+
         let shared = SafariExtensionViewController()
-                
+
         shared.preferredContentSize = NSSize(width:350, height:260)
         return shared
     }()
@@ -34,7 +34,10 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
     override func awakeFromNib() {
         
         super.awakeFromNib()
-
+        
+    }
+    
+    deinit {
     }
 }
 
@@ -56,96 +59,85 @@ extension SafariExtensionViewController {
     }
 
     func updateTargetList() {
-        
-        func updateContent(_ content: Array<TargetTableItem>) {
+              
+        guard let helperProxy = SafariWebExtensionHelper.default.proxy else {
 
-            DispatchQueue.main.async {
-                
-                self.targetsController.content = content
-            }
+            NSLog("Failed to get helper proxy.")
+            return
         }
         
-        SFSafariApplication.getActiveWindow { [unowned self] window in
-        
-            guard let window = window else {
-                
-                return updateContent([])
+        Task {
+            
+            guard let window = await SFSafariApplication.activeWindow() else {
+                NSLog("No active window.")
+                return
             }
             
-            window.getActivePageProperties { result in
-                
-                let usesPrivateBrowsing = try? result.get().properties.usesPrivateBrowsing
-                let currentTargetMode: OpenTarget.Mode? = usesPrivateBrowsing.map { $0 ? .secret : .normal }
-                
-                func includesTarget(_ target: OpenTarget) -> Bool {
-                    
-                    guard target.bundleIdentifier == AppleSafari.bundleIdentifier else {
+            let currentTargetMode = try? await window.activePageProperties.currentTargetMode
                         
-                        return true
-                    }
+            func includesTarget(_ target: OpenTarget) -> Bool {
+                
+                guard target.bundleIdentifier == AppleSafari.bundleIdentifier else {
                     
-                    return currentTargetMode == target.mode
+                    return true
                 }
                 
-                do {
-                    
-                    let selectableTargets = try targetsState.$selectableTargetListItems.read()
-                    let selectableTargetTableItems = selectableTargets
-                        .filter { $0.target.mode == targetMode }
-                        .filter { includesTarget($0.target) }
-                        .sorted { $0.target.name < $1.target.name }
-                        .map(TargetTableItem.init)
-                    
-                    updateContent(selectableTargetTableItems)
-                }
-                catch {
-                    
-                    updateContent([])
-                }
+                return currentTargetMode == target.mode
+            }
+            
+            NSLog("🌀🌀🌀 ここで Helper が OpenTarget をリターンしようとしたときに、正しく NSSecure でエンコードできない、呼び出し先から戻らなくなっています。")
+            let selectableTargets = await helperProxy.selectableTargets()
+                .filter { $0.mode == targetMode }
+                .filter { includesTarget($0) }
+                .sorted { $0.name < $1.name }
+            
+            NSLog("☀️☀️☀️ \(selectableTargets)")
+            Task { @MainActor in
+                
+                let selectableTargetTableItems = await [TargetTableItem](from: selectableTargets)
+                
+                NSLog("☀️ \(selectableTargetTableItems)")
+                targetsController.content = selectableTargetTableItems
             }
         }
     }
     
-    func open(_ target: OpenTarget, withLocationInWindow window: SFSafariWindow) {
-        
-        window.getActivePageProperties { result in
+    func open(_ target: OpenTarget, withLocationInWindow window: SFSafariWindow) async {
 
-            do {
-                let (page, properties) = try result.get()
+        guard let page = try? await window.activePage else {
+            
+            NSLog("No active page in window.")
+            return
+        }
+
+        do {
+            guard let helperProxy = SafariWebExtensionHelper.default.proxy else {
                 
-                guard let url = properties.url else {
-                    
-                    return page.dispatchMessageToScript(with: .urlNotFound())
-                }
-
-                guard target.bundleIdentifier != AppleSafari.bundleIdentifier else {
-
-                    return SFSafariApplication.openWindow(with: url)
-                }
-                
-                NSWorkspace.shared.open(target, with: url) { result in
-                    
-                    switch result {
-                    
-                    case .success:
-                        break
-                    
-                    case .failure(.notSupported):
-                        page.dispatchMessageToScript(with: .targetNotSupported(target))
-                        
-                    case .failure(_):
-                        page.dispatchMessageToScript(with: .failedToOpenTarget(target))
-                    }
-                }
+                NSLog("Failed to get helper proxy.")
+                page.dispatchMessageToScript(with: .failedToOpenTarget(target))
+                return
             }
-            catch SafariError.propertiesNotFound(in: let page?) {
+
+            guard let url = try await page.properties.url else {
                 
                 page.dispatchMessageToScript(with: .urlNotFound())
+                return
             }
-            catch {
+            
+            guard target.bundleIdentifier != AppleSafari.bundleIdentifier else {
                 
-                fatalError("Failed to get properties in active page.")
+                await SFSafariApplication.openWindow(with: url)
+                return
             }
+            
+            guard await helperProxy.open(target, pageURL: url) else {
+                
+                page.dispatchMessageToScript(with: .failedToOpenTarget(target))
+                return
+            }
+        } catch {
+            
+            page.dispatchMessageToScript(with: .failedToOpenTarget(target))
         }
     }
 }
@@ -164,11 +156,10 @@ extension SafariExtensionViewController : NSTableViewDelegate {
         
         let target = targets[selectedRow]
 
-        SFSafariApplication.getActiveWindow { [unowned self] window in
-            
-            window.map {
-
-                open(target, withLocationInWindow: $0)
+        Task {
+            if let window = await SFSafariApplication.activeWindow() {
+                
+                await open(target, withLocationInWindow: window)
             }
         }
     }

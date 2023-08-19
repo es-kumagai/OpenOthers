@@ -23,6 +23,7 @@ public extension NSApplication {
             NSLog("%@; %@", caption, message)
         }
         
+        @MainActor
         func show() {
             
             let alert = NSAlert()
@@ -42,7 +43,9 @@ public extension NSApplication {
             show()
             
         case false:
-            DispatchQueue.main.sync(execute: show)
+            Task { @MainActor in
+                show()
+            }
         }
     }
 }

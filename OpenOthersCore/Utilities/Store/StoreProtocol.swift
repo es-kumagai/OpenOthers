@@ -19,8 +19,8 @@ public protocol StoreProtocol {
     
     init(defaultValue value: Value, key: Key, store: Store)
     
-    func write(_ value: Value) throws
-    func read() throws -> Value
+    func write(_ value: Value)
+    func read() -> Value?
 }
 
 public extension StoreProtocol {

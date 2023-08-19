@@ -12,16 +12,16 @@ import OpenOthersCore
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
     
-    var bundleState = BundleState()
+//    var bundleState = BundleState()
     
     func applicationDidFinishLaunching(_ notification: Notification) {
 
-        bundleState.runningHostBundleDate = Bundle.main.modificationDate
+//        bundleState.runningHostBundleDate = Bundle.main.modificationDate
     }
 
     func applicationWillTerminate(_ notification: Notification) {
 
-        bundleState.runningHostBundleDate = nil
+//        bundleState.runningHostBundleDate = nil
     }
 
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {

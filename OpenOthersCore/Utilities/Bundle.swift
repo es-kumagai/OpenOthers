@@ -18,11 +18,4 @@ public extension Bundle {
         
         bundleAttributes?[.modificationDate] as? Date
     }
-    
-    var iconImage: NSImage? {
-
-        object(forInfoDictionaryKey: "CFBundleIconFile")
-            .flatMap { $0 as? String }
-            .flatMap { image(forResource: $0) }
-    }
 }

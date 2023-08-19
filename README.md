@@ -34,20 +34,14 @@ To install this app extension, a toolbar item that can open other browser is emb
 
 When the toolbar item is clicked, an opening request will be sent to `OpenOthersLauncher.app` with the URL of showing page and browser information to open the URL.
 
-### 3. OpenOthersLauncher.app
+### 3. OpenOthersHelper.xpc
 
 This is a helper application that receive opening requests sended by `OpenOthers Extension.appex`.
 Once this application receives a request from the extension, the url specified by the request will be opened in the browser specified by the request.
 
-This application is also used to install applications as described above.
-
-> Only this application is executed outside of the app sandbox.
-
 ## INSTALLATION
 
-First, Place both `OpenOthers.app` and `OpenOthersLauncher.app` in your application folder.
-
-Then, execute `OpenOthersLauncher.app` to allow macOS to send URL schemes to this application and to be able to enabling the extension in Safari.
+First, Place `OpenOthers.app` in your application folder. Then, execute `OpenOthers.app` to be able to enabling the extension in Safari.
 
 Finally, open the preferences of Safari, then enable `EZ-NET OpenOthers Extension` in extension tab.
 

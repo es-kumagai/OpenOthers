@@ -56,25 +56,6 @@ extension OpenTarget.Argument {
     }
 }
 
-//extension OpenTarget.Argument : Codable {
-//
-//    public init(from decoder: Decoder) throws {
-//
-//        let container = try decoder.singleValueContainer()
-//        let codingData = try container.decode(CodingData.self)
-//
-//        self.init(codingData)
-//    }
-//
-//    public func encode(to encoder: Encoder) throws {
-//
-//        var container = encoder.singleValueContainer()
-//        let codingData = CodingData(dataType: dataType, dataBody: dataBody)
-//
-//        try container.encode(codingData)
-//    }
-//}
-
 extension OpenTarget.Argument {
     
     @objc(ESOpenTargetArgumentCodingData)
@@ -139,7 +120,6 @@ extension OpenTarget.Argument.CodingData : NSSecureCoding {
     
     convenience init?(coder: NSCoder) {
         
-        NSLog("🔑 Decode \(Self.self)")
         guard let dataTypeRawValue = coder.decodeObject(of: NSString.self, forKey: "dataTypeRawValue") as? String, let dataType = OpenTarget.Argument.CodingDataType(rawValue: dataTypeRawValue), let dataBody = coder.decodeObject(of: NSData.self, forKey: "dataBody") as? Data else {
             
             return nil
@@ -150,7 +130,6 @@ extension OpenTarget.Argument.CodingData : NSSecureCoding {
     
     func encode(with coder: NSCoder) {
 
-        NSLog("🔑 Encode \(Self.self)")
         coder.encode(dataType.rawValue, forKey: "dataTypeRawValue")
         coder.encode(dataBody, forKey: "dataBody")
     }

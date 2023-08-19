@@ -14,10 +14,6 @@ public class OpenOthersHelper: NSObject, OpenOthersHelperProtocol {
     
     static let currentWorkspace = NSWorkspace.shared
     
-    var currentWorkspace: NSWorkspace {
-        Self.currentWorkspace
-    }
-    
     public func allTargets() async -> OpenTargets {
         OpenTargets(Targets.all)
     }
@@ -39,7 +35,7 @@ public class OpenOthersHelper: NSObject, OpenOthersHelperProtocol {
         
         do {
             
-            let application = try await currentWorkspace.openApplication(pageURL, with: target)
+            let application = try await OpenOthersHelper.currentWorkspace.openApplication(pageURL, with: target)
 
             NSLog("Target application has been opened: %@", application.bundleIdentifier ?? "(null)")
             return true

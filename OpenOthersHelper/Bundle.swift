@@ -12,12 +12,9 @@ import OpenOthersCore
 extension Bundle {
     
     @MainActor
-    static var currentWorkspace = NSWorkspace.shared
-    
-    @MainActor
     convenience init?(for target: OpenTarget) {
         
-        guard let bundleURL = Self.currentWorkspace.urlForApplication(withBundleIdentifier: target.bundleIdentifier) else {
+        guard let bundleURL = OpenOthersHelper.currentWorkspace.urlForApplication(withBundleIdentifier: target.bundleIdentifier) else {
             
             return nil
         }

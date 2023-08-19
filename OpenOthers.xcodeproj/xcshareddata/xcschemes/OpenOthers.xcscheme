@@ -42,26 +42,6 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B1D8ED3A26D007340028AF32"
-               BuildableName = "OpenOthersUITests.xctest"
-               BlueprintName = "OpenOthersUITests"
-               ReferencedContainer = "container:OpenOthers.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B1D8EDE326D0F8B60028AF32"
-               BuildableName = "OpenTargetsTests.xctest"
-               BlueprintName = "OpenTargetsTests"
-               ReferencedContainer = "container:OpenOthers.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "B1DFBCFF26D157E8005598F6"
                BuildableName = "OpenOthersCoreTests.xctest"
                BlueprintName = "OpenOthersCoreTests"

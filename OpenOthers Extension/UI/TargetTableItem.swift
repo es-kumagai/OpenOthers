@@ -32,33 +32,6 @@ extension TargetTableItem {
         
         self.init(target: item.target, iconImage: item.iconImage)
     }
-
-//    @MainActor
-//    static var currentWorkspace = NSWorkspace.shared
-//
-//    @MainActor
-//    static func bundle(for target: OpenTarget) -> Bundle? {
-//
-//        guard let url = currentWorkspace.urlForApplication(withBundleIdentifier: target.bundleIdentifier) else {
-//
-//            return nil
-//        }
-//
-//        return Bundle(url: url)
-//    }
-    
-//    convenience init(_ item: TargetListItem) {
-//
-//        self.init(target: item.target, iconImage: item.iconImage)
-//    }
-    
-//    @MainActor
-//    convenience init(target: OpenTarget) {
-//        
-//        let bundle = Self.bundle(for: target)
-//        NSLog("🌈 \(target.name) \(bundle)")
-//        self.init(target: target, iconImage: bundle?.iconImage)
-//    }
 }
 
 extension Array<TargetTableItem> {

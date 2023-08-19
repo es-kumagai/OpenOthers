@@ -21,23 +21,13 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
         }
     }
     
-//    let targetsState = TargetsState()
-    
-    static let shared: SafariExtensionViewController = {
-
-        let shared = SafariExtensionViewController()
-
-        shared.preferredContentSize = NSSize(width:350, height:260)
-        return shared
-    }()
+    static let shared = SafariExtensionViewController()
 
     override func awakeFromNib() {
         
         super.awakeFromNib()
         
-    }
-    
-    deinit {
+        preferredContentSize = NSSize(width:350, height:260)
     }
 }
 
@@ -85,19 +75,14 @@ extension SafariExtensionViewController {
                 return currentTargetMode == target.mode
             }
             
-            NSLog("🌀🌀🌀 ここで Helper が OpenTarget をリターンしようとしたときに、正しく NSSecure でエンコードできない、呼び出し先から戻らなくなっています。")
             let selectableTargets = await helperProxy.selectableTargets()
                 .filter { $0.mode == targetMode }
                 .filter { includesTarget($0) }
                 .sorted { $0.name < $1.name }
             
-            NSLog("☀️☀️☀️ \(selectableTargets)")
             Task { @MainActor in
                 
-                let selectableTargetTableItems = await [TargetTableItem](from: selectableTargets)
-                
-                NSLog("☀️ \(selectableTargetTableItems)")
-                targetsController.content = selectableTargetTableItems
+                targetsController.content = await [TargetTableItem](from: selectableTargets)
             }
         }
     }

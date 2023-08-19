@@ -5,7 +5,6 @@
 //  Created by Tomohiro Kumagai on 2021/08/28.
 //
 
-import Foundation
 import ObjectiveC.runtime
 
 enum ObjCRuntime {

@@ -6,8 +6,6 @@
 //  
 //
 
-import Foundation
-
 public final class OpenTargets : NSObject, NSSecureCoding, Sendable {
     
     public static var supportsSecureCoding = true

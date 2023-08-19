@@ -5,7 +5,7 @@
 //  Created by Tomohiro Kumagai on 2021/08/21.
 //
 
-@preconcurrency import SafariServices
+import SafariServices
 
 extension SFSafariTab {
     

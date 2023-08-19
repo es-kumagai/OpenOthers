@@ -9,17 +9,36 @@
 import AppKit
 import OpenOthersCore
 
-@MainActor
-internal var workspace = NSWorkspace.shared
-
-extension Targets {
+public enum Targets {
+        
+    static var all: [OpenTarget] {
     
+        let ignoreMethodNames = [
+            "supportsSecureCoding",
+            "setSupportsSecureCoding:",
+        ]
+        
+        let targetClass = ObjCRuntime.Class(OpenTarget.self)
+        let targets = targetClass.classMethods.compactMap { (method) -> OpenTarget? in
+            
+            guard !ignoreMethodNames.contains(method.name) else {
+                return nil
+            }
+            
+            NSLog("Resolving a target by calling static method: \(method.name)")
+            return targetClass.messageSendToClassMethod(method) as? OpenTarget
+        }
+        
+        NSLog("All targets has been resolved.")
+        return targets
+    }
+
     @MainActor
     static var selectables: [OpenTarget] {
         
         return all.filter { target in
             
-            return workspace.urlForApplication(withBundleIdentifier: target.bundleIdentifier) != nil
+            OpenOthersHelper.currentWorkspace.urlForApplication(withBundleIdentifier: target.bundleIdentifier) != nil
         }
     }
 }

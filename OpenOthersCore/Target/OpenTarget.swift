@@ -5,8 +5,6 @@
 //  Created by Tomohiro Kumagai on 2021/08/21.
 //
 
-import AppKit
-
 @objcMembers
 public class OpenTarget : NSObject, NSSecureCoding, @unchecked Sendable {
 
@@ -29,7 +27,6 @@ public class OpenTarget : NSObject, NSSecureCoding, @unchecked Sendable {
     
     public required convenience init?(coder: NSCoder) {
         
-        NSLog("🔑 Decode \(Self.self)")
         guard let name = coder.decodeObject(of: NSString.self, forKey: "name"), let bundleIdentifier = coder.decodeObject(of: NSString.self, forKey: "bundleIdentifier"), let modeRawValue = coder.decodeObject(of: NSString.self, forKey: "modeRawValue"), let mode = Mode(rawValue: modeRawValue as String), let argumentsDataTypesData = coder.decodeObject(of: NSData.self, forKey: "argumentDataTypesData") else {
             
             return nil
@@ -50,7 +47,6 @@ public class OpenTarget : NSObject, NSSecureCoding, @unchecked Sendable {
     
     public func encode(with coder: NSCoder) {
         
-        NSLog("🔑 Encode \(Self.self)")
         let argumentDataTypesData = try! NSKeyedArchiver.archivedData(withRootObject: arguments.map(\.codingData), requiringSecureCoding: true)
         
         coder.encode(name, forKey: "name")
@@ -73,11 +69,3 @@ extension OpenTarget {
         "\(name) (\(bundleIdentifier), \(mode)) \(arguments)"
     }
 }
-
-//public extension Sequence where Element == OpenTarget {
-//    
-//    func contains(bundleURL: URL?) -> Bool {
-//        
-//        map(\.bundleURL).contains(bundleURL)
-//    }
-//}

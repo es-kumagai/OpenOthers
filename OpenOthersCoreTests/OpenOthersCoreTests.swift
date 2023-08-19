@@ -18,9 +18,33 @@ class OpenOthersCoreTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testSecureCoding() throws {
+
+        func test(target: OpenTarget) throws {
+            
+            let encodedData = try NSKeyedArchiver.archivedData(withRootObject: target, requiringSecureCoding: true)
+            let decodedTarget = try NSKeyedUnarchiver.unarchivedObject(ofClass: OpenTarget.self, from: encodedData)
+
+            XCTAssertEqual(decodedTarget?.name, target.name)
+            XCTAssertEqual(decodedTarget?.bundleIdentifier, target.bundleIdentifier)
+            XCTAssertEqual(decodedTarget?.mode, target.mode)
+            XCTAssertEqual(decodedTarget?.arguments, target.arguments)
+            XCTAssertEqual(decodedTarget?.createNewInstance, target.createNewInstance)
+        }
+        
+        try test(target: .appleSafari)
+        try test(target: .appleSafariSecretMode)
+        try test(target: .brave)
+        try test(target: .braveSecretMode)
+        try test(target: .googleChrome)
+        try test(target: .googleChromeSecretMode)
+        try test(target: .microsoftEdge)
+        try test(target: .microsoftEdgeSecretMode)
+        try test(target: .mozillaFirefox)
+        try test(target: .mozillaFirefoxSecretMode)
+        try test(target: .operaNeon)
+        try test(target: .operaNeonSecretMode)
+        try test(target: .vivaldi)
     }
 
     func testPerformanceExample() throws {

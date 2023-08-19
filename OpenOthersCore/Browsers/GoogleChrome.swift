@@ -5,8 +5,6 @@
 //  Created by Tomohiro Kumagai on 2021/08/21.
 //
 
-import OpenTargets
-
 public extension OpenTarget {
     
     static let googleChrome = GoogleChrome()

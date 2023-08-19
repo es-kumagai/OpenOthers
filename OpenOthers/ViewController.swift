@@ -6,8 +6,7 @@
 //
 
 import Cocoa
-import SafariServices.SFSafariApplication
-import SafariServices.SFSafariExtensionManager
+@preconcurrency import SafariServices
 
 let appName = "OpenOthers"
 let extensionBundleIdentifier = "jp.ez-net.OpenOthers.Extension"
@@ -35,18 +34,20 @@ class ViewController: NSViewController {
         appNameLabel.stringValue = appName
         appDescriptionLabel.stringValue = appDescription ?? ""
         
-        SFSafariExtensionManager.getStateOfSafariExtension(withIdentifier: extensionBundleIdentifier) { (state, error) in
-            guard let state = state, error == nil else {
-                // Insert code to inform the user that something went wrong.
+        Task {
+            
+            guard let state = try? await SFSafariExtensionManager.stateOfSafariExtension(withIdentifier: extensionBundleIdentifier) else {
+                
                 return
             }
-
-            DispatchQueue.main.async {
-                if (state.isEnabled) {
-                    self.appNameLabel.stringValue = "\(appName)'s extension is currently on."
-                } else {
-                    self.appNameLabel.stringValue = "\(appName)'s extension is currently off. You can turn it on in Safari Extensions preferences."
-                }
+            
+            switch state.isEnabled {
+                
+            case true:
+                appNameLabel.stringValue = "\(appName)'s extension is currently on."
+                
+            case false:
+                appNameLabel.stringValue = "\(appName)'s extension is currently off. You can turn it on in Safari Extensions preferences."
             }
         }
     }
@@ -57,10 +58,8 @@ class ViewController: NSViewController {
                 // Insert code to inform the user that something went wrong.
                 return
             }
-
-            DispatchQueue.main.async {
-                NSApplication.shared.terminate(nil)
-            }
+            
+            NSApplication.shared.terminate(nil)
         }
     }
 

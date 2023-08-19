@@ -6,7 +6,8 @@
 //
 
 import SafariServices
-import OpenTargets
+import OpenOthersCore
+import OpenOthersHelper
 
 class SafariExtensionHandler: SFSafariExtensionHandler {
     
@@ -21,25 +22,25 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
 
     }
     
+    @MainActor
     override func validateToolbarItem(in window: SFSafariWindow, validationHandler: @escaping ((Bool, String) -> Void)) {
         // This is called when Safari's state changed in some way that would require the extension's toolbar item to be validated again.
-        window.getActivePageProperties { result in
-
-            switch result {
-            
-            case .success:
+        Task {
+            do {
+                let _ = try await window.activePageProperties
                 validationHandler(true, "")
-                
-            case .failure:
+            } catch {
                 validationHandler(false, "")
             }
         }
     }
     
+    @MainActor
     override func popoverViewController() -> SafariExtensionViewController {
-        return SafariExtensionViewController.shared
+        SafariExtensionViewController.shared
     }
 
+    @MainActor
     override func popoverWillShow(in window: SFSafariWindow) {
         SafariExtensionViewController.shared.updateTargetList()
     }

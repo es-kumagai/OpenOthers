@@ -7,7 +7,7 @@
 
 extension OpenTarget {
     
-    public enum Mode : String {
+    public enum Mode : String, Codable {
         
         case normal
         case secret

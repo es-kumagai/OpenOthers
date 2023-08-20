@@ -7,7 +7,7 @@
 
 extension OpenTarget {
 
-    public enum Argument {
+    public enum Argument : Codable {
     
         case string(String)
         case targetURL

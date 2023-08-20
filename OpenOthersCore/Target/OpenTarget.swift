@@ -6,7 +6,7 @@
 //
 
 @objcMembers
-public class OpenTarget : NSObject, NSSecureCoding, @unchecked Sendable {
+public class OpenTarget : NSObject, Codable, NSSecureCoding, @unchecked Sendable {
 
     public let name: String
     public let bundleIdentifier: String
